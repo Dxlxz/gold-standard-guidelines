@@ -1,0 +1,69 @@
+name: Propose a rule change
+description: Add a new standard, tighten a rule, or deprecate one
+title: "[rule] <document id>: <short description>"
+labels: ["rule-change", "needs-review"]
+body:
+  - type: input
+    id: doc
+    attributes:
+      label: Document id (or "new")
+      description: The stable id from the document's front matter, e.g. `api`, `design-tokens`, or "new" for a new standard.
+      placeholder: api
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: The failure mode in the real world — an incident, a review dispute, a repeated defect. Rules without a failure mode are preferences.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed rule text
+      description: Write the rule as it should appear — one obligation, normative language (MUST / MUST NOT / SHOULD / SHOULD NOT), plus the rationale.
+      placeholder: "**MUST** ... Rationale: ..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: bump
+    attributes:
+      label: Version impact (see GOVERNANCE.md §5)
+      options:
+        - PATCH — clarification only, existing code stays compliant
+        - MINOR — new obligation, existing compliant code stays compliant
+        - MAJOR — existing compliant code can become non-compliant
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: blast
+    attributes:
+      label: Blast radius
+      description: Which repositories, teams or systems are affected? Is there existing code that violates this? Is a codemod or migration window needed?
+    validations:
+      required: false
+
+  - type: textarea
+    id: research
+    attributes:
+      label: Sources
+      description: Real URLs supporting this change (specifications, vendor docs, incident reports). Do not invent references.
+      placeholder: "- https://..."
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmations
+      options:
+        - label: I checked the corpus (index.json / llms.txt) and this does not duplicate or contradict an existing standard, or I have named the conflict above.
+          required: true
+        - label: I am willing to open the pull request following CONTRIBUTING.md.
+          required: false

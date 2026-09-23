@@ -1,0 +1,17 @@
+# Normalise line endings — the corpus is authored on Windows, consumed everywhere.
+* text=auto eol=lf
+
+*.md   text eol=lf
+*.json text eol=lf
+*.yml  text eol=lf
+*.js   text eol=lf
+
+# Generated artefacts — reviewable, but hide from diffs/statistics noise.
+index.json      linguist-generated=true -diff
+llms.txt        linguist-generated=true -diff
+llms-full.txt   linguist-generated=true -diff
+tools/rename-map.json linguist-generated=true
+
+# Keep the corpus out of GitHub language statistics.
+standards/** linguist-documentation=true
+foundation/** linguist-documentation=true

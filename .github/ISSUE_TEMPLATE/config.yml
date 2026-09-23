@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security or privacy issue (private)
+    url: https://github.com/OWNER/gold-standard-guidelines/security/advisories/new
+    about: Credentials, personal data or private URLs committed by mistake — please report privately, not in a public issue.
+  - name: Read the contribution guide first
+    url: https://github.com/OWNER/gold-standard-guidelines/blob/main/CONTRIBUTING.md
+    about: How to propose a new standard, change a rule, or fix a defect.
+  - name: Governance and lifecycle
+    url: https://github.com/OWNER/gold-standard-guidelines/blob/main/GOVERNANCE.md
+    about: Statuses, ownership, versioning, exceptions and precedence.

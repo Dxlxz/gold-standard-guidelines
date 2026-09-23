@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use or adapt these standards, please cite them as below. Documentation is CC BY 4.0; tooling is MIT."
+title: "Gold Standard Guidelines: canonical engineering, design, data, AI and operational standards"
+abstract: >-
+  A public corpus of 117 engineering, design, data, AI, security, operations and process standards,
+  each written to a fixed skeleton (Purpose, Rules, Anti-patterns, Checklist, Canonical summary,
+  Sources) with normative MUST/SHOULD language. Includes machine-readable metadata (index.json),
+  LLM entry points (llms.txt, llms-full.txt) and zero-dependency tooling for validation.
+type: software
+authors:
+  - family-names: "Jeffrey"
+    given-names: "Dale"
+    affiliation: "EarthInfo"
+    alias: "@dale"
+version: "0.1.0"
+date-released: "2026-09-23"
+license: CC-BY-4.0
+license-url: "https://creativecommons.org/licenses/by/4.0/"
+repository-code: "https://github.com/OWNER/gold-standard-guidelines"
+url: "https://github.com/OWNER/gold-standard-guidelines"
+keywords:
+  - guidelines
+  - standards
+  - software-engineering
+  - design-system
+  - data-engineering
+  - geospatial
+  - llm
+  - llms-txt
+  - accessibility
+  - documentation

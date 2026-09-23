@@ -1,0 +1,3163 @@
+{
+ "name": "Gold Standard Guidelines",
+ "description": "Canonical engineering, design, data, AI and operational standards — 117 source-grounded, machine-readable, CI-validated documents.",
+ "generated_at": "2026-09-23T06:08:08.318Z",
+ "count": 117,
+ "domains": [
+  {
+   "key": "foundation",
+   "title": "Foundation",
+   "count": 1
+  },
+  {
+   "key": "design",
+   "title": "Design & UX",
+   "count": 36
+  },
+  {
+   "key": "engineering",
+   "title": "Engineering",
+   "count": 34
+  },
+  {
+   "key": "data",
+   "title": "Data & Geospatial",
+   "count": 12
+  },
+  {
+   "key": "ai",
+   "title": "AI & LLM",
+   "count": 7
+  },
+  {
+   "key": "security",
+   "title": "Security, Privacy & Compliance",
+   "count": 8
+  },
+  {
+   "key": "operations",
+   "title": "Operations & Delivery",
+   "count": 13
+  },
+  {
+   "key": "process",
+   "title": "Process & Team",
+   "count": 6
+  }
+ ],
+ "docs": [
+  {
+   "id": "foundation-index",
+   "title": "Foundation Index",
+   "domain": "foundation",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "foundation",
+    "navigation",
+    "onboarding"
+   ],
+   "applies_to": [
+    "general",
+    "team"
+   ],
+   "related": [
+    "governance",
+    "documentation",
+    "onboarding",
+    "code-review"
+   ],
+   "path": "foundation/00-index.md",
+   "chars": 4670,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": null,
+   "summary": "This is the entry point to the cross-cutting layer of our standards. standards/ tells you what to do in each domain (design, engineering, data, AI, security, operations, process); foundation/ tells you why, what the words mean, and how t…"
+  },
+  {
+   "id": "design-system",
+   "title": "Design System Gold Standard — shadcn/ui Primary",
+   "domain": "design",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "design",
+    "system",
+    "shadcn",
+    "ui"
+   ],
+   "applies_to": [
+    "ui"
+   ],
+   "related": [],
+   "path": "standards/design/01-design-system.md",
+   "chars": 45405,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 1,
+   "summary": "This document defines the canonical standard for designing and implementing product interfaces."
+  },
+  {
+   "id": "layout",
+   "title": "Layout Guidelines — Gold Standard",
+   "domain": "design",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "design",
+    "layout"
+   ],
+   "applies_to": [
+    "ui"
+   ],
+   "related": [],
+   "path": "standards/design/02-layout.md",
+   "chars": 37879,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 3,
+   "summary": "These guidelines define the canonical rules for structuring product interfaces."
+  },
+  {
+   "id": "content-ux-writing",
+   "title": "Content & UX Writing Guidelines — Gold Standard 2026",
+   "domain": "design",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "design",
+    "content",
+    "ux",
+    "writing"
+   ],
+   "applies_to": [
+    "general"
+   ],
+   "related": [
+    "accessibility",
+    "internationalization",
+    "analytics",
+    "release-versioning",
+    "search"
+   ],
+   "path": "standards/design/03-content-ux-writing.md",
+   "chars": 70200,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 37,
+   "summary": "These guidelines define the canonical organizational standard for:"
+  },
+  {
+   "id": "design-tokens",
+   "title": "Design Tokens Guidelines — Gold Standard 2026",
+   "domain": "design",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "design",
+    "tokens"
+   ],
+   "applies_to": [
+    "ui"
+   ],
+   "related": [
+    "internationalization",
+    "layout",
+    "performance",
+    "accessibility",
+    "dependency"
+   ],
+   "path": "standards/design/04-design-tokens.md",
+   "chars": 71348,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 38,
+   "summary": "These guidelines define the canonical organizational standard for:"
+  },
+  {
+   "id": "component",
+   "title": "Component Guidelines — Gold Standard 2026",
+   "domain": "design",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "design",
+    "component"
+   ],
+   "applies_to": [
+    "ui"
+   ],
+   "related": [
+    "forms-validation",
+    "dependency",
+    "internationalization"
+   ],
+   "path": "standards/design/05-component.md",
+   "chars": 81267,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 39,
+   "summary": "These guidelines define the canonical organizational standard for reusable interface components, including:"
+  },
+  {
+   "id": "responsive-device",
+   "title": "Responsive & Device Guidelines — Gold Standard 2026",
+   "domain": "design",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "design",
+    "responsive",
+    "device"
+   ],
+   "applies_to": [
+    "general"
+   ],
+   "related": [
+    "routes",
+    "accessibility",
+    "file-media",
+    "design-tokens"
+   ],
+   "path": "standards/design/06-responsive-device.md",
+   "chars": 73792,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 40,
+   "summary": "These guidelines define the canonical organizational standard for:"
+  },
+  {
+   "id": "layout-patterns",
+   "title": "Layout Patterns Catalogue",
+   "domain": "design",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "design",
+    "layout",
+    "patterns",
+    "catalogue"
+   ],
+   "applies_to": [
+    "ui",
+    "data",
+    "team"
+   ],
+   "related": [],
+   "path": "standards/design/07-layout-patterns.md",
+   "chars": 63903,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 50,
+   "summary": "Layout Patterns define the canonical page-level compositions permitted across the product system."
+  },
+  {
+   "id": "aesthetic",
+   "title": "Aesthetic & Visual Language",
+   "domain": "design",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "design",
+    "aesthetic",
+    "visual",
+    "language"
+   ],
+   "applies_to": [
+    "ui"
+   ],
+   "related": [],
+   "path": "standards/design/08-aesthetic.md",
+   "chars": 44301,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 51,
+   "summary": "This standard defines the visual identity layer of the product system: how the product should look, feel, behave, and express the brand before those decisions are encoded into Design Tokens, Layout rules, Components, or Patterns."
+  },
+  {
+   "id": "states-catalogue",
+   "title": "Empty Loading Error States Catalogue",
+   "domain": "design",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "design",
+    "states",
+    "empty",
+    "loading",
+    "error"
+   ],
+   "applies_to": [
+    "data"
+   ],
+   "related": [],
+   "path": "standards/design/09-states-catalogue.md",
+   "chars": 55024,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 53,
+   "summary": "This standard defines the canonical UX, component, state-management, accessibility, layout, recovery, and content-writing requirements for:"
+  },
+  {
+   "id": "data-viz",
+   "title": "Data Visualization & Dashboards",
+   "domain": "design",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "design",
+    "data",
+    "visualization",
+    "dashboards"
+   ],
+   "applies_to": [
+    "ui",
+    "data"
+   ],
+   "related": [],
+   "path": "standards/design/10-data-viz.md",
+   "chars": 47428,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 54,
+   "summary": "This standard defines the canonical requirements for charts, analytical dashboards, data exploration interfaces, and data-dense visualizations."
+  },
+  {
+   "id": "tables",
+   "title": "Tables & Data Grid",
+   "domain": "design",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "design",
+    "tables",
+    "data",
+    "grid"
+   ],
+   "applies_to": [
+    "data"
+   ],
+   "related": [
+    "aesthetic"
+   ],
+   "path": "standards/design/11-tables.md",
+   "chars": 61719,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 55,
+   "summary": "This standard defines how structured datasets MUST be presented, navigated, queried, selected, edited, exported, and made accessible."
+  },
+  {
+   "id": "motion",
+   "title": "Motion & Interaction",
+   "domain": "design",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "design",
+    "motion",
+    "interaction"
+   ],
+   "applies_to": [
+    "ui"
+   ],
+   "related": [],
+   "path": "standards/design/12-motion.md",
+   "chars": 50913,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 62,
+   "summary": "This standard defines the canonical requirements for motion, transition, animation, and gesture behaviour across product interfaces."
+  },
+  {
+   "id": "iconography",
+   "title": "Iconography & Illustration",
+   "domain": "design",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "design",
+    "iconography",
+    "illustration"
+   ],
+   "applies_to": [
+    "ui"
+   ],
+   "related": [
+    "tables",
+    "aesthetic"
+   ],
+   "path": "standards/design/13-iconography.md",
+   "chars": 61744,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 63,
+   "summary": "This standard defines how visual symbols and supporting imagery MUST be selected, created, licensed, implemented, optimised, and used across the product system."
+  },
+  {
+   "id": "theming",
+   "title": "Theming & Multi-Brand",
+   "domain": "design",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "design",
+    "theming",
+    "multi",
+    "brand"
+   ],
+   "applies_to": [
+    "ui"
+   ],
+   "related": [],
+   "path": "standards/design/14-theming.md",
+   "chars": 65985,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 64,
+   "summary": "Theming is the controlled mapping of stable design-system semantics to different visual expressions."
+  },
+  {
+   "id": "overlays",
+   "title": "Overlays & Layering",
+   "domain": "design",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "design",
+    "overlays",
+    "layering"
+   ],
+   "applies_to": [
+    "ui"
+   ],
+   "related": [
+    "motion"
+   ],
+   "path": "standards/design/15-overlays.md",
+   "chars": 54685,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 66,
+   "summary": "This standard defines the canonical requirements for transient and layered application surfaces."
+  },
+  {
+   "id": "feedback",
+   "title": "Feedback & Status",
+   "domain": "design",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "design",
+    "feedback",
+    "status"
+   ],
+   "applies_to": [
+    "general"
+   ],
+   "related": [
+    "aesthetic"
+   ],
+   "path": "standards/design/16-feedback.md",
+   "chars": 56699,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 67,
+   "summary": "This standard defines how the product MUST communicate:"
+  },
+  {
+   "id": "design-review",
+   "title": "Design Review & Handoff",
+   "domain": "design",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "design",
+    "review",
+    "handoff"
+   ],
+   "applies_to": [
+    "ui",
+    "team"
+   ],
+   "related": [],
+   "path": "standards/design/17-design-review.md",
+   "chars": 42487,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 91,
+   "summary": "Design review and engineering handoff exist to ensure that approved product design can be implemented without ambiguity, silent interpretation, avoidable rework, or divergence from the design system."
+  },
+  {
+   "id": "colour-type-systems",
+   "title": "Colour, Typography & Type Systems",
+   "domain": "design",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "design",
+    "colour",
+    "typography",
+    "type",
+    "systems"
+   ],
+   "applies_to": [
+    "ui"
+   ],
+   "related": [
+    "accessibility"
+   ],
+   "path": "standards/design/18-colour-type-systems.md",
+   "chars": 43488,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 98,
+   "summary": "This standard defines the canonical production rules for colour architecture, contrast, data-visualisation palettes, typography, type behaviour in components, implementation tokens, and rendering modes."
+  },
+  {
+   "id": "spacing-grid-depth",
+   "title": "Spacing, Grid, Density, Elevation & Hierarchy",
+   "domain": "design",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "design",
+    "spacing",
+    "grid",
+    "density",
+    "elevation"
+   ],
+   "applies_to": [
+    "general"
+   ],
+   "related": [],
+   "path": "standards/design/19-spacing-grid-depth.md",
+   "chars": 51977,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 99,
+   "summary": "This specification defines the canonical spatial and visual-composition system for the product."
+  },
+  {
+   "id": "style-catalogue",
+   "title": "Design Style Catalogue",
+   "domain": "design",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "design",
+    "style",
+    "catalogue"
+   ],
+   "applies_to": [
+    "ui",
+    "data"
+   ],
+   "related": [
+    "accessibility"
+   ],
+   "path": "standards/design/20-style-catalogue.md",
+   "chars": 51653,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 100,
+   "summary": "This catalogue defines reproducible visual recipes for 28 distinct interface design styles. Its purpose is not to prescribe one aesthetic, but to make aesthetic direction implementable through tokens without compromising accessibility, c…"
+  },
+  {
+   "id": "corporate-enterprise-visual",
+   "title": "Corporate & Enterprise Visual Standards",
+   "domain": "design",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "design",
+    "corporate",
+    "enterprise",
+    "visual",
+    "standards"
+   ],
+   "applies_to": [
+    "ui"
+   ],
+   "related": [
+    "accessibility"
+   ],
+   "path": "standards/design/21-corporate-enterprise-visual.md",
+   "chars": 59070,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 101,
+   "summary": "Corporate and Enterprise Visual Standards define how an organisation presents information when credibility, continuity, traceability, accessibility, legal clarity, and institutional identity matter more than visual novelty."
+  },
+  {
+   "id": "brand-whitelabel",
+   "title": "Brand & White-label Application",
+   "domain": "design",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "design",
+    "brand",
+    "white",
+    "label",
+    "application"
+   ],
+   "applies_to": [
+    "ui"
+   ],
+   "related": [
+    "accessibility"
+   ],
+   "path": "standards/design/22-brand-whitelabel.md",
+   "chars": 56361,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 102,
+   "summary": "This standard defines how a production application incorporates first-party, tenant, client and partner brands without weakening usability, accessibility, security, component consistency, data integrity, attribution requirements or opera…"
+  },
+  {
+   "id": "anti-ai-slop",
+   "title": "Anti-AI-Slop & Craft Standard",
+   "domain": "design",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "design",
+    "anti",
+    "ai",
+    "slop",
+    "craft"
+   ],
+   "applies_to": [
+    "ai"
+   ],
+   "related": [
+    "accessibility",
+    "corporate-enterprise-visual"
+   ],
+   "path": "standards/design/23-anti-ai-slop.md",
+   "chars": 54666,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 103,
+   "summary": "The Anti-AI-Slop & Craft Standard defines how teams MUST identify, reject, and replace interface design that is superficially polished but contextually generic."
+  },
+  {
+   "id": "image-prompt-engineering",
+   "title": "Image Prompt Engineering",
+   "domain": "design",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "design",
+    "image",
+    "prompt",
+    "engineering"
+   ],
+   "applies_to": [
+    "ai"
+   ],
+   "related": [
+    "prompt-engineering",
+    "style-catalogue"
+   ],
+   "path": "standards/design/24-image-prompt-engineering.md",
+   "chars": 65597,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 104,
+   "summary": "This standard defines how text-to-image and image-editing models are used to produce repeatable, on-brand, production-ready visual assets rather than one-off generated images."
+  },
+  {
+   "id": "visual-style-recipes",
+   "title": "Visual Style Recipe Library",
+   "domain": "design",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "design",
+    "visual",
+    "style",
+    "recipe",
+    "library"
+   ],
+   "applies_to": [
+    "ui"
+   ],
+   "related": [
+    "corporate-enterprise-visual",
+    "accessibility"
+   ],
+   "path": "standards/design/25-visual-style-recipes.md",
+   "chars": 80801,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 105,
+   "summary": "The Visual Style Recipe Library defines reusable text-to-image directions for product, editorial, marketing, data, scientific, geospatial, and institutional visual production."
+  },
+  {
+   "id": "prompt-packs",
+   "title": "Ready-to-Use Visual Prompt Packs",
+   "domain": "design",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "design",
+    "prompt",
+    "ready",
+    "use",
+    "visual"
+   ],
+   "applies_to": [
+    "ui",
+    "ai"
+   ],
+   "related": [
+    "prompt-engineering",
+    "image-prompt-engineering"
+   ],
+   "path": "standards/design/26-prompt-packs.md",
+   "chars": 76201,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 106,
+   "summary": "This catalogue provides copy-paste production prompt packs for the visual assets product teams repeatedly need:"
+  },
+  {
+   "id": "component-variant-contract",
+   "title": "Component Design & Variant Contract",
+   "domain": "design",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "design",
+    "component",
+    "variant",
+    "contract"
+   ],
+   "applies_to": [
+    "ui"
+   ],
+   "related": [
+    "accessibility"
+   ],
+   "path": "standards/design/27-component-variant-contract.md",
+   "chars": 62140,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 107,
+   "summary": "The Component Design & Variant Contract defines the minimum public, visual, semantic, interaction, accessibility, and testing guarantees required for every reusable component."
+  },
+  {
+   "id": "forms-editors",
+   "title": "Forms, Data Entry & Editors",
+   "domain": "design",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "design",
+    "forms",
+    "data",
+    "entry",
+    "editors"
+   ],
+   "applies_to": [
+    "ui",
+    "data"
+   ],
+   "related": [],
+   "path": "standards/design/28-forms-editors.md",
+   "chars": 66327,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 108,
+   "summary": "Forms are transactional interfaces. Their purpose is to let users create or modify valid product state with the least possible ambiguity, unnecessary work, and risk of data loss."
+  },
+  {
+   "id": "search-navigation",
+   "title": "Search, Navigation & Wayfinding",
+   "domain": "design",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "design",
+    "search",
+    "navigation",
+    "wayfinding"
+   ],
+   "applies_to": [
+    "ui"
+   ],
+   "related": [],
+   "path": "standards/design/29-search-navigation.md",
+   "chars": 59948,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 109,
+   "summary": "Search, Navigation & Wayfinding define how users answer three different questions:"
+  },
+  {
+   "id": "overlays-feedback",
+   "title": "Overlays, Feedback & Micro-interactions",
+   "domain": "design",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "design",
+    "overlays",
+    "feedback",
+    "micro",
+    "interactions"
+   ],
+   "applies_to": [
+    "ui"
+   ],
+   "related": [],
+   "path": "standards/design/30-overlays-feedback.md",
+   "chars": 73313,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 110,
+   "summary": "Overlays and feedback mechanisms control attention."
+  },
+  {
+   "id": "dashboard-dataviz-map",
+   "title": "Dashboard, Data Viz & Map Interaction",
+   "domain": "design",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "design",
+    "dashboard",
+    "data",
+    "viz",
+    "map"
+   ],
+   "applies_to": [
+    "data"
+   ],
+   "related": [
+    "search-navigation",
+    "accessibility"
+   ],
+   "path": "standards/design/31-dashboard-dataviz-map.md",
+   "chars": 74472,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 111,
+   "summary": "This standard defines how data is composed, encoded, prioritised, explored, and interpreted in user interfaces."
+  },
+  {
+   "id": "a11y-inclusive",
+   "title": "Accessibility & Inclusive Design Patterns",
+   "domain": "design",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "design",
+    "a11y",
+    "accessibility",
+    "inclusive",
+    "patterns"
+   ],
+   "applies_to": [
+    "ui",
+    "team"
+   ],
+   "related": [
+    "extension"
+   ],
+   "path": "standards/design/32-a11y-inclusive.md",
+   "chars": 73042,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 112,
+   "summary": "Accessibility is a product-quality requirement, not an engineering remediation phase."
+  },
+  {
+   "id": "content-microcopy",
+   "title": "Content, Microcopy, Help & Onboarding",
+   "domain": "design",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "design",
+    "content",
+    "microcopy",
+    "help",
+    "onboarding"
+   ],
+   "applies_to": [
+    "team"
+   ],
+   "related": [
+    "anti-ai-slop"
+   ],
+   "path": "standards/design/33-content-microcopy.md",
+   "chars": 62364,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 113,
+   "summary": "Content is part of the interface."
+  },
+  {
+   "id": "ds-governance-tokens",
+   "title": "Design System Governance, Tokens & Docs",
+   "domain": "design",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "design",
+    "ds",
+    "system",
+    "governance",
+    "tokens"
+   ],
+   "applies_to": [
+    "ui",
+    "team"
+   ],
+   "related": [],
+   "path": "standards/design/34-ds-governance-tokens.md",
+   "chars": 50472,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 114,
+   "summary": "This standard defines how a production design system is governed, tokenized, built, themed, documented, versioned, adopted, measured, deprecated, and evolved across web, iOS, Android, and design tools."
+  },
+  {
+   "id": "design-qa-metrics",
+   "title": "Design QA, Critique, Visual Regression & UX Metrics",
+   "domain": "design",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "design",
+    "qa",
+    "critique",
+    "visual"
+   ],
+   "applies_to": [
+    "ui"
+   ],
+   "related": [
+    "component-variant-contract",
+    "corporate-enterprise-visual",
+    "content-microcopy"
+   ],
+   "path": "standards/design/35-design-qa-metrics.md",
+   "chars": 63403,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 115,
+   "summary": "Design quality MUST be verifiable."
+  },
+  {
+   "id": "handoff-figma",
+   "title": "Handoff, Prototyping & Figma Library",
+   "domain": "design",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "design",
+    "handoff",
+    "prototyping",
+    "figma",
+    "library"
+   ],
+   "applies_to": [
+    "ui"
+   ],
+   "related": [],
+   "path": "standards/design/36-handoff-figma.md",
+   "chars": 52088,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 116,
+   "summary": "This standard defines the contract between design artifacts, prototypes, the Figma design system, and production code."
+  },
+  {
+   "id": "facade",
+   "title": "Facade Guidelines",
+   "domain": "engineering",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "engineering",
+    "facade"
+   ],
+   "applies_to": [
+    "general"
+   ],
+   "related": [
+    "component"
+   ],
+   "path": "standards/engineering/01-facade.md",
+   "chars": 19630,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 2,
+   "summary": "The facade is the visible product surface users interact with."
+  },
+  {
+   "id": "routes",
+   "title": "Routes Guidelines — Gold Standard",
+   "domain": "engineering",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "engineering",
+    "routes"
+   ],
+   "applies_to": [
+    "general"
+   ],
+   "related": [],
+   "path": "standards/engineering/02-routes.md",
+   "chars": 41464,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 4,
+   "summary": "These guidelines define the canonical routing architecture for product applications."
+  },
+  {
+   "id": "reusability-libraries",
+   "title": "Reusability & Libraries Guidelines — Gold Standard",
+   "domain": "engineering",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "engineering",
+    "reusability",
+    "libraries"
+   ],
+   "applies_to": [
+    "general"
+   ],
+   "related": [
+    "adr"
+   ],
+   "path": "standards/engineering/03-reusability-libraries.md",
+   "chars": 56905,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 6,
+   "summary": "These guidelines define the canonical standard for reusable code, shared libraries, packages, components, utilities, hooks, services, and internal platform modules."
+  },
+  {
+   "id": "framework",
+   "title": "Framework Guidelines — Gold Standard",
+   "domain": "engineering",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "engineering",
+    "framework"
+   ],
+   "applies_to": [
+    "general"
+   ],
+   "related": [],
+   "path": "standards/engineering/04-framework.md",
+   "chars": 58987,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 7,
+   "summary": "These guidelines define the canonical framework architecture for product applications."
+  },
+  {
+   "id": "architecture",
+   "title": "Architecture Guidelines — Gold Standard",
+   "domain": "engineering",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "engineering",
+    "architecture"
+   ],
+   "applies_to": [
+    "team"
+   ],
+   "related": [
+    "code-review",
+    "adr"
+   ],
+   "path": "standards/engineering/05-architecture.md",
+   "chars": 60999,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 10,
+   "summary": "These guidelines define the canonical architecture standard for software products."
+  },
+  {
+   "id": "api",
+   "title": "API Guidelines — Gold Standard",
+   "domain": "engineering",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "engineering",
+    "api"
+   ],
+   "applies_to": [
+    "api"
+   ],
+   "related": [],
+   "path": "standards/engineering/06-api.md",
+   "chars": 70981,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 12,
+   "summary": "These guidelines define the canonical standards for designing, implementing, documenting, securing, operating, evolving, and retiring APIs."
+  },
+  {
+   "id": "state-management",
+   "title": "State Management Guidelines — Gold Standard",
+   "domain": "engineering",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "engineering",
+    "state",
+    "management"
+   ],
+   "applies_to": [
+    "general"
+   ],
+   "related": [],
+   "path": "standards/engineering/07-state-management.md",
+   "chars": 52842,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 13,
+   "summary": "These guidelines define the canonical standard for application state."
+  },
+  {
+   "id": "forms-validation",
+   "title": "Forms & Validation Guidelines — Gold Standard",
+   "domain": "engineering",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "engineering",
+    "forms",
+    "validation"
+   ],
+   "applies_to": [
+    "ui"
+   ],
+   "related": [],
+   "path": "standards/engineering/08-forms-validation.md",
+   "chars": 71898,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 14,
+   "summary": "These guidelines define the canonical standard for forms, user input, validation, submission workflows, drafts, autosave, multi-step forms, file uploads, destructive actions, and accessible error handling."
+  },
+  {
+   "id": "error-handling-resilience",
+   "title": "Error Handling & Resilience Guidelines — Gold Standard",
+   "domain": "engineering",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "engineering",
+    "error",
+    "handling",
+    "resilience"
+   ],
+   "applies_to": [
+    "general"
+   ],
+   "related": [],
+   "path": "standards/engineering/09-error-handling-resilience.md",
+   "chars": 65734,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 16,
+   "summary": "These guidelines define the canonical standard for:"
+  },
+  {
+   "id": "testing",
+   "title": "Testing Guidelines — Gold Standard",
+   "domain": "engineering",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "engineering",
+    "testing"
+   ],
+   "applies_to": [
+    "team"
+   ],
+   "related": [],
+   "path": "standards/engineering/10-testing.md",
+   "chars": 58528,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 17,
+   "summary": "These guidelines define the canonical standard for software testing across:"
+  },
+  {
+   "id": "performance",
+   "title": "Performance Guidelines — Gold Standard",
+   "domain": "engineering",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "engineering",
+    "performance"
+   ],
+   "applies_to": [
+    "ui"
+   ],
+   "related": [],
+   "path": "standards/engineering/11-performance.md",
+   "chars": 60188,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 18,
+   "summary": "These guidelines define the canonical performance standard for applications across:"
+  },
+  {
+   "id": "accessibility",
+   "title": "Accessibility Guidelines — Gold Standard 2026",
+   "domain": "engineering",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "engineering",
+    "accessibility"
+   ],
+   "applies_to": [
+    "general"
+   ],
+   "related": [],
+   "path": "standards/engineering/12-accessibility.md",
+   "chars": 80053,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 19,
+   "summary": "These guidelines define the canonical accessibility standard for all product interfaces."
+  },
+  {
+   "id": "ci-cd",
+   "title": "CI/CD Guidelines — Gold Standard 2026",
+   "domain": "engineering",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "engineering",
+    "ci",
+    "cd"
+   ],
+   "applies_to": [
+    "infra"
+   ],
+   "related": [
+    "security",
+    "reusability-libraries",
+    "architecture"
+   ],
+   "path": "standards/engineering/13-ci-cd.md",
+   "chars": 66743,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 24,
+   "summary": "These guidelines define the canonical organizational standard for:"
+  },
+  {
+   "id": "git-repository",
+   "title": "Git & Repository Guidelines — Gold Standard 2026",
+   "domain": "engineering",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "engineering",
+    "git",
+    "repository"
+   ],
+   "applies_to": [
+    "general"
+   ],
+   "related": [
+    "reusability-libraries",
+    "feature-flag"
+   ],
+   "path": "standards/engineering/14-git-repository.md",
+   "chars": 71001,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 25,
+   "summary": "These guidelines define the canonical organizational standard for:"
+  },
+  {
+   "id": "dependency",
+   "title": "Dependency Guidelines — Gold Standard 2026",
+   "domain": "engineering",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "engineering",
+    "dependency"
+   ],
+   "applies_to": [
+    "general"
+   ],
+   "related": [
+    "security",
+    "performance",
+    "privacy-data-governance",
+    "governance",
+    "code-review"
+   ],
+   "path": "standards/engineering/15-dependency.md",
+   "chars": 72386,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 26,
+   "summary": "These guidelines define the canonical organizational standard for third-party software dependencies across:"
+  },
+  {
+   "id": "internationalization",
+   "title": "Internationalization Guidelines — Gold Standard 2026",
+   "domain": "engineering",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "engineering",
+    "internationalization"
+   ],
+   "applies_to": [
+    "general"
+   ],
+   "related": [
+    "notifications",
+    "routes",
+    "security",
+    "search"
+   ],
+   "path": "standards/engineering/16-internationalization.md",
+   "chars": 69876,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 36,
+   "summary": "These guidelines define the canonical organizational standard for:"
+  },
+  {
+   "id": "browser-compatibility",
+   "title": "Browser & Compatibility Guidelines — Gold Standard 2026",
+   "domain": "engineering",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "engineering",
+    "browser",
+    "compatibility"
+   ],
+   "applies_to": [
+    "general"
+   ],
+   "related": [
+    "accessibility",
+    "extension",
+    "framework",
+    "dependency"
+   ],
+   "path": "standards/engineering/17-browser-compatibility.md",
+   "chars": 72398,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 41,
+   "summary": "These guidelines define the canonical organizational standard for:"
+  },
+  {
+   "id": "seo",
+   "title": "SEO Guidelines — Gold Standard 2026",
+   "domain": "engineering",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "engineering",
+    "seo"
+   ],
+   "applies_to": [
+    "general"
+   ],
+   "related": [
+    "performance",
+    "routes",
+    "internationalization",
+    "accessibility",
+    "analytics"
+   ],
+   "path": "standards/engineering/18-seo.md",
+   "chars": 73809,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 42,
+   "summary": "These guidelines define the canonical organizational standard for technical and product SEO across public web surfaces, including:"
+  },
+  {
+   "id": "email",
+   "title": "Email Guidelines — Gold Standard 2026",
+   "domain": "engineering",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "engineering",
+    "email"
+   ],
+   "applies_to": [
+    "ai"
+   ],
+   "related": [
+    "security",
+    "accessibility",
+    "privacy-data-governance",
+    "configuration-environment",
+    "file-media"
+   ],
+   "path": "standards/engineering/19-email.md",
+   "chars": 76600,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 43,
+   "summary": "These guidelines define the canonical organizational standard for product-generated email, including:"
+  },
+  {
+   "id": "admin-internal-tools",
+   "title": "Admin & Internal Tools Guidelines — Gold Standard 2026",
+   "domain": "engineering",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "engineering",
+    "admin",
+    "internal",
+    "tools"
+   ],
+   "applies_to": [
+    "general"
+   ],
+   "related": [
+    "feature-flag",
+    "security",
+    "authentication-authorization",
+    "error-handling-resilience",
+    "observability"
+   ],
+   "path": "standards/engineering/20-admin-internal-tools.md",
+   "chars": 71302,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 44,
+   "summary": "These guidelines define the canonical organizational standard for:"
+  },
+  {
+   "id": "multi-tenancy",
+   "title": "Multi-Tenancy Guidelines — Gold Standard 2026",
+   "domain": "engineering",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "engineering",
+    "multi",
+    "tenancy"
+   ],
+   "applies_to": [
+    "general"
+   ],
+   "related": [
+    "security",
+    "internationalization",
+    "admin-internal-tools"
+   ],
+   "path": "standards/engineering/21-multi-tenancy.md",
+   "chars": 76985,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 45,
+   "summary": "These guidelines define the canonical organizational standard for multi-tenant systems, including:"
+  },
+  {
+   "id": "pattern",
+   "title": "Pattern Guidelines — Gold Standard 2026",
+   "domain": "engineering",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "engineering",
+    "pattern"
+   ],
+   "applies_to": [
+    "team"
+   ],
+   "related": [
+    "routes",
+    "file-media",
+    "accessibility",
+    "search",
+    "component"
+   ],
+   "path": "standards/engineering/22-pattern.md",
+   "chars": 71400,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 49,
+   "summary": "These guidelines define the canonical organizational standard for recurring product interaction patterns, including:"
+  },
+  {
+   "id": "time",
+   "title": "Time Date & Timezone",
+   "domain": "engineering",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "engineering",
+    "time",
+    "date",
+    "timezone"
+   ],
+   "applies_to": [
+    "general"
+   ],
+   "related": [],
+   "path": "standards/engineering/23-time.md",
+   "chars": 73065,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 61,
+   "summary": "This standard defines the canonical representation, persistence, transport, calculation, scheduling, rendering, validation, accessibility, and testing requirements for temporal data."
+  },
+  {
+   "id": "navigation",
+   "title": "Navigation & Information Architecture",
+   "domain": "engineering",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "engineering",
+    "navigation",
+    "information",
+    "architecture"
+   ],
+   "applies_to": [
+    "ui",
+    "team"
+   ],
+   "related": [
+    "architecture"
+   ],
+   "path": "standards/engineering/24-navigation.md",
+   "chars": 79772,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 65,
+   "summary": "This standard defines the canonical information-architecture, routing, navigation, wayfinding, responsive, state-management, accessibility, and URL requirements for application navigation."
+  },
+  {
+   "id": "realtime",
+   "title": "Realtime WebSocket SSE",
+   "domain": "engineering",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "engineering",
+    "realtime",
+    "websocket",
+    "sse"
+   ],
+   "applies_to": [
+    "general"
+   ],
+   "related": [
+    "feedback",
+    "tables"
+   ],
+   "path": "standards/engineering/25-realtime.md",
+   "chars": 74409,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 71,
+   "summary": "This standard defines how applications MUST design, operate, secure, scale, and observe realtime communication using WebSocket or Server-Sent Events."
+  },
+  {
+   "id": "concurrency",
+   "title": "Concurrency & Consistency",
+   "domain": "engineering",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "engineering",
+    "concurrency",
+    "consistency"
+   ],
+   "applies_to": [
+    "general"
+   ],
+   "related": [],
+   "path": "standards/engineering/26-concurrency.md",
+   "chars": 81217,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 73,
+   "summary": "This standard defines the canonical architecture, database, API, state-management, user-experience, distributed-systems, retry, messaging, and testing requirements for concurrency and consistency."
+  },
+  {
+   "id": "offline-sync",
+   "title": "Offline-first & Sync",
+   "domain": "engineering",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "engineering",
+    "offline",
+    "first",
+    "sync"
+   ],
+   "applies_to": [
+    "data"
+   ],
+   "related": [
+    "concurrency"
+   ],
+   "path": "standards/engineering/27-offline-sync.md",
+   "chars": 81080,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 81,
+   "summary": "This standard defines the canonical architecture, data model, synchronization protocol, conflict model, security controls, user experience, storage lifecycle, and testing requirements for offline-first and local-first applications."
+  },
+  {
+   "id": "code-review",
+   "title": "Code Review",
+   "domain": "engineering",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "engineering",
+    "code",
+    "review"
+   ],
+   "applies_to": [
+    "team"
+   ],
+   "related": [],
+   "path": "standards/engineering/28-code-review.md",
+   "chars": 61709,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 85,
+   "summary": "This standard defines the canonical requirements for authoring, reviewing, approving, and merging production changes."
+  },
+  {
+   "id": "adr",
+   "title": "Architecture Decision Records",
+   "domain": "engineering",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "engineering",
+    "adr",
+    "architecture",
+    "decision",
+    "records"
+   ],
+   "applies_to": [
+    "team"
+   ],
+   "related": [
+    "code-review"
+   ],
+   "path": "standards/engineering/29-adr.md",
+   "chars": 53118,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 86,
+   "summary": "This standard defines the canonical requirements for creating, reviewing, approving, storing, superseding, discovering, and maintaining Architecture Decision Records."
+  },
+  {
+   "id": "tech-debt",
+   "title": "Technical Debt & Refactoring",
+   "domain": "engineering",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "engineering",
+    "tech",
+    "technical",
+    "debt",
+    "refactoring"
+   ],
+   "applies_to": [
+    "team"
+   ],
+   "related": [
+    "adr"
+   ],
+   "path": "standards/engineering/30-tech-debt.md",
+   "chars": 72555,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 89,
+   "summary": "This standard defines the canonical identification, classification, scoring, ownership, prioritization, repayment, refactoring, modernization, reporting, and governance requirements for technical debt."
+  },
+  {
+   "id": "experimentation",
+   "title": "Experimentation & A/B Testing",
+   "domain": "engineering",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "engineering",
+    "experimentation",
+    "b",
+    "testing"
+   ],
+   "applies_to": [
+    "team"
+   ],
+   "related": [
+    "testing"
+   ],
+   "path": "standards/engineering/31-experimentation.md",
+   "chars": 45321,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 92,
+   "summary": "This standard defines how teams MUST design, implement, analyse, govern, and document controlled experiments."
+  },
+  {
+   "id": "mobile-native",
+   "title": "Mobile & Native App",
+   "domain": "engineering",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "engineering",
+    "mobile",
+    "native",
+    "app"
+   ],
+   "applies_to": [
+    "client"
+   ],
+   "related": [],
+   "path": "standards/engineering/32-mobile-native.md",
+   "chars": 62070,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 95,
+   "summary": "Mobile applications operate under constraints that do not exist, or do not exist to the same degree, in browser-based applications."
+  },
+  {
+   "id": "desktop-app",
+   "title": "Desktop & Electron Apps",
+   "domain": "engineering",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "engineering",
+    "desktop",
+    "electron",
+    "apps"
+   ],
+   "applies_to": [
+    "client"
+   ],
+   "related": [],
+   "path": "standards/engineering/33-desktop-app.md",
+   "chars": 58516,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 96,
+   "summary": "This standard defines how desktop applications MUST be architected, secured, packaged, updated, observed, and operated."
+  },
+  {
+   "id": "extension",
+   "title": "Browser Extension",
+   "domain": "engineering",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "engineering",
+    "extension",
+    "browser"
+   ],
+   "applies_to": [
+    "client"
+   ],
+   "related": [],
+   "path": "standards/engineering/34-extension.md",
+   "chars": 56808,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 97,
+   "summary": "Browser extensions execute with capabilities that ordinary web applications do not possess. Depending on granted permissions, an extension may observe or modify pages, inspect navigation, access browser APIs, intercept requests, persist…"
+  },
+  {
+   "id": "data-database",
+   "title": "Data & Database Guidelines — Gold Standard",
+   "domain": "data",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "data",
+    "database"
+   ],
+   "applies_to": [
+    "data"
+   ],
+   "related": [
+    "code-review"
+   ],
+   "path": "standards/data/01-data-database.md",
+   "chars": 78736,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 11,
+   "summary": "These guidelines define the canonical standards for:"
+  },
+  {
+   "id": "analytics",
+   "title": "Analytics Guidelines — Gold Standard",
+   "domain": "data",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "data",
+    "analytics"
+   ],
+   "applies_to": [
+    "data"
+   ],
+   "related": [],
+   "path": "standards/data/02-analytics.md",
+   "chars": 75132,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 21,
+   "summary": "These guidelines define the canonical standard for product and business analytics across:"
+  },
+  {
+   "id": "caching",
+   "title": "Caching Guidelines — Gold Standard 2026",
+   "domain": "data",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "data",
+    "caching"
+   ],
+   "applies_to": [
+    "general"
+   ],
+   "related": [],
+   "path": "standards/data/03-caching.md",
+   "chars": 67805,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 32,
+   "summary": "These guidelines define the canonical organizational standard for:"
+  },
+  {
+   "id": "search",
+   "title": "Search Guidelines — Gold Standard 2026",
+   "domain": "data",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "data",
+    "search"
+   ],
+   "applies_to": [
+    "general"
+   ],
+   "related": [
+    "data-database",
+    "state-management",
+    "privacy-data-governance",
+    "feature-flag",
+    "governance"
+   ],
+   "path": "standards/data/04-search.md",
+   "chars": 73114,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 33,
+   "summary": "These guidelines define the canonical organizational standard for:"
+  },
+  {
+   "id": "file-media",
+   "title": "File & Media Guidelines — Gold Standard 2026",
+   "domain": "data",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "data",
+    "file",
+    "media"
+   ],
+   "applies_to": [
+    "general"
+   ],
+   "related": [
+    "accessibility",
+    "dependency",
+    "background-jobs-queue"
+   ],
+   "path": "standards/data/05-file-media.md",
+   "chars": 75287,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 34,
+   "summary": "These guidelines define the canonical organizational standard for:"
+  },
+  {
+   "id": "geospatial",
+   "title": "Geospatial & Map Guidelines",
+   "domain": "data",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "data",
+    "geospatial",
+    "map"
+   ],
+   "applies_to": [
+    "data"
+   ],
+   "related": [
+    "code-review"
+   ],
+   "path": "standards/data/06-geospatial.md",
+   "chars": 63855,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 58,
+   "summary": "This standard defines the canonical requirements for geospatial data storage, transformation, querying, delivery, visualization, offline use, and export."
+  },
+  {
+   "id": "ingestion",
+   "title": "Data Ingestion ETL ELT",
+   "domain": "data",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "data",
+    "ingestion",
+    "etl",
+    "elt"
+   ],
+   "applies_to": [
+    "data"
+   ],
+   "related": [
+    "tables"
+   ],
+   "path": "standards/data/07-ingestion.md",
+   "chars": 60851,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 59,
+   "summary": "This standard defines how data MUST enter, move through, be transformed within, and become trustworthy inside the platform."
+  },
+  {
+   "id": "lakehouse",
+   "title": "Lakehouse & Table Format",
+   "domain": "data",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "data",
+    "lakehouse",
+    "table",
+    "format"
+   ],
+   "applies_to": [
+    "ui",
+    "data"
+   ],
+   "related": [],
+   "path": "standards/data/08-lakehouse.md",
+   "chars": 68533,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 60,
+   "summary": "A production lakehouse is not a collection of Parquet files."
+  },
+  {
+   "id": "data-modeling",
+   "title": "Data Modeling & Schema Evolution",
+   "domain": "data",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "data",
+    "modeling",
+    "schema",
+    "evolution"
+   ],
+   "applies_to": [
+    "data"
+   ],
+   "related": [
+    "events-webhooks"
+   ],
+   "path": "standards/data/09-data-modeling.md",
+   "chars": 57393,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 80,
+   "summary": "Data models define the durable meaning, integrity, ownership, and lifecycle of application state."
+  },
+  {
+   "id": "warehouse-modeling",
+   "title": "Analytics & Warehouse Modeling",
+   "domain": "data",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "data",
+    "warehouse",
+    "analytics",
+    "modeling"
+   ],
+   "applies_to": [
+    "data"
+   ],
+   "related": [
+    "code-review"
+   ],
+   "path": "standards/data/10-warehouse-modeling.md",
+   "chars": 56076,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 82,
+   "summary": "This standard defines the canonical requirements for analytical warehouse modeling and governed analytical data products."
+  },
+  {
+   "id": "geo-metadata",
+   "title": "Geospatial Metadata & Catalog",
+   "domain": "data",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "data",
+    "geo",
+    "geospatial",
+    "metadata",
+    "catalog"
+   ],
+   "applies_to": [
+    "data"
+   ],
+   "related": [
+    "tables"
+   ],
+   "path": "standards/data/11-geo-metadata.md",
+   "chars": 73295,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 83,
+   "summary": "This standard defines how geospatial datasets and assets MUST be described, catalogued, discovered, versioned, governed, attributed, quality-assessed, and published."
+  },
+  {
+   "id": "env-data-quality",
+   "title": "Scientific & Environmental Data Quality",
+   "domain": "data",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "data",
+    "env",
+    "scientific",
+    "environmental",
+    "quality"
+   ],
+   "applies_to": [
+    "data"
+   ],
+   "related": [],
+   "path": "standards/data/12-env-data-quality.md",
+   "chars": 59275,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 84,
+   "summary": "Scientific and environmental data are meaningful only when their measurement basis, uncertainty, provenance, quality state, temporal semantics, and transformations remain explicit."
+  },
+  {
+   "id": "ai-llm",
+   "title": "AI/LLM Guidelines — Gold Standard 2026",
+   "domain": "ai",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "ai",
+    "llm"
+   ],
+   "applies_to": [
+    "ai"
+   ],
+   "related": [
+    "code-review",
+    "search",
+    "file-media",
+    "multi-tenancy"
+   ],
+   "path": "standards/ai/01-ai-llm.md",
+   "chars": 74279,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 47,
+   "summary": "These guidelines define the canonical organizational standard for applications using:"
+  },
+  {
+   "id": "prompt-engineering",
+   "title": "Prompt Engineering",
+   "domain": "ai",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "ai",
+    "prompt",
+    "engineering"
+   ],
+   "applies_to": [
+    "ai"
+   ],
+   "related": [
+    "code-review"
+   ],
+   "path": "standards/ai/02-prompt-engineering.md",
+   "chars": 42255,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 52,
+   "summary": "Prompt engineering is production software engineering."
+  },
+  {
+   "id": "ai-agents",
+   "title": "AI Agent Guidelines",
+   "domain": "ai",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "ai",
+    "agent"
+   ],
+   "applies_to": [
+    "ai"
+   ],
+   "related": [
+    "prompt-engineering"
+   ],
+   "path": "standards/ai/03-ai-agents.md",
+   "chars": 65877,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 56,
+   "summary": "An AI agent is a model-driven runtime that can perform multi-step work by inspecting state, selecting actions, invoking tools, observing results, delegating work, and continuing until a defined stopping condition is reached."
+  },
+  {
+   "id": "rag",
+   "title": "RAG & Vector Retrieval",
+   "domain": "ai",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "ai",
+    "rag",
+    "vector",
+    "retrieval"
+   ],
+   "applies_to": [
+    "ai"
+   ],
+   "related": [],
+   "path": "standards/ai/04-rag.md",
+   "chars": 80453,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 57,
+   "summary": "This standard defines the canonical architecture, data contracts, retrieval behavior, security controls, ranking strategy, user experience, evaluation framework, and operational requirements for Retrieval-Augmented Generation and vector…"
+  },
+  {
+   "id": "ai-eval",
+   "title": "AI Evaluation & Red-team",
+   "domain": "ai",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "ai",
+    "evaluation",
+    "red",
+    "team"
+   ],
+   "applies_to": [
+    "ai"
+   ],
+   "related": [
+    "prompt-engineering"
+   ],
+   "path": "standards/ai/05-ai-eval.md",
+   "chars": 82038,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 68,
+   "summary": "AI evaluation is the disciplined process of measuring whether an AI system behaves correctly, safely, reliably, fairly, and efficiently under representative and adversarial conditions."
+  },
+  {
+   "id": "prompt-library",
+   "title": "Prompt Library & Governance",
+   "domain": "ai",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "ai",
+    "prompt",
+    "library",
+    "governance"
+   ],
+   "applies_to": [
+    "ai",
+    "team"
+   ],
+   "related": [
+    "code-review",
+    "governance",
+    "prompt-engineering"
+   ],
+   "path": "standards/ai/06-prompt-library.md",
+   "chars": 63862,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 69,
+   "summary": "This standard defines the canonical engineering, security, ownership, lifecycle, deployment, testing, audit, and user-interface requirements for production prompts."
+  },
+  {
+   "id": "ai-ux",
+   "title": "AI UX",
+   "domain": "ai",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "ai",
+    "ux"
+   ],
+   "applies_to": [
+    "ai"
+   ],
+   "related": [],
+   "path": "standards/ai/07-ai-ux.md",
+   "chars": 57599,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 70,
+   "summary": "This standard defines the canonical UX requirements for interfaces powered by generative AI, language models, multimodal models, agents, retrieval systems, and AI-assisted workflows."
+  },
+  {
+   "id": "security",
+   "title": "Security Guidelines — Gold Standard",
+   "domain": "security",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "security"
+   ],
+   "applies_to": [
+    "security"
+   ],
+   "related": [
+    "code-review"
+   ],
+   "path": "standards/security/01-security.md",
+   "chars": 59166,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 5,
+   "summary": "These guidelines define the minimum security standard for product engineering."
+  },
+  {
+   "id": "authentication-authorization",
+   "title": "Authentication & Authorization Guidelines — Gold Standard 2026",
+   "domain": "security",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "security",
+    "authentication",
+    "authorization"
+   ],
+   "applies_to": [
+    "security"
+   ],
+   "related": [],
+   "path": "standards/security/02-authentication-authorization.md",
+   "chars": 73385,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 15,
+   "summary": "These guidelines define the canonical standard for:"
+  },
+  {
+   "id": "privacy-data-governance",
+   "title": "Privacy & Data Governance Guidelines — Gold Standard",
+   "domain": "security",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "security",
+    "privacy",
+    "data",
+    "governance"
+   ],
+   "applies_to": [
+    "data",
+    "security",
+    "team"
+   ],
+   "related": [
+    "governance"
+   ],
+   "path": "standards/security/03-privacy-data-governance.md",
+   "chars": 74557,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 22,
+   "summary": "These guidelines define the canonical organizational standard for:"
+  },
+  {
+   "id": "secrets",
+   "title": "Secrets & Key Management",
+   "domain": "security",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "security",
+    "secrets",
+    "key",
+    "management"
+   ],
+   "applies_to": [
+    "security"
+   ],
+   "related": [],
+   "path": "standards/security/04-secrets.md",
+   "chars": 58211,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 74,
+   "summary": "This standard defines the canonical requirements for creating, storing, distributing, using, rotating, revoking, recovering, auditing, and destroying secrets and cryptographic keys."
+  },
+  {
+   "id": "abuse",
+   "title": "Rate Limiting & Abuse Defense",
+   "domain": "security",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "security",
+    "abuse",
+    "rate",
+    "limiting",
+    "defense"
+   ],
+   "applies_to": [
+    "security"
+   ],
+   "related": [
+    "feedback"
+   ],
+   "path": "standards/security/05-abuse.md",
+   "chars": 61904,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 75,
+   "summary": "This standard defines how the platform MUST protect shared services and business workflows from excessive, automated, fraudulent, or abusive use while preserving availability and fair access for legitimate users."
+  },
+  {
+   "id": "threat-model",
+   "title": "Threat Modeling & Secure SDLC",
+   "domain": "security",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "security",
+    "threat",
+    "modeling",
+    "secure",
+    "sdlc"
+   ],
+   "applies_to": [
+    "data",
+    "security"
+   ],
+   "related": [
+    "events-webhooks",
+    "code-review"
+   ],
+   "path": "standards/security/06-threat-model.md",
+   "chars": 59461,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 76,
+   "summary": "Threat modeling and the Secure Software Development Lifecycle (Secure SDLC) define how security risk is identified, designed against, verified, accepted, and monitored throughout the lifecycle of a system or feature."
+  },
+  {
+   "id": "audit-logging",
+   "title": "Audit Logging & Compliance Evidence",
+   "domain": "security",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "security",
+    "audit",
+    "logging",
+    "compliance",
+    "evidence"
+   ],
+   "applies_to": [
+    "security"
+   ],
+   "related": [],
+   "path": "standards/security/07-audit-logging.md",
+   "chars": 85050,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 77,
+   "summary": "This standard defines the canonical requirements for security audit logging and compliance evidence."
+  },
+  {
+   "id": "legal-licensing",
+   "title": "Legal & Licensing",
+   "domain": "security",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "security",
+    "legal",
+    "licensing"
+   ],
+   "applies_to": [
+    "security"
+   ],
+   "related": [],
+   "path": "standards/security/08-legal-licensing.md",
+   "chars": 42645,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 94,
+   "summary": "This standard defines the minimum legal and licensing controls for software and digital assets used, modified, distributed, deployed, or contributed by the organisation."
+  },
+  {
+   "id": "observability",
+   "title": "Observability Guidelines — Gold Standard 2026",
+   "domain": "operations",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "operations",
+    "observability"
+   ],
+   "applies_to": [
+    "infra"
+   ],
+   "related": [],
+   "path": "standards/operations/01-observability.md",
+   "chars": 71827,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 20,
+   "summary": "These guidelines define the canonical standard for production observability across:"
+  },
+  {
+   "id": "configuration-environment",
+   "title": "Configuration & Environment Guidelines — Gold Standard",
+   "domain": "operations",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "operations",
+    "configuration",
+    "environment"
+   ],
+   "applies_to": [
+    "infra"
+   ],
+   "related": [
+    "analytics"
+   ],
+   "path": "standards/operations/02-configuration-environment.md",
+   "chars": 66832,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 23,
+   "summary": "These guidelines define the canonical standard for:"
+  },
+  {
+   "id": "deployment-infrastructure",
+   "title": "Deployment & Infrastructure Guidelines — Gold Standard",
+   "domain": "operations",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "operations",
+    "deployment",
+    "infrastructure"
+   ],
+   "applies_to": [
+    "infra"
+   ],
+   "related": [
+    "security",
+    "data-database",
+    "api",
+    "configuration-environment",
+    "backup-disaster-recovery"
+   ],
+   "path": "standards/operations/03-deployment-infrastructure.md",
+   "chars": 84662,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 27,
+   "summary": "These guidelines define the canonical organizational standard for:"
+  },
+  {
+   "id": "backup-disaster-recovery",
+   "title": "Backup & Disaster Recovery Guidelines — Gold Standard",
+   "domain": "operations",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "operations",
+    "backup",
+    "disaster",
+    "recovery"
+   ],
+   "applies_to": [
+    "infra"
+   ],
+   "related": [],
+   "path": "standards/operations/04-backup-disaster-recovery.md",
+   "chars": 82263,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 28,
+   "summary": "These guidelines define the canonical organizational standard for:"
+  },
+  {
+   "id": "feature-flag",
+   "title": "Feature Flag Guidelines — Gold Standard 2026",
+   "domain": "operations",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "operations",
+    "feature",
+    "flag"
+   ],
+   "applies_to": [
+    "infra"
+   ],
+   "related": [
+    "architecture",
+    "analytics",
+    "privacy-data-governance",
+    "dependency",
+    "governance"
+   ],
+   "path": "standards/operations/05-feature-flag.md",
+   "chars": 68373,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 29,
+   "summary": "These guidelines define the canonical organizational standard for:"
+  },
+  {
+   "id": "release-versioning",
+   "title": "Release & Versioning Guidelines — Gold Standard 2026",
+   "domain": "operations",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "operations",
+    "release",
+    "versioning"
+   ],
+   "applies_to": [
+    "infra"
+   ],
+   "related": [
+    "api",
+    "security",
+    "data-database"
+   ],
+   "path": "standards/operations/06-release-versioning.md",
+   "chars": 71196,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 30,
+   "summary": "These guidelines define the canonical organizational standard for:"
+  },
+  {
+   "id": "background-jobs-queue",
+   "title": "Background Jobs & Queue Guidelines — Gold Standard 2026",
+   "domain": "operations",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "operations",
+    "background",
+    "jobs",
+    "queue"
+   ],
+   "applies_to": [
+    "infra"
+   ],
+   "related": [
+    "security",
+    "architecture"
+   ],
+   "path": "standards/operations/07-background-jobs-queue.md",
+   "chars": 72008,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 31,
+   "summary": "These guidelines define the canonical organizational standard for:"
+  },
+  {
+   "id": "notifications",
+   "title": "Notifications Guidelines — Gold Standard 2026",
+   "domain": "operations",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "operations",
+    "notifications"
+   ],
+   "applies_to": [
+    "infra"
+   ],
+   "related": [
+    "analytics",
+    "internationalization",
+    "routes",
+    "privacy-data-governance",
+    "dependency"
+   ],
+   "path": "standards/operations/08-notifications.md",
+   "chars": 66364,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 35,
+   "summary": "These guidelines define the canonical organizational standard for:"
+  },
+  {
+   "id": "billing-payments",
+   "title": "Billing & Payments Guidelines — Gold Standard 2026",
+   "domain": "operations",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "operations",
+    "billing",
+    "payments"
+   ],
+   "applies_to": [
+    "general"
+   ],
+   "related": [
+    "internationalization",
+    "email",
+    "admin-internal-tools"
+   ],
+   "path": "standards/operations/09-billing-payments.md",
+   "chars": 75678,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 46,
+   "summary": "These guidelines define the canonical organizational standard for:"
+  },
+  {
+   "id": "events-webhooks",
+   "title": "Events & Webhooks",
+   "domain": "operations",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "operations",
+    "events",
+    "webhooks"
+   ],
+   "applies_to": [
+    "api"
+   ],
+   "related": [],
+   "path": "standards/operations/10-events-webhooks.md",
+   "chars": 82862,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 72,
+   "summary": "Events and webhooks are asynchronous APIs."
+  },
+  {
+   "id": "cost",
+   "title": "Cost Engineering FinOps",
+   "domain": "operations",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "operations",
+    "cost",
+    "engineering",
+    "finops"
+   ],
+   "applies_to": [
+    "infra"
+   ],
+   "related": [],
+   "path": "standards/operations/11-cost.md",
+   "chars": 53225,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 78,
+   "summary": "This standard defines the canonical requirements for measuring, allocating, governing, forecasting, and optimizing technology cost."
+  },
+  {
+   "id": "incidents",
+   "title": "Incident Management & On-call",
+   "domain": "operations",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "operations",
+    "incidents",
+    "incident",
+    "management",
+    "on",
+    "call"
+   ],
+   "applies_to": [
+    "infra"
+   ],
+   "related": [
+    "tables",
+    "feedback"
+   ],
+   "path": "standards/operations/12-incidents.md",
+   "chars": 65097,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 79,
+   "summary": "This standard defines how the organisation MUST prepare for, detect, declare, coordinate, mitigate, communicate, review, and learn from production incidents."
+  },
+  {
+   "id": "support",
+   "title": "Support & Escalation",
+   "domain": "operations",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "operations",
+    "support",
+    "escalation"
+   ],
+   "applies_to": [
+    "team"
+   ],
+   "related": [],
+   "path": "standards/operations/13-support.md",
+   "chars": 48964,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 93,
+   "summary": "This standard defines how customer, operational, and internal support requests MUST be received, classified, investigated, escalated, communicated, resolved, and fed back into engineering."
+  },
+  {
+   "id": "documentation",
+   "title": "Documentation Guidelines — Gold Standard 2026",
+   "domain": "process",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "process",
+    "documentation"
+   ],
+   "applies_to": [
+    "team"
+   ],
+   "related": [
+    "code-review",
+    "adr"
+   ],
+   "path": "standards/process/01-documentation.md",
+   "chars": 67623,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 8,
+   "summary": "These guidelines define the canonical standard for product, engineering, API, operational, architectural, and internal documentation."
+  },
+  {
+   "id": "reusable-repositories",
+   "title": "Reusable Repositories & Open-Source Adoption — Gold Standard 2026",
+   "domain": "process",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "process",
+    "reusable",
+    "repositories",
+    "open",
+    "source"
+   ],
+   "applies_to": [
+    "team"
+   ],
+   "related": [
+    "code-review"
+   ],
+   "path": "standards/process/02-reusable-repositories.md",
+   "chars": 45750,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 9,
+   "summary": "These guidelines define how teams may use public repositories, open-source projects, starter kits, boilerplates, templates, reference implementations, examples, snippets, libraries, and existing products when building new products."
+  },
+  {
+   "id": "governance",
+   "title": "Governance Guidelines — Gold Standard 2026",
+   "domain": "process",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "process",
+    "governance"
+   ],
+   "applies_to": [
+    "team"
+   ],
+   "related": [
+    "security"
+   ],
+   "path": "standards/process/03-governance.md",
+   "chars": 74188,
+   "created": "2026-09-22",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 48,
+   "summary": "These guidelines define the canonical organizational standard for engineering governance, including:"
+  },
+  {
+   "id": "dor-dod",
+   "title": "Definition of Ready & Done",
+   "domain": "process",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "process",
+    "dor",
+    "definition",
+    "ready",
+    "done"
+   ],
+   "applies_to": [
+    "general"
+   ],
+   "related": [
+    "tables",
+    "feedback"
+   ],
+   "path": "standards/process/04-dor-dod.md",
+   "chars": 55007,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 87,
+   "summary": "This standard defines when work is sufficiently understood to enter committed delivery and when completed work may legitimately be represented as done."
+  },
+  {
+   "id": "estimation",
+   "title": "Estimation & Planning",
+   "domain": "process",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "process",
+    "estimation",
+    "planning"
+   ],
+   "applies_to": [
+    "team"
+   ],
+   "related": [
+    "code-review"
+   ],
+   "path": "standards/process/05-estimation.md",
+   "chars": 35506,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 88,
+   "summary": "This standard defines how engineering teams MUST estimate, plan, re-estimate, and communicate software delivery work."
+  },
+  {
+   "id": "onboarding",
+   "title": "Onboarding & Ramp-up",
+   "domain": "process",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@dale",
+   "tags": [
+    "process",
+    "onboarding",
+    "ramp",
+    "up"
+   ],
+   "applies_to": [
+    "team"
+   ],
+   "related": [
+    "code-review",
+    "secrets"
+   ],
+   "path": "standards/process/06-onboarding.md",
+   "chars": 52408,
+   "created": "2026-09-23",
+   "updated": "2026-09-23",
+   "review_by": "2026-12-22",
+   "legacy_number": 90,
+   "summary": "This standard defines the canonical requirements for engineering onboarding and technical ramp-up."
+  }
+ ]
+}

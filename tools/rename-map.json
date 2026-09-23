@@ -1,0 +1,818 @@
+{
+ "generated_at": "2026-09-23T05:46:55.065Z",
+ "count": 116,
+ "map": [
+  {
+   "legacy_file": "01-design-system-gold-standard-shadcnui-primary.md",
+   "legacy_number": 1,
+   "id": "design-system",
+   "domain": "design",
+   "path": "standards/design/01-design-system.md"
+  },
+  {
+   "legacy_file": "03-layout-guidelines-gold-standard.md",
+   "legacy_number": 3,
+   "id": "layout",
+   "domain": "design",
+   "path": "standards/design/02-layout.md"
+  },
+  {
+   "legacy_file": "37-content-ux-writing-guidelines-gold-standard-2026.md",
+   "legacy_number": 37,
+   "id": "content-ux-writing",
+   "domain": "design",
+   "path": "standards/design/03-content-ux-writing.md"
+  },
+  {
+   "legacy_file": "38-design-tokens-guidelines-gold-standard-2026.md",
+   "legacy_number": 38,
+   "id": "design-tokens",
+   "domain": "design",
+   "path": "standards/design/04-design-tokens.md"
+  },
+  {
+   "legacy_file": "39-component-guidelines-gold-standard-2026.md",
+   "legacy_number": 39,
+   "id": "component",
+   "domain": "design",
+   "path": "standards/design/05-component.md"
+  },
+  {
+   "legacy_file": "40-responsive-device-guidelines-gold-standard-2026.md",
+   "legacy_number": 40,
+   "id": "responsive-device",
+   "domain": "design",
+   "path": "standards/design/06-responsive-device.md"
+  },
+  {
+   "legacy_file": "50-layout-patterns-catalogue.md",
+   "legacy_number": 50,
+   "id": "layout-patterns",
+   "domain": "design",
+   "path": "standards/design/07-layout-patterns.md"
+  },
+  {
+   "legacy_file": "51-aesthetic-visual-language.md",
+   "legacy_number": 51,
+   "id": "aesthetic",
+   "domain": "design",
+   "path": "standards/design/08-aesthetic.md"
+  },
+  {
+   "legacy_file": "53-empty-loading-error-states-catalogue.md",
+   "legacy_number": 53,
+   "id": "states-catalogue",
+   "domain": "design",
+   "path": "standards/design/09-states-catalogue.md"
+  },
+  {
+   "legacy_file": "54-data-visualization-dashboards.md",
+   "legacy_number": 54,
+   "id": "data-viz",
+   "domain": "design",
+   "path": "standards/design/10-data-viz.md"
+  },
+  {
+   "legacy_file": "55-tables-data-grid.md",
+   "legacy_number": 55,
+   "id": "tables",
+   "domain": "design",
+   "path": "standards/design/11-tables.md"
+  },
+  {
+   "legacy_file": "62-motion-interaction.md",
+   "legacy_number": 62,
+   "id": "motion",
+   "domain": "design",
+   "path": "standards/design/12-motion.md"
+  },
+  {
+   "legacy_file": "63-iconography-illustration.md",
+   "legacy_number": 63,
+   "id": "iconography",
+   "domain": "design",
+   "path": "standards/design/13-iconography.md"
+  },
+  {
+   "legacy_file": "64-theming-multi-brand.md",
+   "legacy_number": 64,
+   "id": "theming",
+   "domain": "design",
+   "path": "standards/design/14-theming.md"
+  },
+  {
+   "legacy_file": "66-overlays-layering.md",
+   "legacy_number": 66,
+   "id": "overlays",
+   "domain": "design",
+   "path": "standards/design/15-overlays.md"
+  },
+  {
+   "legacy_file": "67-feedback-status.md",
+   "legacy_number": 67,
+   "id": "feedback",
+   "domain": "design",
+   "path": "standards/design/16-feedback.md"
+  },
+  {
+   "legacy_file": "91-design-review-handoff.md",
+   "legacy_number": 91,
+   "id": "design-review",
+   "domain": "design",
+   "path": "standards/design/17-design-review.md"
+  },
+  {
+   "legacy_file": "98-colour-typography-type-systems.md",
+   "legacy_number": 98,
+   "id": "colour-type-systems",
+   "domain": "design",
+   "path": "standards/design/18-colour-type-systems.md"
+  },
+  {
+   "legacy_file": "99-spacing-grid-density-elevation-hierarchy.md",
+   "legacy_number": 99,
+   "id": "spacing-grid-depth",
+   "domain": "design",
+   "path": "standards/design/19-spacing-grid-depth.md"
+  },
+  {
+   "legacy_file": "100-design-style-catalogue.md",
+   "legacy_number": 100,
+   "id": "style-catalogue",
+   "domain": "design",
+   "path": "standards/design/20-style-catalogue.md"
+  },
+  {
+   "legacy_file": "101-corporate-enterprise-visual-standards.md",
+   "legacy_number": 101,
+   "id": "corporate-enterprise-visual",
+   "domain": "design",
+   "path": "standards/design/21-corporate-enterprise-visual.md"
+  },
+  {
+   "legacy_file": "102-brand-white-label-application.md",
+   "legacy_number": 102,
+   "id": "brand-whitelabel",
+   "domain": "design",
+   "path": "standards/design/22-brand-whitelabel.md"
+  },
+  {
+   "legacy_file": "103-anti-ai-slop-craft-standard.md",
+   "legacy_number": 103,
+   "id": "anti-ai-slop",
+   "domain": "design",
+   "path": "standards/design/23-anti-ai-slop.md"
+  },
+  {
+   "legacy_file": "104-image-prompt-engineering.md",
+   "legacy_number": 104,
+   "id": "image-prompt-engineering",
+   "domain": "design",
+   "path": "standards/design/24-image-prompt-engineering.md"
+  },
+  {
+   "legacy_file": "105-visual-style-recipe-library.md",
+   "legacy_number": 105,
+   "id": "visual-style-recipes",
+   "domain": "design",
+   "path": "standards/design/25-visual-style-recipes.md"
+  },
+  {
+   "legacy_file": "106-ready-to-use-visual-prompt-packs.md",
+   "legacy_number": 106,
+   "id": "prompt-packs",
+   "domain": "design",
+   "path": "standards/design/26-prompt-packs.md"
+  },
+  {
+   "legacy_file": "107-component-design-variant-contract.md",
+   "legacy_number": 107,
+   "id": "component-variant-contract",
+   "domain": "design",
+   "path": "standards/design/27-component-variant-contract.md"
+  },
+  {
+   "legacy_file": "108-forms-data-entry-editors.md",
+   "legacy_number": 108,
+   "id": "forms-editors",
+   "domain": "design",
+   "path": "standards/design/28-forms-editors.md"
+  },
+  {
+   "legacy_file": "109-search-navigation-wayfinding.md",
+   "legacy_number": 109,
+   "id": "search-navigation",
+   "domain": "design",
+   "path": "standards/design/29-search-navigation.md"
+  },
+  {
+   "legacy_file": "110-overlays-feedback-micro-interactions.md",
+   "legacy_number": 110,
+   "id": "overlays-feedback",
+   "domain": "design",
+   "path": "standards/design/30-overlays-feedback.md"
+  },
+  {
+   "legacy_file": "111-dashboard-data-viz-map-interaction.md",
+   "legacy_number": 111,
+   "id": "dashboard-dataviz-map",
+   "domain": "design",
+   "path": "standards/design/31-dashboard-dataviz-map.md"
+  },
+  {
+   "legacy_file": "112-accessibility-inclusive-design-patterns.md",
+   "legacy_number": 112,
+   "id": "a11y-inclusive",
+   "domain": "design",
+   "path": "standards/design/32-a11y-inclusive.md"
+  },
+  {
+   "legacy_file": "113-content-microcopy-help-onboarding.md",
+   "legacy_number": 113,
+   "id": "content-microcopy",
+   "domain": "design",
+   "path": "standards/design/33-content-microcopy.md"
+  },
+  {
+   "legacy_file": "114-design-system-governance-tokens-docs.md",
+   "legacy_number": 114,
+   "id": "ds-governance-tokens",
+   "domain": "design",
+   "path": "standards/design/34-ds-governance-tokens.md"
+  },
+  {
+   "legacy_file": "115-design-qa-critique-visual-regression-ux-metrics.md",
+   "legacy_number": 115,
+   "id": "design-qa-metrics",
+   "domain": "design",
+   "path": "standards/design/35-design-qa-metrics.md"
+  },
+  {
+   "legacy_file": "116-handoff-prototyping-figma-library.md",
+   "legacy_number": 116,
+   "id": "handoff-figma",
+   "domain": "design",
+   "path": "standards/design/36-handoff-figma.md"
+  },
+  {
+   "legacy_file": "02-facade-guidelines.md",
+   "legacy_number": 2,
+   "id": "facade",
+   "domain": "engineering",
+   "path": "standards/engineering/01-facade.md"
+  },
+  {
+   "legacy_file": "04-routes-guidelines-gold-standard.md",
+   "legacy_number": 4,
+   "id": "routes",
+   "domain": "engineering",
+   "path": "standards/engineering/02-routes.md"
+  },
+  {
+   "legacy_file": "06-reusability-libraries-guidelines-gold-standard.md",
+   "legacy_number": 6,
+   "id": "reusability-libraries",
+   "domain": "engineering",
+   "path": "standards/engineering/03-reusability-libraries.md"
+  },
+  {
+   "legacy_file": "07-framework-guidelines-gold-standard.md",
+   "legacy_number": 7,
+   "id": "framework",
+   "domain": "engineering",
+   "path": "standards/engineering/04-framework.md"
+  },
+  {
+   "legacy_file": "10-architecture-guidelines-gold-standard.md",
+   "legacy_number": 10,
+   "id": "architecture",
+   "domain": "engineering",
+   "path": "standards/engineering/05-architecture.md"
+  },
+  {
+   "legacy_file": "12-api-guidelines-gold-standard.md",
+   "legacy_number": 12,
+   "id": "api",
+   "domain": "engineering",
+   "path": "standards/engineering/06-api.md"
+  },
+  {
+   "legacy_file": "13-state-management-guidelines-gold-standard.md",
+   "legacy_number": 13,
+   "id": "state-management",
+   "domain": "engineering",
+   "path": "standards/engineering/07-state-management.md"
+  },
+  {
+   "legacy_file": "14-forms-validation-guidelines-gold-standard.md",
+   "legacy_number": 14,
+   "id": "forms-validation",
+   "domain": "engineering",
+   "path": "standards/engineering/08-forms-validation.md"
+  },
+  {
+   "legacy_file": "16-error-handling-resilience-guidelines-gold-standard.md",
+   "legacy_number": 16,
+   "id": "error-handling-resilience",
+   "domain": "engineering",
+   "path": "standards/engineering/09-error-handling-resilience.md"
+  },
+  {
+   "legacy_file": "17-testing-guidelines-gold-standard.md",
+   "legacy_number": 17,
+   "id": "testing",
+   "domain": "engineering",
+   "path": "standards/engineering/10-testing.md"
+  },
+  {
+   "legacy_file": "18-performance-guidelines-gold-standard.md",
+   "legacy_number": 18,
+   "id": "performance",
+   "domain": "engineering",
+   "path": "standards/engineering/11-performance.md"
+  },
+  {
+   "legacy_file": "19-accessibility-guidelines-gold-standard-2026.md",
+   "legacy_number": 19,
+   "id": "accessibility",
+   "domain": "engineering",
+   "path": "standards/engineering/12-accessibility.md"
+  },
+  {
+   "legacy_file": "24-cicd-guidelines-gold-standard-2026.md",
+   "legacy_number": 24,
+   "id": "ci-cd",
+   "domain": "engineering",
+   "path": "standards/engineering/13-ci-cd.md"
+  },
+  {
+   "legacy_file": "25-git-repository-guidelines-gold-standard-2026.md",
+   "legacy_number": 25,
+   "id": "git-repository",
+   "domain": "engineering",
+   "path": "standards/engineering/14-git-repository.md"
+  },
+  {
+   "legacy_file": "26-dependency-guidelines-gold-standard-2026.md",
+   "legacy_number": 26,
+   "id": "dependency",
+   "domain": "engineering",
+   "path": "standards/engineering/15-dependency.md"
+  },
+  {
+   "legacy_file": "36-internationalization-guidelines-gold-standard-2026.md",
+   "legacy_number": 36,
+   "id": "internationalization",
+   "domain": "engineering",
+   "path": "standards/engineering/16-internationalization.md"
+  },
+  {
+   "legacy_file": "41-browser-compatibility-guidelines-gold-standard-2026.md",
+   "legacy_number": 41,
+   "id": "browser-compatibility",
+   "domain": "engineering",
+   "path": "standards/engineering/17-browser-compatibility.md"
+  },
+  {
+   "legacy_file": "42-seo-guidelines-gold-standard-2026.md",
+   "legacy_number": 42,
+   "id": "seo",
+   "domain": "engineering",
+   "path": "standards/engineering/18-seo.md"
+  },
+  {
+   "legacy_file": "43-email-guidelines-gold-standard-2026.md",
+   "legacy_number": 43,
+   "id": "email",
+   "domain": "engineering",
+   "path": "standards/engineering/19-email.md"
+  },
+  {
+   "legacy_file": "44-admin-internal-tools-guidelines-gold-standard-2026.md",
+   "legacy_number": 44,
+   "id": "admin-internal-tools",
+   "domain": "engineering",
+   "path": "standards/engineering/20-admin-internal-tools.md"
+  },
+  {
+   "legacy_file": "45-multi-tenancy-guidelines-gold-standard-2026.md",
+   "legacy_number": 45,
+   "id": "multi-tenancy",
+   "domain": "engineering",
+   "path": "standards/engineering/21-multi-tenancy.md"
+  },
+  {
+   "legacy_file": "49-pattern-guidelines-gold-standard-2026.md",
+   "legacy_number": 49,
+   "id": "pattern",
+   "domain": "engineering",
+   "path": "standards/engineering/22-pattern.md"
+  },
+  {
+   "legacy_file": "61-time-date-timezone.md",
+   "legacy_number": 61,
+   "id": "time",
+   "domain": "engineering",
+   "path": "standards/engineering/23-time.md"
+  },
+  {
+   "legacy_file": "65-navigation-information-architecture.md",
+   "legacy_number": 65,
+   "id": "navigation",
+   "domain": "engineering",
+   "path": "standards/engineering/24-navigation.md"
+  },
+  {
+   "legacy_file": "71-realtime-websocket-sse.md",
+   "legacy_number": 71,
+   "id": "realtime",
+   "domain": "engineering",
+   "path": "standards/engineering/25-realtime.md"
+  },
+  {
+   "legacy_file": "73-concurrency-consistency.md",
+   "legacy_number": 73,
+   "id": "concurrency",
+   "domain": "engineering",
+   "path": "standards/engineering/26-concurrency.md"
+  },
+  {
+   "legacy_file": "81-offline-first-sync.md",
+   "legacy_number": 81,
+   "id": "offline-sync",
+   "domain": "engineering",
+   "path": "standards/engineering/27-offline-sync.md"
+  },
+  {
+   "legacy_file": "85-code-review.md",
+   "legacy_number": 85,
+   "id": "code-review",
+   "domain": "engineering",
+   "path": "standards/engineering/28-code-review.md"
+  },
+  {
+   "legacy_file": "86-architecture-decision-records.md",
+   "legacy_number": 86,
+   "id": "adr",
+   "domain": "engineering",
+   "path": "standards/engineering/29-adr.md"
+  },
+  {
+   "legacy_file": "89-technical-debt-refactoring.md",
+   "legacy_number": 89,
+   "id": "tech-debt",
+   "domain": "engineering",
+   "path": "standards/engineering/30-tech-debt.md"
+  },
+  {
+   "legacy_file": "92-experimentation-ab-testing.md",
+   "legacy_number": 92,
+   "id": "experimentation",
+   "domain": "engineering",
+   "path": "standards/engineering/31-experimentation.md"
+  },
+  {
+   "legacy_file": "95-mobile-native-app.md",
+   "legacy_number": 95,
+   "id": "mobile-native",
+   "domain": "engineering",
+   "path": "standards/engineering/32-mobile-native.md"
+  },
+  {
+   "legacy_file": "96-desktop-electron-apps.md",
+   "legacy_number": 96,
+   "id": "desktop-app",
+   "domain": "engineering",
+   "path": "standards/engineering/33-desktop-app.md"
+  },
+  {
+   "legacy_file": "97-browser-extension.md",
+   "legacy_number": 97,
+   "id": "extension",
+   "domain": "engineering",
+   "path": "standards/engineering/34-extension.md"
+  },
+  {
+   "legacy_file": "11-data-database-guidelines-gold-standard.md",
+   "legacy_number": 11,
+   "id": "data-database",
+   "domain": "data",
+   "path": "standards/data/01-data-database.md"
+  },
+  {
+   "legacy_file": "21-analytics-guidelines-gold-standard.md",
+   "legacy_number": 21,
+   "id": "analytics",
+   "domain": "data",
+   "path": "standards/data/02-analytics.md"
+  },
+  {
+   "legacy_file": "32-caching-guidelines-gold-standard-2026.md",
+   "legacy_number": 32,
+   "id": "caching",
+   "domain": "data",
+   "path": "standards/data/03-caching.md"
+  },
+  {
+   "legacy_file": "33-search-guidelines-gold-standard-2026.md",
+   "legacy_number": 33,
+   "id": "search",
+   "domain": "data",
+   "path": "standards/data/04-search.md"
+  },
+  {
+   "legacy_file": "34-file-media-guidelines-gold-standard-2026.md",
+   "legacy_number": 34,
+   "id": "file-media",
+   "domain": "data",
+   "path": "standards/data/05-file-media.md"
+  },
+  {
+   "legacy_file": "58-geospatial-map-guidelines.md",
+   "legacy_number": 58,
+   "id": "geospatial",
+   "domain": "data",
+   "path": "standards/data/06-geospatial.md"
+  },
+  {
+   "legacy_file": "59-data-ingestion-etl-elt.md",
+   "legacy_number": 59,
+   "id": "ingestion",
+   "domain": "data",
+   "path": "standards/data/07-ingestion.md"
+  },
+  {
+   "legacy_file": "60-lakehouse-table-format.md",
+   "legacy_number": 60,
+   "id": "lakehouse",
+   "domain": "data",
+   "path": "standards/data/08-lakehouse.md"
+  },
+  {
+   "legacy_file": "80-data-modeling-schema-evolution.md",
+   "legacy_number": 80,
+   "id": "data-modeling",
+   "domain": "data",
+   "path": "standards/data/09-data-modeling.md"
+  },
+  {
+   "legacy_file": "82-analytics-warehouse-modeling.md",
+   "legacy_number": 82,
+   "id": "warehouse-modeling",
+   "domain": "data",
+   "path": "standards/data/10-warehouse-modeling.md"
+  },
+  {
+   "legacy_file": "83-geospatial-metadata-catalog.md",
+   "legacy_number": 83,
+   "id": "geo-metadata",
+   "domain": "data",
+   "path": "standards/data/11-geo-metadata.md"
+  },
+  {
+   "legacy_file": "84-scientific-environmental-data-quality.md",
+   "legacy_number": 84,
+   "id": "env-data-quality",
+   "domain": "data",
+   "path": "standards/data/12-env-data-quality.md"
+  },
+  {
+   "legacy_file": "47-aillm-guidelines-gold-standard-2026.md",
+   "legacy_number": 47,
+   "id": "ai-llm",
+   "domain": "ai",
+   "path": "standards/ai/01-ai-llm.md"
+  },
+  {
+   "legacy_file": "52-prompt-engineering.md",
+   "legacy_number": 52,
+   "id": "prompt-engineering",
+   "domain": "ai",
+   "path": "standards/ai/02-prompt-engineering.md"
+  },
+  {
+   "legacy_file": "56-ai-agent-guidelines.md",
+   "legacy_number": 56,
+   "id": "ai-agents",
+   "domain": "ai",
+   "path": "standards/ai/03-ai-agents.md"
+  },
+  {
+   "legacy_file": "57-rag-vector-retrieval.md",
+   "legacy_number": 57,
+   "id": "rag",
+   "domain": "ai",
+   "path": "standards/ai/04-rag.md"
+  },
+  {
+   "legacy_file": "68-ai-evaluation-red-team.md",
+   "legacy_number": 68,
+   "id": "ai-eval",
+   "domain": "ai",
+   "path": "standards/ai/05-ai-eval.md"
+  },
+  {
+   "legacy_file": "69-prompt-library-governance.md",
+   "legacy_number": 69,
+   "id": "prompt-library",
+   "domain": "ai",
+   "path": "standards/ai/06-prompt-library.md"
+  },
+  {
+   "legacy_file": "70-ai-ux.md",
+   "legacy_number": 70,
+   "id": "ai-ux",
+   "domain": "ai",
+   "path": "standards/ai/07-ai-ux.md"
+  },
+  {
+   "legacy_file": "05-security-guidelines-gold-standard.md",
+   "legacy_number": 5,
+   "id": "security",
+   "domain": "security",
+   "path": "standards/security/01-security.md"
+  },
+  {
+   "legacy_file": "15-authentication-authorization-guidelines-gold-standard-2026.md",
+   "legacy_number": 15,
+   "id": "authentication-authorization",
+   "domain": "security",
+   "path": "standards/security/02-authentication-authorization.md"
+  },
+  {
+   "legacy_file": "22-privacy-data-governance-guidelines-gold-standard.md",
+   "legacy_number": 22,
+   "id": "privacy-data-governance",
+   "domain": "security",
+   "path": "standards/security/03-privacy-data-governance.md"
+  },
+  {
+   "legacy_file": "74-secrets-key-management.md",
+   "legacy_number": 74,
+   "id": "secrets",
+   "domain": "security",
+   "path": "standards/security/04-secrets.md"
+  },
+  {
+   "legacy_file": "75-rate-limiting-abuse-defense.md",
+   "legacy_number": 75,
+   "id": "abuse",
+   "domain": "security",
+   "path": "standards/security/05-abuse.md"
+  },
+  {
+   "legacy_file": "76-threat-modeling-secure-sdlc.md",
+   "legacy_number": 76,
+   "id": "threat-model",
+   "domain": "security",
+   "path": "standards/security/06-threat-model.md"
+  },
+  {
+   "legacy_file": "77-audit-logging-compliance-evidence.md",
+   "legacy_number": 77,
+   "id": "audit-logging",
+   "domain": "security",
+   "path": "standards/security/07-audit-logging.md"
+  },
+  {
+   "legacy_file": "94-legal-licensing.md",
+   "legacy_number": 94,
+   "id": "legal-licensing",
+   "domain": "security",
+   "path": "standards/security/08-legal-licensing.md"
+  },
+  {
+   "legacy_file": "20-observability-guidelines-gold-standard-2026.md",
+   "legacy_number": 20,
+   "id": "observability",
+   "domain": "operations",
+   "path": "standards/operations/01-observability.md"
+  },
+  {
+   "legacy_file": "23-configuration-environment-guidelines-gold-standard.md",
+   "legacy_number": 23,
+   "id": "configuration-environment",
+   "domain": "operations",
+   "path": "standards/operations/02-configuration-environment.md"
+  },
+  {
+   "legacy_file": "27-deployment-infrastructure-guidelines-gold-standard.md",
+   "legacy_number": 27,
+   "id": "deployment-infrastructure",
+   "domain": "operations",
+   "path": "standards/operations/03-deployment-infrastructure.md"
+  },
+  {
+   "legacy_file": "28-backup-disaster-recovery-guidelines-gold-standard.md",
+   "legacy_number": 28,
+   "id": "backup-disaster-recovery",
+   "domain": "operations",
+   "path": "standards/operations/04-backup-disaster-recovery.md"
+  },
+  {
+   "legacy_file": "29-feature-flag-guidelines-gold-standard-2026.md",
+   "legacy_number": 29,
+   "id": "feature-flag",
+   "domain": "operations",
+   "path": "standards/operations/05-feature-flag.md"
+  },
+  {
+   "legacy_file": "30-release-versioning-guidelines-gold-standard-2026.md",
+   "legacy_number": 30,
+   "id": "release-versioning",
+   "domain": "operations",
+   "path": "standards/operations/06-release-versioning.md"
+  },
+  {
+   "legacy_file": "31-background-jobs-queue-guidelines-gold-standard-2026.md",
+   "legacy_number": 31,
+   "id": "background-jobs-queue",
+   "domain": "operations",
+   "path": "standards/operations/07-background-jobs-queue.md"
+  },
+  {
+   "legacy_file": "35-notifications-guidelines-gold-standard-2026.md",
+   "legacy_number": 35,
+   "id": "notifications",
+   "domain": "operations",
+   "path": "standards/operations/08-notifications.md"
+  },
+  {
+   "legacy_file": "46-billing-payments-guidelines-gold-standard-2026.md",
+   "legacy_number": 46,
+   "id": "billing-payments",
+   "domain": "operations",
+   "path": "standards/operations/09-billing-payments.md"
+  },
+  {
+   "legacy_file": "72-events-webhooks.md",
+   "legacy_number": 72,
+   "id": "events-webhooks",
+   "domain": "operations",
+   "path": "standards/operations/10-events-webhooks.md"
+  },
+  {
+   "legacy_file": "78-cost-engineering-finops.md",
+   "legacy_number": 78,
+   "id": "cost",
+   "domain": "operations",
+   "path": "standards/operations/11-cost.md"
+  },
+  {
+   "legacy_file": "79-incident-management-on-call.md",
+   "legacy_number": 79,
+   "id": "incidents",
+   "domain": "operations",
+   "path": "standards/operations/12-incidents.md"
+  },
+  {
+   "legacy_file": "93-support-escalation.md",
+   "legacy_number": 93,
+   "id": "support",
+   "domain": "operations",
+   "path": "standards/operations/13-support.md"
+  },
+  {
+   "legacy_file": "08-documentation-guidelines-gold-standard-2026.md",
+   "legacy_number": 8,
+   "id": "documentation",
+   "domain": "process",
+   "path": "standards/process/01-documentation.md"
+  },
+  {
+   "legacy_file": "09-reusable-repositories-open-source-adoption-gold-standard-2026.md",
+   "legacy_number": 9,
+   "id": "reusable-repositories",
+   "domain": "process",
+   "path": "standards/process/02-reusable-repositories.md"
+  },
+  {
+   "legacy_file": "48-governance-guidelines-gold-standard-2026.md",
+   "legacy_number": 48,
+   "id": "governance",
+   "domain": "process",
+   "path": "standards/process/03-governance.md"
+  },
+  {
+   "legacy_file": "87-definition-of-ready-done.md",
+   "legacy_number": 87,
+   "id": "dor-dod",
+   "domain": "process",
+   "path": "standards/process/04-dor-dod.md"
+  },
+  {
+   "legacy_file": "88-estimation-planning.md",
+   "legacy_number": 88,
+   "id": "estimation",
+   "domain": "process",
+   "path": "standards/process/05-estimation.md"
+  },
+  {
+   "legacy_file": "90-onboarding-ramp-up.md",
+   "legacy_number": 90,
+   "id": "onboarding",
+   "domain": "process",
+   "path": "standards/process/06-onboarding.md"
+  }
+ ]
+}
