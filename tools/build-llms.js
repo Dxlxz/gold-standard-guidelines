@@ -18,7 +18,7 @@ const link = (p) => BASE + p;
 let llms = '# ' + idx.name + '\n\n';
 llms += '> ' + idx.description + '\n';
 llms += '> ' + idx.count + ' documents, ' + idx.domains.length + ' domains. Normative language: MUST / MUST NOT / SHOULD / SHOULD NOT.\n';
-llms += '> Status: ' + idx.count + ' provisional (draft) standards awaiting review. Generated ' + idx.generated_at.slice(0, 10) + '.\n\n';
+llms += '> Status: ' + idx.count + ' provisional (draft) standards awaiting review. Content updated ' + (idx.content_updated || 'n/a') + '.\n\n';
 llms += 'Start with foundation/ (principles, naming & terminology, authoring, glossary) before applying any standard.\n\n';
 
 for (const d of idx.domains) {

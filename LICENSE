@@ -1,22 +1,3 @@
-Copyright (c) 2026 Dxlxz <https://github.com/Dxlxz>. All rights reserved
-by the copyright holder under the licence terms below.
-
-Documentation in this repository is licensed under the
-Creative Commons Attribution 4.0 International Public License (CC BY 4.0).
-
-  Scope   : every file under standards/, foundation/ and templates/, plus the top-level
-            markdown documents (README, AGENTS, CONTRIBUTING, GOVERNANCE, PROVENANCE,
-            ATTRIBUTION, LICENSING, CHANGELOG, CODE_OF_CONDUCT, SECURITY).
-  Tooling : tools/, .github/, schema/ and the generated artefacts (index.json, llms.txt,
-            llms-full.txt) are licensed under MIT — see LICENSE-MIT.
-  Details : see LICENSING.md (scope, warranties, third-party material, trademarks).
-
-  Canonical licence page  : https://creativecommons.org/licenses/by/4.0/
-  Source of the text below: https://creativecommons.org/licenses/by/4.0/legalcode.txt
-
-The legal code follows verbatim, unmodified.
-
-==============================================================================
 Attribution 4.0 International
 
 =======================================================================

@@ -1,5 +1,7 @@
 # Licensing (scope and details)
 
+**Copyright (c) 2026 Dxlxz** — <https://github.com/Dxlxz>. Documentation is licensed CC BY 4.0, tooling MIT (see the table below). The verbatim CC BY 4.0 legal code is the whole of [`LICENSE`](LICENSE); the MIT text is in [`LICENSE-MIT`](LICENSE-MIT).
+
 This repository uses **two licences**. Which one applies depends on what you are using.
 
 | What | Files | Licence |

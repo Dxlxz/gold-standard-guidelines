@@ -71,7 +71,7 @@ for (const d of docs) byDomain[d.domain] = (byDomain[d.domain] || 0) + 1;
 const index = {
   name: PROJECT_NAME,
   description: pkg.description || 'Canonical engineering, design, data, AI and operational standards.',
-  generated_at: new Date().toISOString(),
+  content_updated: docs.reduce((m, d) => (d.updated && d.updated > m ? d.updated : m), ''),
   count: docs.length,
   domains: DOMAIN_ORDER.filter((d) => byDomain[d]).map((d) => ({ key: d, title: DOMAIN_TITLES[d], count: byDomain[d] })),
   docs,

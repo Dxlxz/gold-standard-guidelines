@@ -7,9 +7,9 @@
 *.js   text eol=lf
 
 # Generated artefacts — reviewable, but hide from diffs/statistics noise.
-index.json      linguist-generated=true -diff
-llms.txt        linguist-generated=true -diff
-llms-full.txt   linguist-generated=true -diff
+index.json      linguist-generated=true
+llms.txt        linguist-generated=true
+llms-full.txt   linguist-generated=true
 tools/rename-map.json linguist-generated=true
 
 # Keep the corpus out of GitHub language statistics.
