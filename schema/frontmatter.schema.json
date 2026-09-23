@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://earthinfo.com.my/guidelines/schema/frontmatter.schema.json",
+  "title": "Guidelines front matter",
+  "description": "Metadata contract for every document in this repository. Validated by tools/validate.js in CI.",
+  "type": "object",
+  "required": ["id", "title", "domain", "status", "version", "owner", "tags", "applies_to", "created", "updated", "review_by", "chars"],
+  "additionalProperties": true,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "maxLength": 60,
+      "description": "Stable identifier, kebab-case, unique across the repo. Never changes once published; renames keep a supersedes/legacy record."
+    },
+    "title": { "type": "string", "minLength": 4, "maxLength": 120, "description": "Human title, Title Case, no version/year suffixes." },
+    "domain": {
+      "type": "string",
+      "enum": ["foundation", "design", "engineering", "data", "ai", "security", "operations", "process"],
+      "description": "Must match the containing folder."
+    },
+    "status": { "type": "string", "enum": ["draft", "review", "active", "deprecated"] },
+    "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$", "description": "Semantic version of the standard itself (see GOVERNANCE.md)." },
+    "owner": { "type": "string", "pattern": "^@[A-Za-z0-9-]+$", "description": "Accountable reviewer (@handle)." },
+    "tags": { "type": "array", "minItems": 1, "items": { "type": "string", "pattern": "^[a-z0-9-]+$" }, "uniqueItems": true },
+    "applies_to": {
+      "type": "array", "minItems": 1, "uniqueItems": true,
+      "items": { "type": "string", "enum": ["general", "ui", "client", "api", "data", "ai", "security", "infra", "team"] }
+    },
+    "related": { "type": "array", "items": { "type": "string" }, "uniqueItems": true, "description": "ids of related documents (must resolve)." },
+    "legacy_number": { "type": ["integer", "null"], "description": "Original export number (traceability only)." },
+    "provenance": {
+      "type": "string",
+      "enum": ["baseline", "generated-batch", "generated-design", "authored"],
+      "description": "How the document was produced. Public repositories MUST NOT carry private provenance (conversation URLs, credentials, internal hosts) — enforced by tools/validate.js."
+    },
+    "created": { "type": "string", "format": "date" },
+    "updated": { "type": "string", "format": "date" },
+    "review_by": { "type": "string", "format": "date", "description": "Next mandatory review date (90 days by default)." },
+    "chars": { "type": "integer", "minimum": 3000, "description": "Body length excluding front matter." }
+  }
+}

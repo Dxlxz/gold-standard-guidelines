@@ -1,0 +1,51 @@
+{
+  "name": "gold-standard-guidelines",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Canonical engineering, design, data, AI and operational standards — 117 source-grounded, machine-readable, CI-validated documents.",
+  "keywords": [
+    "guidelines",
+    "standards",
+    "engineering-standards",
+    "design-system",
+    "data-engineering",
+    "geospatial",
+    "llm",
+    "llms-txt",
+    "ai-agents",
+    "accessibility",
+    "documentation",
+    "spec"
+  ],
+  "license": "CC-BY-4.0",
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dxlxz/gold-standard-guidelines.git"
+  },
+  "homepage": "https://github.com/Dxlxz/gold-standard-guidelines#readme",
+  "bugs": {
+    "url": "https://github.com/Dxlxz/gold-standard-guidelines/issues"
+  },
+  "author": "Dale Jeffrey (@Dxlxz)",
+  "scripts": {
+    "build": "node tools/build-index.js && node tools/build-llms.js",
+    "validate": "node tools/validate.js",
+    "check": "npm run build && npm run validate",
+    "llms": "node tools/build-llms.js",
+    "stats": "node -e \"const i=require('./index.json');console.log(i.count+' documents');for(const d of i.domains)console.log('  '+d.key.padEnd(12)+d.count)\""
+  },
+  "files": [
+    "standards",
+    "foundation",
+    "templates",
+    "schema",
+    "tools",
+    "index.json",
+    "llms.txt",
+    "llms-full.txt"
+  ],
+  "displayName": "Gold Standard Guidelines"
+}

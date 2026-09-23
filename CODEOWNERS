@@ -1,0 +1,23 @@
+# Default owner for everything in this repository.
+# Replace the domain lines with the accountable reviewer for each domain (see GOVERNANCE.md §2).
+# A standard whose owner is vacant cannot leave `draft`.
+
+*                                   @dale
+
+# Domain owners (edit these handles when owners are appointed)
+/standards/design/                  @dale
+/standards/engineering/             @dale
+/standards/data/                    @dale
+/standards/ai/                      @dale
+/standards/security/                @dale
+/standards/operations/              @dale
+/standards/process/                 @dale
+/foundation/                        @dale
+
+# Repository machinery — maintainer only
+/tools/                             @dale
+/.github/                           @dale
+/schema/                            @dale
+/GOVERNANCE.md                      @dale
+/LICENSE                            @dale
+/LICENSE-MIT                        @dale
