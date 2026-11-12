@@ -9,6 +9,7 @@ How this corpus was produced, how to credit it, and what to check before trustin
 | Baseline | 49 | Exported from an internal design-system specification session (2026-09-22) |
 | Generated — engineering/data/AI/security/ops/process | 48 | Authored with a large language model against a fixed document skeleton |
 | Generated — design set | 19 | Same skeleton, plus **web research**: each document drove 37–75 firecrawl search/scrape tool calls and lists its sources |
+| Generated — client-delivery process set | 6 | Same skeleton, written with a large language model with **web research** through Firecrawl (2026-11-12). Each document names how much of each source was read and ends with a "Not verified" list |
 | Navigation | 1 | `foundation/00-index.md`, written for this repository |
 
 Every standard follows the same skeleton — Purpose → Rules → Anti-patterns → Checklist → Canonical

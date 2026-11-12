@@ -3,13 +3,13 @@
 **Canonical engineering, design, data, AI and operational standards — as a repository you can clone, validate, and feed to an AI agent.**
 
 [![validate](https://github.com/Dxlxz/gold-standard-guidelines/actions/workflows/validate.yml/badge.svg)](https://github.com/Dxlxz/gold-standard-guidelines/actions/workflows/validate.yml)
-![documents](https://img.shields.io/badge/documents-117-informational)
+![documents](https://img.shields.io/badge/documents-123-informational)
 ![status](https://img.shields.io/badge/status-drafts%20%C2%B7%20v0.1.0-orange)
 ![docs licence](https://img.shields.io/badge/docs-CC%20BY%204.0-lightgrey)
 ![tooling licence](https://img.shields.io/badge/tools-MIT-blue)
 ![dependencies](https://img.shields.io/badge/npm%20dependencies-0-success)
 
-117 standards across 8 domains: UI and design systems, application engineering, data and geospatial
+123 standards across 8 domains: UI and design systems, application engineering, data and geospatial
 platforms, AI/LLM systems, security, operations, and team process. Every document is written to one
 skeleton — **Purpose → Rules → Anti-patterns → Checklist → Canonical summary → Sources** — uses
 normative language (`MUST` / `MUST NOT` / `SHOULD` / `SHOULD NOT`), and carries machine-readable
@@ -48,7 +48,7 @@ and no way to check compliance. This corpus is the opposite:
 | [`standards/ai/`](standards/ai) | 7 | LLM usage, prompt engineering, prompt library, agents, RAG & vector retrieval, evaluation & red-teaming, AI UX |
 | [`standards/security/`](standards/security) | 8 | security, auth & authorisation, privacy & data governance, secrets, rate limiting & abuse, threat modelling, audit logging, legal & licensing |
 | [`standards/operations/`](standards/operations) | 13 | configuration, deployment & infrastructure, CI/CD, backup & DR, feature flags, release & versioning, background jobs, observability, incidents, cost/FinOps, billing, events & webhooks, support |
-| [`standards/process/`](standards/process) | 6 | documentation, decision records, DoR/DoD, estimation, onboarding, governance, technical debt, experimentation, code review, design review |
+| [`standards/process/`](standards/process) | 12 | documentation, decision records, DoR/DoD, estimation, onboarding, governance, technical debt, experimentation, code review, design review; client delivery: stakeholders, requirements, change control, acceptance, handover, training and adoption |
 
 Browse the machine catalogue: [`index.json`](index.json) · or read the compact list: [`llms.txt`](llms.txt).
 
@@ -64,7 +64,7 @@ Browse the machine catalogue: [`index.json`](index.json) · or read the compact 
 ```bash
 git clone https://github.com/Dxlxz/gold-standard-guidelines.git
 cd gold-standard-guidelines
-npm run stats      # 117 documents, per-domain counts
+npm run stats      # 123 documents, per-domain counts
 npm run check      # rebuild catalogue + validate metadata, naming, links (no network, no deps)
 ```
 

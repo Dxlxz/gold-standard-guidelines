@@ -1,8 +1,8 @@
 # Gold Standard Guidelines
 
-> Canonical engineering, design, data, AI and operational standards — 117 source-grounded, machine-readable, CI-validated documents.
-> 117 documents, 8 domains. Normative language: MUST / MUST NOT / SHOULD / SHOULD NOT.
-> Status: 117 provisional (draft) standards awaiting review. Content updated 2026-09-23.
+> Canonical engineering, design, data, AI and operational standards — 123 source-grounded, machine-readable, CI-validated documents.
+> 123 documents, 8 domains. Normative language: MUST / MUST NOT / SHOULD / SHOULD NOT.
+> Status: 123 provisional (draft) standards awaiting review. Content updated 2026-11-12.
 
 Start with foundation/ (principles, naming & terminology, authoring, glossary) before applying any standard.
 
@@ -131,13 +131,19 @@ Start with foundation/ (principles, naming & terminology, authoring, glossary) b
 - [Incident Management & On-call](https://raw.githubusercontent.com/Dxlxz/gold-standard-guidelines/main/standards/operations/12-incidents.md): This standard defines how the organisation MUST prepare for, detect, declare, coordinate, mitigate, communicate, review, and learn from production incidents.
 - [Support & Escalation](https://raw.githubusercontent.com/Dxlxz/gold-standard-guidelines/main/standards/operations/13-support.md): This standard defines how customer, operational, and internal support requests MUST be received, classified, investigated, escalated, communicated, resolved, and fed back into engineering.
 
-## Process & Team (6)
+## Process & Team (12)
 - [Documentation Guidelines — Gold Standard 2026](https://raw.githubusercontent.com/Dxlxz/gold-standard-guidelines/main/standards/process/01-documentation.md): These guidelines define the canonical standard for product, engineering, API, operational, architectural, and internal documentation.
 - [Reusable Repositories & Open-Source Adoption — Gold Standard 2026](https://raw.githubusercontent.com/Dxlxz/gold-standard-guidelines/main/standards/process/02-reusable-repositories.md): These guidelines define how teams may use public repositories, open-source projects, starter kits, boilerplates, templates, reference implementations, examples, snippets, libraries, and existing products when building new products.
 - [Governance Guidelines — Gold Standard 2026](https://raw.githubusercontent.com/Dxlxz/gold-standard-guidelines/main/standards/process/03-governance.md): These guidelines define the canonical organizational standard for engineering governance, including:
 - [Definition of Ready & Done](https://raw.githubusercontent.com/Dxlxz/gold-standard-guidelines/main/standards/process/04-dor-dod.md): This standard defines when work is sufficiently understood to enter committed delivery and when completed work may legitimately be represented as done.
 - [Estimation & Planning](https://raw.githubusercontent.com/Dxlxz/gold-standard-guidelines/main/standards/process/05-estimation.md): This standard defines how engineering teams MUST estimate, plan, re-estimate, and communicate software delivery work.
 - [Onboarding & Ramp-up](https://raw.githubusercontent.com/Dxlxz/gold-standard-guidelines/main/standards/process/06-onboarding.md): This standard defines the canonical requirements for engineering onboarding and technical ramp-up.
+- [Stakeholder Engagement & Communication](https://raw.githubusercontent.com/Dxlxz/gold-standard-guidelines/main/standards/process/07-stakeholder-engagement.md): This standard defines how a delivery team identifies the people a system affects, agrees who decides what, and keeps them informed. It binds every project delivered for a client, internal or external, from the first week to handover.
+- [Requirements & Discovery](https://raw.githubusercontent.com/Dxlxz/gold-standard-guidelines/main/standards/process/08-requirements-discovery.md): This standard defines how a delivery team finds out what a system must do before it commits to building it, and how it writes that down so the client, the team and the testers read the same thing. It binds every project and every new mod…
+- [Scope Change Control](https://raw.githubusercontent.com/Dxlxz/gold-standard-guidelines/main/standards/process/09-change-control.md): This standard defines how a change to agreed scope is asked for, assessed, decided and recorded. It binds every project that has an agreed baseline of scope, dates or cost, from the day the baseline is approved until handover.
+- [Acceptance Testing & Sign-off](https://raw.githubusercontent.com/Dxlxz/gold-standard-guidelines/main/standards/process/10-acceptance-testing.md): This standard defines how a client decides that a system is acceptable: who tests, against what, in which environment, how defects are judged, and what a signature means. It binds every delivery that a client must accept, whether a whole…
+- [Handover & Transition](https://raw.githubusercontent.com/Dxlxz/gold-standard-guidelines/main/standards/process/11-handover-transition.md): This standard defines how a system moves from the team that built it to the people who will own, run and change it: what is handed over, how the receiving team proves it can operate the system, and when the delivery team's responsibility…
+- [Training & Adoption](https://raw.githubusercontent.com/Dxlxz/gold-standard-guidelines/main/standards/process/12-training-adoption.md): This standard defines how the people who will use a system are prepared for it, and how the team finds out whether they are in fact using it to do their work. It binds every delivery in which people must change how they work: a new syste…
 
 ## Machine-readable
 - [index.json](https://raw.githubusercontent.com/Dxlxz/gold-standard-guidelines/main/index.json): full catalogue — id, domain, status, tags, applies_to, related, path

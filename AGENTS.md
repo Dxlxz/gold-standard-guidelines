@@ -31,6 +31,7 @@ Read this before generating or reviewing code.
 | Performance, caching, realtime, offline | `performance` · `caching` · `realtime` · `concurrency` · `offline-sync` |
 | Deploy, config, CI/CD, incidents | `deployment-infrastructure` · `configuration-environment` · `ci-cd` · `incidents` · `observability` · `threat-model` |
 | Review, planning, decisions, debt | `code-review` · `adr` · `dor-dod` · `estimation` · `tech-debt` · `governance` · `onboarding` |
+| Client delivery: stakeholders, scope, acceptance, handover | `stakeholder-engagement` · `requirements-discovery` · `change-control` · `acceptance-testing` · `handover-transition` · `training-adoption` |
 | Platform & architecture patterns | `architecture` · `facade` · `routes` · `framework` · `state-management` · `pattern` · `reusability-libraries` |
 | Mobile / desktop / extension | `mobile-native` · `desktop-app` · `extension` |
 | Legal, licensing, third-party code | `legal-licensing` · `reusable-repositories` |

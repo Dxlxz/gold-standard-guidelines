@@ -1,8 +1,8 @@
 {
  "name": "Gold Standard Guidelines",
- "description": "Canonical engineering, design, data, AI and operational standards — 117 source-grounded, machine-readable, CI-validated documents.",
- "content_updated": "2026-09-23",
- "count": 117,
+ "description": "Canonical engineering, design, data, AI and operational standards — 123 source-grounded, machine-readable, CI-validated documents.",
+ "content_updated": "2026-11-12",
+ "count": 123,
  "domains": [
   {
    "key": "foundation",
@@ -42,7 +42,7 @@
   {
    "key": "process",
    "title": "Process & Team",
-   "count": 6
+   "count": 12
   }
  ],
  "docs": [
@@ -3158,6 +3158,202 @@
    "review_by": "2026-12-22",
    "legacy_number": 90,
    "summary": "This standard defines the canonical requirements for engineering onboarding and technical ramp-up."
+  },
+  {
+   "id": "stakeholder-engagement",
+   "title": "Stakeholder Engagement & Communication",
+   "domain": "process",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@Dxlxz",
+   "tags": [
+    "process",
+    "stakeholders",
+    "communication",
+    "client-delivery"
+   ],
+   "applies_to": [
+    "team",
+    "general"
+   ],
+   "related": [
+    "requirements-discovery",
+    "change-control",
+    "governance",
+    "documentation",
+    "privacy-data-governance"
+   ],
+   "path": "standards/process/07-stakeholder-engagement.md",
+   "chars": 17568,
+   "created": "2026-11-12",
+   "updated": "2026-11-12",
+   "review_by": "2027-02-10",
+   "legacy_number": null,
+   "summary": "This standard defines how a delivery team identifies the people a system affects, agrees who decides what, and keeps them informed. It binds every project delivered for a client, internal or external, from the first week to handover."
+  },
+  {
+   "id": "requirements-discovery",
+   "title": "Requirements & Discovery",
+   "domain": "process",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@Dxlxz",
+   "tags": [
+    "process",
+    "requirements",
+    "discovery",
+    "user-research",
+    "client-delivery"
+   ],
+   "applies_to": [
+    "team",
+    "general"
+   ],
+   "related": [
+    "stakeholder-engagement",
+    "change-control",
+    "acceptance-testing",
+    "dor-dod",
+    "estimation"
+   ],
+   "path": "standards/process/08-requirements-discovery.md",
+   "chars": 20090,
+   "created": "2026-11-12",
+   "updated": "2026-11-12",
+   "review_by": "2027-02-10",
+   "legacy_number": null,
+   "summary": "This standard defines how a delivery team finds out what a system must do before it commits to building it, and how it writes that down so the client, the team and the testers read the same thing. It binds every project and every new mod…"
+  },
+  {
+   "id": "change-control",
+   "title": "Scope Change Control",
+   "domain": "process",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@Dxlxz",
+   "tags": [
+    "process",
+    "scope",
+    "change-request",
+    "client-delivery"
+   ],
+   "applies_to": [
+    "team",
+    "general"
+   ],
+   "related": [
+    "requirements-discovery",
+    "stakeholder-engagement",
+    "acceptance-testing",
+    "estimation",
+    "dor-dod"
+   ],
+   "path": "standards/process/09-change-control.md",
+   "chars": 18618,
+   "created": "2026-11-12",
+   "updated": "2026-11-12",
+   "review_by": "2027-02-10",
+   "legacy_number": null,
+   "summary": "This standard defines how a change to agreed scope is asked for, assessed, decided and recorded. It binds every project that has an agreed baseline of scope, dates or cost, from the day the baseline is approved until handover."
+  },
+  {
+   "id": "acceptance-testing",
+   "title": "Acceptance Testing & Sign-off",
+   "domain": "process",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@Dxlxz",
+   "tags": [
+    "process",
+    "acceptance",
+    "uat",
+    "sign-off",
+    "client-delivery"
+   ],
+   "applies_to": [
+    "team",
+    "general"
+   ],
+   "related": [
+    "requirements-discovery",
+    "change-control",
+    "handover-transition",
+    "testing",
+    "dor-dod"
+   ],
+   "path": "standards/process/10-acceptance-testing.md",
+   "chars": 21184,
+   "created": "2026-11-12",
+   "updated": "2026-11-12",
+   "review_by": "2027-02-10",
+   "legacy_number": null,
+   "summary": "This standard defines how a client decides that a system is acceptable: who tests, against what, in which environment, how defects are judged, and what a signature means. It binds every delivery that a client must accept, whether a whole…"
+  },
+  {
+   "id": "handover-transition",
+   "title": "Handover & Transition",
+   "domain": "process",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@Dxlxz",
+   "tags": [
+    "process",
+    "handover",
+    "transition",
+    "operations",
+    "client-delivery"
+   ],
+   "applies_to": [
+    "team",
+    "general"
+   ],
+   "related": [
+    "acceptance-testing",
+    "training-adoption",
+    "documentation",
+    "support",
+    "secrets"
+   ],
+   "path": "standards/process/11-handover-transition.md",
+   "chars": 21539,
+   "created": "2026-11-12",
+   "updated": "2026-11-12",
+   "review_by": "2027-02-10",
+   "legacy_number": null,
+   "summary": "This standard defines how a system moves from the team that built it to the people who will own, run and change it: what is handed over, how the receiving team proves it can operate the system, and when the delivery team's responsibility…"
+  },
+  {
+   "id": "training-adoption",
+   "title": "Training & Adoption",
+   "domain": "process",
+   "status": "draft",
+   "version": "0.1.0",
+   "owner": "@Dxlxz",
+   "tags": [
+    "process",
+    "training",
+    "adoption",
+    "change-management",
+    "client-delivery"
+   ],
+   "applies_to": [
+    "team",
+    "general"
+   ],
+   "related": [
+    "handover-transition",
+    "stakeholder-engagement",
+    "acceptance-testing",
+    "onboarding",
+    "support"
+   ],
+   "path": "standards/process/12-training-adoption.md",
+   "chars": 21145,
+   "created": "2026-11-12",
+   "updated": "2026-11-12",
+   "review_by": "2027-02-10",
+   "legacy_number": null,
+   "summary": "This standard defines how the people who will use a system are prepared for it, and how the team finds out whether they are in fact using it to do their work. It binds every delivery in which people must change how they work: a new syste…"
   }
  ]
 }

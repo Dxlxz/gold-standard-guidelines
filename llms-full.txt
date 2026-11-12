@@ -1,6 +1,6 @@
-# Gold Standard Guidelines — Complete Corpus (117 standards)
+# Gold Standard Guidelines — Complete Corpus (123 standards)
 
-Canonical engineering, design, data, AI and operational standards — 117 source-grounded, machine-readable, CI-validated documents.
+Canonical engineering, design, data, AI and operational standards — 123 source-grounded, machine-readable, CI-validated documents.
 
 Normative language: MUST / MUST NOT / SHOULD / SHOULD NOT. All documents are status=draft until reviewed.
 
@@ -138,6 +138,12 @@ Normative language: MUST / MUST NOT / SHOULD / SHOULD NOT. All documents are sta
 - [dor-dod] Definition of Ready & Done — standards/process/04-dor-dod.md
 - [estimation] Estimation & Planning — standards/process/05-estimation.md
 - [onboarding] Onboarding & Ramp-up — standards/process/06-onboarding.md
+- [stakeholder-engagement] Stakeholder Engagement & Communication — standards/process/07-stakeholder-engagement.md
+- [requirements-discovery] Requirements & Discovery — standards/process/08-requirements-discovery.md
+- [change-control] Scope Change Control — standards/process/09-change-control.md
+- [acceptance-testing] Acceptance Testing & Sign-off — standards/process/10-acceptance-testing.md
+- [handover-transition] Handover & Transition — standards/process/11-handover-transition.md
+- [training-adoption] Training & Adoption — standards/process/12-training-adoption.md
 
 
 
@@ -353135,3 +353141,1599 @@ On-call duty and privileged production mutation SHOULD each have separate readin
 shadcn/ui is the canonical baseline for onboarding-management interfaces. Checklist completion, access state, blockers, progress, and readiness MUST remain accessible, authorized, and semantically distinct.
 
 **Canonical rule:** engineering onboarding is conforming only when a new engineer can safely build, test, navigate, change, review, and increasingly operate the systems within their role; can find authoritative architecture and standards without depending on tribal knowledge; and when recurring onboarding friction is treated as a defect in the engineering system rather than a weakness of the person encountering it.
+
+
+<!-- ===== stakeholder-engagement | process | standards/process/07-stakeholder-engagement.md ===== -->
+
+# Stakeholder Engagement & Communication — Gold Standard 2026
+
+## 1. Purpose
+
+This standard defines how a delivery team identifies the people a system affects, agrees who decides what, and
+keeps them informed. It binds every project delivered for a client, internal or external, from the first week to
+handover.
+
+The failure it prevents: a system built to the specification that the client's IT team refuses to host, that
+officers quietly do not use, or that a sponsor learns is late from someone else. These failures are rarely
+technical. They come from a person nobody asked, a decision nobody owned, or a promise nobody wrote down.
+
+A stakeholder is any person or group that pays for the system, decides about it, uses it, runs it, must comply
+because of it, or is affected by what it decides. That includes people who have no power over the project.
+
+**Out of scope:** how needs become requirements (`requirements-discovery`); how a change to agreed scope is decided
+(`change-control`); engineering governance inside the delivery organisation (`governance`); the format of technical
+documents (`documentation`).
+
+## 2. Rules
+
+### 2.1 Identify and map
+
+1. Every project **MUST** have a stakeholder map before requirements work starts, and no later than ten working
+   days after kick-off. Rationale: the cost of a missed stakeholder grows with every decision made without them.
+2. The map **MUST** name at least one real person or team for each of these seats, or state "none: confirmed with
+   the sponsor": the sponsor (decision owner), each end-user role, the team that will run the system after
+   handover, procurement or contract administration, compliance (legal, data protection, audit), the owner of every
+   system this one integrates with, the owner of the data, support and training, and the people the system serves
+   or decides about. Rationale: a fixed list of seats finds the people a brainstorm forgets.
+3. For each entry the map **MUST** record: what the person or team decides or approves, what they care about most,
+   any position they have stated with its source and date, and whether they have been asked about the current
+   decision. Rationale: a name with no interest and no decision right cannot be acted on.
+4. The map **MUST** record influence over the project and interest in its outcome separately for each entry.
+   Rationale: people with high interest and low influence, usually end users and the public, decide whether the
+   system works and cannot stop the project; they need a deliberate channel.
+5. End-user roles and affected people **MUST** appear on the map even when they have no formal say. Rationale: they
+   carry the cost of every decision.
+6. The delivery lead **MUST** review the map at each phase boundary and whenever a named person changes role.
+   Rationale: a map is correct on the day it is written.
+7. A new stakeholder **MUST** be briefed within five working days of being identified: the goal, the current scope,
+   the decisions already made, and what is expected of them. Rationale: a late arrival reopens closed decisions
+   unless they know why each was made.
+
+### 2.2 Decision rights
+
+8. Each type of decision **MUST** have exactly one accountable person, named in writing: scope, budget, acceptance,
+   go-live, data use, security risk acceptance, and public communication. Rationale: two accountable people is
+   none.
+9. The team **MUST** record who is responsible for the work, who is accountable, who is consulted before, and who is
+   informed after, for each deliverable that needs a client decision. A RACI table is the default form.
+   Rationale: "the client" is not a person and cannot approve anything.
+10. The team **MUST NOT** treat agreement from an end user, a technical contact or a friendly manager as a decision
+    that belongs to the accountable person. Rationale: an approval from the wrong person is void on the day it is
+    challenged.
+11. The map **MUST** state an escalation path with a time limit for each level. Rationale: a blocked decision with
+    no path waits for the next steering meeting.
+12. Where the client's own project framework defines governance bodies, the map **MUST** use the client's names
+    and terms of reference for them. Example: a Malaysian public-sector project under PPrISA has a Jawatankuasa
+    Pemandu Projek, a Jawatankuasa Teknikal Projek and a Pasukan Projek, each with a different chair. Rationale:
+    the client's bodies hold the real authority; a parallel structure has none.
+
+### 2.3 Communication plan
+
+13. Every project **MUST** have a written communication plan agreed with the sponsor: for each stakeholder or
+    group, what they receive, how often, through which channel, who sends it, and how the plan itself is updated. Rationale: communication that
+    depends on memory stops when the team is busy, which is when it matters.
+14. The sponsor **MUST** receive a status report at an agreed interval of no more than two weeks. Rationale: two
+    weeks is the longest a sponsor can be out of date and still correct course cheaply.
+15. A status report **MUST** state: what was completed, what comes next, each risk or issue with its owner, each
+    decision needed from the reader with a date, and the current forecast against the agreed dates
+    (`estimation`). Rationale: a report that asks for nothing and forecasts nothing is a diary.
+16. A status report **MUST** use the reader's words for their own work and **MUST NOT** rely on engineering terms
+    the reader has not been taught. Rationale: a sponsor who cannot follow the report cannot act on it.
+17. A forecast in a report **MUST** be the team's honest current forecast. A status colour **MUST** follow written
+    thresholds agreed in the plan. Rationale: a green status the week before a missed date destroys trust in every
+    later report.
+18. News that changes a date, a cost or the scope **MUST** reach the accountable person within one working day of
+    the team knowing it, without waiting for the next report. Rationale: the sponsor has their own superiors to
+    tell, and needs the time.
+19. Each steering or review meeting **SHOULD** end with the list of decisions made and the actions, owners and dates
+    read back. Rationale: people leave the same meeting with different outcomes in mind.
+
+### 2.4 Record of decisions and commitments
+
+20. The project **MUST** keep one decision log that every stakeholder on the map can read: the decision, who made
+    it, the date, the options that were rejected and why. Technical decisions follow `adr`. Rationale: the log is
+    how a decision survives staff turnover on both sides.
+21. Minutes of a meeting where a decision or commitment was made **MUST** be sent to the attendees within two
+    working days, with actions, owners and dates. Rationale: unrecorded agreements are remembered differently by
+    each side.
+22. An agreement made verbally or in chat **MUST** be confirmed in writing in the agreed channel within two working
+    days, and is not a commitment until then. Rationale: chat is not a record, and the person who agreed may not
+    hold the decision right.
+23. Only the delivery lead, or a person the delivery lead names, **MUST** commit the team to a date, a cost or a
+    change of scope. Rationale: a promise made by an engineer in a meeting binds the whole team.
+24. A commitment the team can no longer keep **MUST** be withdrawn explicitly, to the person it was made to, with
+    the new forecast. Rationale: a silent slip is discovered at the worst moment.
+
+### 2.5 End users and affected people
+
+25. The team **MUST** engage end users directly, in their place of work where possible, and not only through their
+    managers. Rationale: a manager describes the process as designed; users follow the process as practised.
+26. Each end-user role on the map **MUST** be consulted at least once in every phase: discovery, design, build,
+    acceptance. The form is defined in `requirements-discovery` and `acceptance-testing`. Rationale: a role that
+    first sees the system at training has no way to change it.
+27. For a system that serves the public or decides about a person, the map **MUST** state how the people affected
+    are represented: direct research with them, a representative body, or evidence such as complaint and appeal
+    records. Rationale: they are not in the room and will not be heard by default.
+28. Output from a simulated stakeholder, including an AI persona, **MUST NOT** be recorded as a stakeholder's
+    position or consent. It is a hypothesis to test with the real person. Rationale: a model wrote the persona,
+    so its agreement is evidence about the model and not about the person.
+29. Engagement **MUST** be accessible to the people engaged: language, literacy, disability, working hours and
+    location (`a11y-inclusive`). Rationale: a session held in the wrong language at the wrong time selects for
+    the people who needed it least.
+
+### 2.6 Conflict and change of people
+
+30. When two stakeholders want incompatible things, the team **MUST** state the conflict and the options to the
+    accountable person, and **MUST NOT** resolve it silently in the design. Rationale: a compromise nobody chose
+    satisfies nobody and has no owner.
+31. When the sponsor or another accountable person leaves, the team **MUST** confirm the successor in writing and
+    walk them through the decision log within ten working days. Rationale: a new sponsor is not bound, in practice,
+    by decisions they have never seen.
+32. A stakeholder who opposes the project **SHOULD** be met early and their objection recorded in their own words.
+    Rationale: an objection that is heard can be designed for; one that is avoided returns at acceptance.
+
+### 2.7 Records about people
+
+33. The stakeholder map **MUST** hold only a person's name, role, organisation, decision rights and positions they
+    stated in a work setting, each with its source. It **MUST NOT** hold opinions about the person, or personal
+    details. Rationale: the map is shared, and it is personal data (`privacy-data-governance`).
+34. The map and the decision log **MUST** be stored where the project's documents live, with access limited to the
+    project. Rationale: a map in one person's notebook is lost when they leave.
+
+## 3. Anti-patterns
+
+| Anti-pattern | Why it fails | Instead |
+|---|---|---|
+| "The client wants…" | Nobody can name who decided, so nobody can confirm or reverse it | Name the accountable person (rule 8) |
+| Sponsor-only engagement | The system fits the sponsor's picture of the work, not the work | Engage each role directly (rules 25, 26) |
+| Watermelon status: green outside, red inside | The first honest report arrives with the missed date | Written thresholds and an honest forecast (rule 17) |
+| The hallway agreement | Each side remembers a different scope | Confirm in writing in two working days (rule 22) |
+| The friendly approver | A technical contact says yes; the Contract Administrator says no at acceptance | One accountable person per decision (rules 8, 10) |
+| The stakeholder discovered at go-live | The IT unit, auditor or neighbouring team blocks the launch | Fixed list of seats in the first ten days (rules 1, 2) |
+| Persona as evidence | An AI persona's "approval" is reported as user support | Hypothesis only (rule 28) |
+| Design by silent compromise | Two conflicting requests are merged into something neither asked for | Put the conflict to the accountable person (rule 30) |
+
+```text
+✗ prohibited: "Status: GREEN. Team is working hard on integration. Some challenges remain."
+✓ required:   "Status: AMBER (forecast go-live 8 December, agreed 1 December).
+               Done: officer approval screen, 14 of 14 acceptance scenarios pass.
+               Next: integration with the payment gateway.
+               Risk: the gateway test account is not issued. Owner: ICT Unit. Needed by 20 November.
+               Decision needed from you by 18 November: accept go-live on 8 December, or remove batch printing."
+```
+
+## 4. Checklist
+
+- [ ] A stakeholder map exists, dated within ten working days of kick-off, and every seat in rule 2 has a name or
+      "none: confirmed with the sponsor".
+- [ ] Each map entry records decision rights, main interest, stated positions with source and date, and influence
+      and interest.
+- [ ] One accountable person is named in writing for scope, budget, acceptance, go-live, data use, security risk
+      acceptance and public communication.
+- [ ] A communication plan lists, per stakeholder, what, how often, which channel and who sends it.
+- [ ] The last status report is no more than two weeks old and contains completed work, next work, risks with
+      owners, decisions needed with dates, and a forecast.
+- [ ] The status thresholds are written in the plan.
+- [ ] The decision log has an entry for every decision in the last steering minutes.
+- [ ] Minutes of the last decision meeting were sent within two working days.
+- [ ] Every end-user role on the map has a dated engagement in the current phase.
+- [ ] For a public-facing system, the map states how affected people are represented.
+- [ ] No entry in the map or the log records a simulated persona's view as a person's position.
+- [ ] The map holds no personal detail beyond name, role, organisation, decision rights and stated positions.
+
+## 5. Canonical summary
+
+- Map the people in the first ten working days, from a fixed list of seats: who pays, decides, uses, runs,
+  complies, integrates, owns the data, supports, and is affected.
+- One accountable person per decision type, named in writing. "The client" is not a person.
+- A written communication plan; a status report at least every two weeks that states done, next, risks, decisions
+  needed and an honest forecast.
+- Bad news reaches the accountable person within one working day.
+- One decision log. Verbal and chat agreements are confirmed in writing within two working days.
+- Engage end users directly and in every phase. People who are affected but absent get an explicit channel.
+- A simulated persona is a hypothesis, never a position or consent.
+- Conflicts between stakeholders go to the accountable person; the team does not settle them in the design.
+- The most common mistake: treating the sponsor's view, or a friendly contact's yes, as everyone's.
+- See also: `requirements-discovery`, `change-control`, `acceptance-testing`, `handover-transition`,
+  `training-adoption`.
+
+## Sources
+
+Every source below was opened and read on 2026-11-12. "Read" names how much of it was read. A rule with no
+source here is this standard's own judgement, and so is every number of days or weeks in the rules.
+
+- **Metodologi PPrISA 2.0: Garis Panduan Pengurusan Projek ICT Sektor Awam** — Jabatan Digital Negara, Kementerian
+  Digital, Versi 2.0 (the file name says "Versi Beta"), December 2024.
+  <https://sqa.jdn.gov.my/images/pdfdocument/pprisa/PPrISA2_0VersiBetaDisember2024.pdf>. Read: full document, by
+  question. Supports rule 12 (three governance bodies whose chairs must be different people), rule 13 (the Pelan
+  Pengurusan Komunikasi lists who needs what, in which format, from whom, by which method, how often, and how the
+  plan is updated), rules 14 and 15 (status reports at a frequency written in the project documents; PPrISA sets
+  no fixed interval, so two weeks is this standard's number).
+- **Templat Pengurusan Projek ICT Sektor Awam (PPrISA)** — Jabatan Digital Negara.
+  <https://sqa.jdn.gov.my/index.php/en/templat-pengurusan-projek-ict-sektor-awam-pprisa>. Read: full page. Lists
+  PPrISA06 Pelan Pengurusan Komunikasi and PPrISA16 and PPrISA17 Laporan Status/Kemajuan Projek.
+- **Governance principles for agile service delivery** — GOV.UK Service Manual, last updated 23 May 2016.
+  <https://www.gov.uk/service-manual/agile-delivery/governance-principles-for-agile-service-delivery>. Read: full
+  page. Supports rules 8 and 11 (decisions at the right level, by the right people, when they are needed) and
+  rule 25 (go and see for yourself).
+- **Learning about users and their needs** — GOV.UK Service Manual, last updated 23 March 2017.
+  <https://www.gov.uk/service-manual/user-research/start-by-learning-user-needs>. Read: full page. Supports rules
+  5 and 25 (users include the staff who provide the service and people who act for others).
+- **What is P2?** — IAP2 Canada. <https://iap2canada.ca/what-is-P2>. Read: full page. Supports rule 27: the IAP2
+  Spectrum has five levels (Inform, Consult, Involve, Collaborate, Empower) and the public's effect on the decision
+  grows at each level. The table of promises for each level was not read.
+- **Environmental Scanning: The Impact of the Stakeholder Concept** — A. L. Mendelow, ICIS 1981 Proceedings.
+  <https://aisel.aisnet.org/icis1981/20>. Read: abstract only. The abstract relates scanning to the power of the
+  stakeholder and the dynamism of the environment. The power and interest grid used in rule 4 is a later
+  adaptation; cite it as "adapted from Mendelow (1981)".
+- **ISO 21502:2020, Project, programme and portfolio management: Guidance on project management** — ISO, edition 1,
+  2020, marked "to be revised". <https://www.iso.org/standard/74947.html>. Read: catalogue page and abstract only.
+  The standard is paywalled; its clause text was not read and no rule here claims to restate it.
+
+### Not verified
+
+- No source read for this standard defines RACI. Rule 9 uses it as common practice.
+- PMBOK Guide and PRINCE2 are paywalled and were not read. Nothing here is taken from them.
+
+
+<!-- ===== requirements-discovery | process | standards/process/08-requirements-discovery.md ===== -->
+
+# Requirements & Discovery — Gold Standard 2026
+
+## 1. Purpose
+
+This standard defines how a delivery team finds out what a system must do before it commits to building it, and
+how it writes that down so the client, the team and the testers read the same thing. It binds every project and
+every new module, from the first conversation to the agreed baseline.
+
+The failure it prevents: a team builds exactly what the document says, and the document was wrong. The usual
+causes are a solution chosen before the problem was understood, requirements written from a meeting room and not
+from the work, and words such as "fast", "user-friendly" and "secure" that every reader interprets differently.
+
+Two terms. A **need** is something a person must be able to do or know to reach their outcome. A **requirement**
+is a statement the system must satisfy, that can be checked, and that traces to a need, a rule or a constraint.
+
+**Out of scope:** who the stakeholders are and who decides (`stakeholder-engagement`); what happens when a
+requirement changes after the baseline (`change-control`); when a single work item is ready to build (`dor-dod`);
+how the work is sized (`estimation`); how the result is accepted (`acceptance-testing`).
+
+## 2. Rules
+
+### 2.1 Start from the problem
+
+1. A project **MUST** begin with a written problem statement agreed with the sponsor: who has the problem, what
+   happens today, what it costs, and what will be different when it is solved. Rationale: a team that cannot state
+   the problem cannot tell whether it solved it.
+2. When the client arrives with a solution ("we need a portal"), the team **MUST** restate it as the problem that
+   solution is meant to solve, and confirm the restatement with the sponsor. Rationale: the solution is one answer;
+   the problem decides whether it is the right one.
+3. The problem statement **MUST** list what is not part of the problem. Rationale: unstated exclusions return as
+   disputes about scope.
+4. The team **MUST** write down the outcome measures that will show success, with the current value where it can
+   be measured. Rationale: "improve the process" cannot be accepted or rejected.
+5. Discovery **MUST** end with an explicit decision by the accountable person: proceed, proceed with a smaller
+   scope, or stop. Rationale: a discovery that can only say yes is a formality.
+6. The team **MUST NOT** start building production features before that decision. A throwaway prototype to test an
+   assumption is allowed and **MUST** be labelled as one. Rationale: code written during discovery hardens the
+   first idea.
+
+### 2.2 Learn from the people who do the work
+
+7. The team **MUST** research with actual or likely users of each role on the stakeholder map, and **MUST NOT**
+   substitute the client's managers, the client's ICT staff or the team's own members for them. Rationale: each of
+   those groups describes the work as it is designed, not as it is done.
+8. For an existing process, the team **MUST** observe the work being done at least once for each role, in the
+   place where it is done. Rationale: people leave out the steps they no longer notice, and those steps are the
+   requirements.
+9. The team **MUST** collect the real artefacts of the work: forms, letters, spreadsheets, registers, the report
+   the director asks for each month. Rationale: the artefacts show the data, the rules and the exceptions that
+   interviews miss.
+10. A round of qualitative research **SHOULD** have four to eight participants for each distinct role. More rounds
+    **SHOULD** be preferred over a larger round. Rationale: small rounds repeated find more than one large round,
+    and a role with one participant is one opinion.
+11. Research **MUST** include people who find the work or the technology hard: new staff, staff at a small or
+    remote office, people with a disability, people with low confidence in digital tools. Rationale: a design
+    tested only with expert users fails everyone else.
+12. Each person who writes requirements or designs screens **SHOULD** observe research directly, at least two
+    hours in every six weeks of discovery and design. Rationale: a summary loses the detail that changes a design.
+13. The team **MUST** record, for each finding, how it is known: observed, said by a user, said by someone about
+    users, or assumed. Rationale: an assumption written in the same list as an observation is soon treated as
+    one.
+
+### 2.3 Write requirements that can be checked
+
+14. Each requirement **MUST** have a unique, stable identifier that is never reused. Rationale: tests, changes and
+    disputes all point at requirements by identifier.
+15. Each requirement **MUST** state one thing. A requirement with "and" that can be half met **MUST** be split.
+    Rationale: a compound requirement cannot be passed or failed.
+16. Each requirement **MUST** be verifiable: a named person can decide, by a test or an inspection, whether the
+    system meets it. Rationale: a requirement that cannot be checked is a wish.
+17. A requirement **MUST NOT** use unmeasured words: fast, easy, user-friendly, robust, flexible, secure, modern,
+    seamless, as appropriate, where possible. It states the measure. Rationale: these words pass review because
+    everyone agrees with them and nobody agrees what they mean.
+18. A requirement **MUST** state what is needed and **SHOULD NOT** state how to build it, unless the "how" is a
+    real constraint, in which case it is recorded as a constraint with its source. Rationale: a design decision
+    written as a requirement cannot be improved without a change request.
+19. Each functional requirement **MUST** carry acceptance criteria before it enters the baseline. Given, When,
+    Then is the default form for behaviour; a rule list is the default for calculations and validations.
+    Rationale: the acceptance criteria are the requirement in the form a tester and a user can both read.
+20. Each requirement **MUST** name its source: the need, the user role, the law or policy clause, the contract
+    clause, or the integration it comes from. Rationale: a requirement with no source cannot be questioned,
+    prioritised or removed.
+21. A user story **SHOULD** be independent, negotiable, valuable, estimable, small and testable (INVEST), and
+    **MUST** name a real role from the stakeholder map, not "user". Rationale: "as a user" hides the conflict
+    between roles.
+
+### 2.4 Rules, data, quality and constraints
+
+22. Business rules **MUST** be written once, in a rules list, each with its source and its owner on the client
+    side, and referenced from the requirements that use them. Rationale: the same rule copied into ten
+    requirements changes in nine.
+23. The requirements **MUST** cover the exceptions as well as the main path: the incomplete application, the
+    returned payment, the officer on leave, the record that was entered wrongly last year. Rationale: the main
+    path is a small part of the work and a smaller part of the effort.
+24. Quality requirements **MUST** be stated with numbers and conditions for at least: performance and capacity,
+    availability and recovery (`backup-disaster-recovery`), security and access (`security`), accessibility
+    (`a11y-inclusive`), languages, browsers and devices, audit trail (`audit-logging`), data retention and
+    privacy (`privacy-data-governance`). "Not applicable" **MUST** be written with a reason. Rationale: quality
+    requirements left out are still expected, and are found at acceptance.
+25. Constraints **MUST** be listed with their source and marked hard or soft: laws, the client's ICT policy and
+    hosting rules, the systems that must be integrated, the budget ceiling, fixed dates. Rationale: a soft
+    constraint treated as hard removes good options; a hard one treated as soft removes the project.
+26. Each integration **MUST** name the other system's owner, the interface, the data exchanged, who is the
+    source of truth for each item, and whether a test environment exists. Rationale: integrations are where the
+    team depends on people who are not on the project.
+27. Data to be migrated **MUST** be profiled during discovery: volume, quality, duplicates, and the owner who will
+    decide what is corrected and what is left behind. Rationale: data quality is discovered either now or during
+    go-live week.
+
+### 2.5 Assumptions, unknowns and priority
+
+28. The team **MUST** keep an assumptions log: the assumption, what breaks if it is false, how it will be tested,
+    and by when. Rationale: every plan rests on assumptions; the log makes them visible before they fail.
+29. The riskiest assumptions **MUST** be tested first, before the baseline where that is possible. Rationale: the
+    cheapest time to be wrong is before the estimate is signed.
+30. Open questions **MUST** each have an owner on the client side and a date. A requirement that depends on an
+    open question **MUST** be marked. Rationale: an unanswered question is answered by the developer, silently.
+31. Requirements **MUST** be prioritised by the accountable person into at least three levels, and the lowest
+    level **MUST** be non-empty. Rationale: when everything is a must, the team decides the priority, at the
+    moment the time runs out.
+
+### 2.6 Baseline, traceability and review
+
+32. The requirements **MUST** be reviewed by the people who will use the system, run it, test it and build it,
+    before the baseline. Rationale: each group finds a different kind of defect, and a defect found here costs
+    a conversation.
+33. A requirements review **MUST** walk through scenarios with users, using a prototype or the real artefacts.
+    Sending a document for comment is not a review. Rationale: people cannot see what is missing from a list;
+    they can when they try to do their work with it.
+34. The baseline **MUST** be approved in writing by the accountable person for scope, with a version number and a
+    date. Rationale: the baseline is what `change-control` measures every later request against.
+35. Where the client's framework names its requirement documents, the team **MUST** use those names and
+    templates. Example: a Malaysian public-sector project under KRISA delivers a Spesifikasi Keperluan Bisnes
+    (BRS) and a Spesifikasi Keperluan Sistem (SRS). Rationale: the client's approval bodies approve documents
+    they recognise.
+36. The team **MUST** keep a traceability record from each need to its requirements, and from each requirement to
+    its acceptance tests. Rationale: it answers the two questions asked at acceptance: "where is my need?" and
+    "why was this built?".
+37. A requirement **MUST NOT** be removed from the baseline silently. It is withdrawn through `change-control`
+    with a reason. Rationale: a requirement that disappears is remembered by the person who asked for it.
+
+### 2.7 Research records and consent
+
+38. Research participants **MUST** be told what the session is for, how the notes or recordings will be used, and
+    that they can stop. Recording **MUST** have their consent. Rationale: staff who think they are being assessed
+    describe the official process.
+39. Research notes **MUST NOT** be used to assess a participant's performance, and findings **MUST** be reported
+    without names unless the participant agrees. Rationale: one breach ends honest answers for the rest of the
+    project (`privacy-data-governance`).
+
+## 3. Anti-patterns
+
+| Anti-pattern | Why it fails | Instead |
+|---|---|---|
+| Solution first | "Build us an app" is accepted as the requirement; the problem is found after go-live | Restate as a problem and confirm it (rules 1, 2) |
+| Requirements by workshop only | The room describes the official process; the exceptions stay at the counter | Observe the work, collect the artefacts (rules 8, 9) |
+| The manager as the user | The approver's needs are met; the clerk's 200 daily entries take twice as long | Research with each real role (rule 7) |
+| Adjective requirements | "The system shall be user-friendly and fast" passes review and fails acceptance | State the measure (rules 16, 17) |
+| Everything is a must | Priority is decided by whatever is unfinished on the last day | A non-empty lowest level (rule 31) |
+| The copied tender specification | Requirements are pasted from the tender; nobody has checked them against the work | Trace each to a need or a rule (rule 20) |
+| Sign-off by email attachment | A 90-page document is "approved" unread | Scenario walkthrough with users (rule 33) |
+| Assumption as fact | "The agency will provide the API" sits in the plan until integration week | Assumptions log, riskiest first (rules 28, 29) |
+| Quality requirements later | Performance, accessibility and audit trail are found at acceptance | Numbers and conditions at baseline (rule 24) |
+
+```text
+✗ prohibited: "REQ-031 The system shall process applications quickly and be easy for officers to use."
+
+✓ required:   "REQ-031 An officer can record a decision on an application.
+               Source: need N-07 (processing officer); Peraturan 12(3).
+               Given an application in status 'Lengkap' assigned to the officer,
+               When the officer selects Lulus or Tolak and enters a reason of at least 10 characters,
+               Then the status changes, the applicant is notified, and the decision, officer and time are
+               written to the audit trail.
+               Quality: the decision screen opens in under 2 seconds at the 95th percentile with 150
+               concurrent officers (NFR-04)."
+```
+
+## 4. Checklist
+
+- [ ] A problem statement exists, is agreed with the sponsor, and lists what is out of the problem.
+- [ ] Outcome measures are written, with current values where measurable.
+- [ ] Each role on the stakeholder map has dated research with real users, and the work was observed at least once.
+- [ ] Findings are marked observed, said, reported or assumed.
+- [ ] Every requirement has an identifier, one statement, a source and acceptance criteria.
+- [ ] No requirement uses an unmeasured word.
+- [ ] Business rules are in one list with a source and a client-side owner.
+- [ ] Quality requirements have numbers, or "not applicable" with a reason, for every area in rule 24.
+- [ ] Constraints are listed with source and marked hard or soft.
+- [ ] Each integration names the owner, interface, data, source of truth and test environment.
+- [ ] Migration data has been profiled and has an owner for correction decisions.
+- [ ] The assumptions log and the open questions each have owners and dates.
+- [ ] Priorities have at least three levels and the lowest is not empty.
+- [ ] The baseline has a version, a date and the written approval of the accountable person for scope.
+- [ ] Traceability exists from need to requirement to acceptance test.
+- [ ] Discovery ended with a recorded proceed, reduce or stop decision.
+
+## 5. Canonical summary
+
+- Agree the problem before the solution. Write what is out of the problem.
+- Learn from the people who do the work, where they do it: observe, collect the real forms and reports.
+- Four to eight participants per role per round; include the people who find it hard.
+- One requirement, one statement, one identifier, one source, and acceptance criteria that a user can read.
+- No unmeasured words. "Fast" is a number and a condition.
+- Rules in one list. Exceptions, quality requirements, constraints, integrations and migration data are
+  requirements too.
+- Keep an assumptions log and test the riskiest first.
+- Priorities come from the accountable person, and something must be in the lowest level.
+- Review by walking through scenarios with users; then baseline with a version and a written approval.
+- The most common mistake: writing requirements from a meeting room and a tender document.
+- See also: `stakeholder-engagement`, `change-control`, `acceptance-testing`, `dor-dod`, `estimation`.
+
+## Sources
+
+Every source below was opened and read on 2026-11-12. "Read" names how much of it was read. A rule with no
+source here is this standard's own judgement.
+
+- **How the discovery phase works** — GOV.UK Service Manual, last updated 21 June 2021.
+  <https://www.gov.uk/service-manual/agile-delivery/how-the-discovery-phase-works>. Read: full page. Supports
+  rules 1 to 6 (understand the problem, the users and the constraints; do not start building; stop if there is no
+  viable service) and rule 25. The page gives a typical length of four to eight weeks.
+- **Learning about users and their needs** — GOV.UK Service Manual, last updated 23 March 2017.
+  <https://www.gov.uk/service-manual/user-research/start-by-learning-user-needs>. Read: full page. Supports the
+  definition of a need, rules 7 to 9 (review existing evidence, interview and observe actual or likely users),
+  rule 18 (problems, not solutions) and rule 36 (keep track of which needs relate to each story).
+- **Plan user research for your service** — GOV.UK Service Manual, last updated 15 October 2026.
+  <https://www.gov.uk/service-manual/user-research/plan-user-research-for-your-service>. Read: full page. Supports
+  rule 10 (four to eight participants a round for interviews and usability tests; a round at least every two
+  weeks), rule 11 (disabled users and people who need support in every round) and rule 12 (two hours of
+  observation every six weeks for each team member).
+- **How Many Test Users in a Usability Study?** — Jakob Nielsen, Nielsen Norman Group, 3 June 2012.
+  <https://www.nngroup.com/articles/how-many-test-users/>. Read: full article. Supports rule 10: five users for a
+  qualitative test, with stated exceptions (about 20 for quantitative studies, 15 per group for card sorting, a
+  few per group when user groups differ). This is evidence about usability tests, not about interviews.
+- **ISO/IEC/IEEE 29148:2018, Systems and software engineering: Life cycle processes: Requirements engineering** —
+  ISO, IEC and IEEE, 2018; a draft revision is in progress. <https://www.iso.org/standard/72089.html>. Read:
+  catalogue page and abstract only. The standard is paywalled. Rules 14 to 18 follow the commonly cited
+  characteristics of a good requirement (singular, unambiguous, verifiable, necessary); the clause text that
+  defines them was not read.
+- **INVEST in Good Stories, and SMART Tasks** — Bill Wake, xp123.com, 2003.
+  <https://xp123.com/invest-in-good-stories-and-smart-tasks/>. Read: full article. Supports rule 21.
+- **Introducing BDD** — Dan North, 2006. <https://dannorth.net/introducing-bdd/>. Read: full article. Supports
+  rule 19 (Given some context, When an event occurs, Then ensure some outcomes).
+- **Ringkasan Eksekutif KRISA (Kejuruteraan Sistem Aplikasi Sektor Awam)** — Jabatan Digital Negara, first
+  published by MAMPU in 2019. <https://sqa.jdn.gov.my/index.php/ms/ringkasan-eksekutif-krisa>. Read: full page.
+  Supports rule 35 (D02 Spesifikasi Keperluan Bisnes, D03 Spesifikasi Keperluan Sistem). A KRISA 2.0 exists and
+  renumbers some documents; it was not read for this standard.
+- **The challenges in implementing digital change** — National Audit Office (UK), 21 July 2021.
+  <https://www.nao.org.uk/insights/the-challenges-in-implementing-digital-change/>. Read: report page (background,
+  scope, conclusions), not the full report. Supports rules 1 and 2: the report finds a consistent pattern of
+  underperformance, often because technology decisions were taken before the business problem was understood.
+- **Contracting for Agile Guidance Note** — UK Digital, Data and Technology Playbook, 20 June 2023.
+  <https://www.gov.uk/government/publications/the-digital-data-and-technology-playbook/contracting-for-agile-guidance-note-html>.
+  Read: full page. Supports rule 31 (requirements prioritised by the Product Owner, for example with MoSCoW).
+
+### Not verified
+
+- BABOK Guide (IIBA): only the task titles are public. Nothing here is taken from it.
+- The numbers in rule 10 come from guidance on research rounds and usability tests. No source read here gives a
+  number of participants for requirements discovery as such.
+
+
+<!-- ===== change-control | process | standards/process/09-change-control.md ===== -->
+
+# Scope Change Control — Gold Standard 2026
+
+## 1. Purpose
+
+This standard defines how a change to agreed scope is asked for, assessed, decided and recorded. It binds every
+project that has an agreed baseline of scope, dates or cost, from the day the baseline is approved until handover.
+
+The failure it prevents has two forms. In the first, the team says yes to every request in a meeting; the date
+slips, nobody decided that it should, and the team is blamed for a delay the client asked for. In the second, the
+team says "that is a change request" to everything, including its own defects; the client stops asking and builds
+a spreadsheet next to the system. Both come from the same gap: no shared rule for what a change is and who
+decides.
+
+Change is normal and often correct. The purpose of change control is that every change is a decision made by the
+person who owns the consequence, with the consequence in front of them.
+
+**Out of scope:** changes to live infrastructure and releases (`release-versioning`, `deployment-infrastructure`);
+defects and how they are fixed (`testing`, `acceptance-testing`); how the baseline is produced
+(`requirements-discovery`); how size is forecast (`estimation`).
+
+## 2. Rules
+
+### 2.1 The baseline
+
+1. A project **MUST** have a baseline before change control applies: the approved requirements with a version,
+   the agreed dates or forecast, and the agreed cost or capacity. Rationale: a change is a difference from
+   something; without a baseline every request is an argument.
+2. The baseline **MUST** name what is fixed and what may vary. For a fixed-price, fixed-date contract, scope is
+   usually the part that varies. Rationale: when all three are declared fixed, quality becomes the variable and
+   nobody chose that.
+3. The change procedure **MUST** be written in the project plan and agreed with the sponsor before the first
+   request arrives: the form, who assesses, who decides at each level, and the time limits. Rationale: a procedure
+   invented during the first dispute is seen as a tactic.
+4. Where the client's framework has a change procedure, the team **MUST** use it. Example: a Malaysian
+   public-sector project under PPrISA uses the Borang Permohonan Pindaan and the Log Penyelesaian Pindaan, and a
+   complex project is advised to have a Change Control Board chaired by the Pemilik Projek. Rationale: a decision made outside
+   the client's own procedure does not bind the client.
+
+### 2.2 What is a change
+
+5. Every request **MUST** be classified as one of four things before anyone estimates it:
+   **defect** (the system does not do what an agreed requirement or acceptance criterion says),
+   **clarification** (the requirement was ambiguous and this settles which meaning was intended),
+   **change** (the baseline does not contain it, or contains something different), or
+   **new work** (outside the purpose of the project).
+   Rationale: each has a different owner of cost, and most disputes are about the class and not the work.
+6. A defect **MUST NOT** be handled as a change request, and **MUST NOT** be charged as one. Rationale: the client
+   already paid for the requirement to be met.
+7. A clarification **MUST** be decided by reading the baseline, the acceptance criteria and the research record
+   together. Where they do not settle it, the team **MUST** state both readings and their cost to the accountable
+   person. Rationale: an ambiguity is a shared failure of the baseline; treating it as wholly one side's fault
+   costs more than the work.
+8. The team **MUST NOT** classify a request alone when the class is disputed. The dispute goes to the person
+   named in the escalation path (`stakeholder-engagement`). Rationale: the party that benefits from the class
+   cannot be its only judge.
+9. A requirement found to be wrong, impossible or harmful **MUST** be raised as a change by the team itself.
+   Rationale: change control is not only for the client's requests; building a requirement the team knows is
+   wrong is not compliance.
+
+### 2.3 The request
+
+10. Every change **MUST** have a written request with an identifier: who asks, what is wanted, why, and by when
+    it is needed. The team writes it down when the request arrives verbally. Rationale: a request that exists only
+    in a meeting has as many versions as attendees.
+11. A request **MUST** state the need behind it, not only the solution asked for. Rationale: the team can often
+    meet the need with something smaller that is already in scope.
+12. Receiving a request **MUST NOT** be treated as accepting it, by either side. The team **MUST** say so at the
+    moment of receipt. Rationale: "noted" in a meeting is heard as "yes".
+13. Work on a change **MUST NOT** start before it is approved, except the assessment itself. Rationale: started
+    work becomes the argument for approving it.
+
+### 2.4 Impact assessment
+
+14. The team **MUST** assess each request against at least: scope (requirements added, changed, removed), effort
+    and cost, dates, quality and test effort, risk, other modules and integrations, data and migration, security
+    and privacy, training and documentation, and work already done that would be discarded. Rationale: the
+    visible cost of a change is the screen; most of the cost is everywhere else.
+15. The assessment **MUST** state the cost of not making the change. Rationale: without it the comparison is
+    always "cost versus nothing".
+16. The assessment **MUST** offer at least two options where they exist: make the change and move the date, make
+    it and remove something of equal size, defer it to a later phase, or decline. Rationale: one option is a
+    price, not a decision.
+17. The assessment **MUST** be returned within a time limit written in the procedure; five working days is the
+    default. A larger assessment **MUST** be agreed as its own piece of work. Rationale: a request with no answer
+    is assumed to be in progress.
+18. The effect on dates **MUST** follow `estimation`: a forecast with a range, not a single date. Rationale: a
+    change assessed with false precision produces the next change request.
+
+### 2.5 The decision
+
+19. Every change **MUST** be decided by the accountable person for scope, or by the body the procedure names, and
+    recorded as approved, rejected or deferred, with the option chosen. Rationale: the person who owns the budget
+    and the date is the only one who can trade them.
+20. The procedure **MUST** set levels of authority. Default: the delivery lead and the client's project manager
+    together may approve a change that has no effect on the agreed dates, cost, quality requirements or other
+    modules; anything else goes to the accountable person or the change board. Rationale: sending every label
+    change to a steering committee teaches people to go around the procedure.
+21. An approval **MUST** state what gives way: the date moves, the cost rises, or named scope is removed. An
+    approval that changes nothing else **MUST** say that it uses contingency, and how much remains. Rationale:
+    "approved, same date, same cost" is how a project becomes late in small steps.
+22. A decision **MUST** be made within the time limit in the procedure. A request with no decision by its
+    needed-by date is escalated, not assumed. Rationale: silence is not approval and is not rejection.
+23. A rejected or deferred request **MUST** be answered to the requester with the reason. Rationale: the person
+    who asked had a need; if it is not heard it returns at acceptance.
+24. A change that alters the contract price, the contract dates or the contracted deliverables **MUST** also
+    follow the variation clause of the contract, and **MUST** be signed by the people the contract authorises.
+    Rationale: a project-level approval does not amend a contract.
+
+### 2.6 Small changes and working backlogs
+
+25. For iterative delivery, the procedure **SHOULD** allow the product owner to reorder, split and replace items
+    within the baseline without a change request, when the total size and the agreed outcomes do not change.
+    Rationale: reprioritising within scope is the intended use of a backlog, and is not a change of scope.
+26. Replacing an item with one of equal size **MUST** be recorded in the backlog with what was removed and who
+    agreed. Rationale: the removed item is the one remembered at acceptance.
+27. The project **SHOULD** hold a small change allowance, agreed at the start, for changes below a stated size,
+    decided by the product owner and reported in each status report. Rationale: an allowance makes small changes
+    cheap to decide and visible in total.
+28. Work in an iteration that has started **SHOULD NOT** change, unless the product owner and the team agree that
+    the iteration's goal is not put at risk. Rationale: a change mid-iteration costs the work in progress as
+    well as the new work.
+29. The sum of small changes **MUST** be reported against the baseline in each status report. Rationale: scope
+    creep is a total; each item alone is reasonable.
+
+### 2.7 Urgent changes
+
+30. A change needed to meet a legal deadline, protect people or data, or keep a service running **MAY** start on
+    the verbal approval of the accountable person. The written request and assessment **MUST** follow within two
+    working days. Rationale: the procedure must not be the reason a real emergency is handled late.
+31. Urgent changes **MUST** be counted and reviewed at each steering meeting. Rationale: a path with no paperwork
+    becomes the normal path unless someone counts its use.
+
+### 2.8 After the decision
+
+32. An approved change **MUST** update the baseline: the requirements with a new version, the acceptance
+    criteria and tests, the plan and forecast, and the documents and training material it touches. Rationale: a
+    change that is built and not written into the baseline is a defect at acceptance.
+33. The project **MUST** keep one change log that every stakeholder on the map can read: identifier, class,
+    requester, date, assessment, decision, decider, and the baseline version that contains it. Rationale: the log
+    is the answer to "why is this late?" and "who agreed this?".
+34. Approved changes **MUST** be communicated to everyone whose work they affect, including testers, trainers
+    and the team that will run the system. Rationale: the tester who is not told fails the changed feature
+    against the old requirement.
+35. Each status report **MUST** show the changes received, approved, rejected and pending since the last report,
+    and their total effect on dates and cost. Rationale: the sponsor should never learn the total from the final
+    invoice.
+36. At the end of the project the change log **MUST** be reviewed for patterns: which part of the requirements
+    produced the most changes and why. Rationale: a cluster of changes is a finding about discovery, and the next
+    project needs it.
+
+## 3. Anti-patterns
+
+| Anti-pattern | Why it fails | Instead |
+|---|---|---|
+| "While you're there, can you just…" | Accepted in a meeting, never assessed, paid for with the date | Written request, not accepted on receipt (rules 10, 12) |
+| Everything is a change request | Defects and ambiguities are billed; the client stops reporting them | Classify first; defects are never changes (rules 5, 6) |
+| Nothing is a change request | The team absorbs every request until it misses the date | Assess and decide each one (rules 14, 19) |
+| The engineer's yes | A developer agrees in a demo; the delivery lead learns at the next sprint | Only the named person commits (`stakeholder-engagement` rule 23) |
+| Approved, same date, same cost | Each approval is free; the project is late by the sum | State what gives way (rule 21) |
+| Gold plating | The team adds what it thinks is better, untested and unasked | A team's own idea is also a request (rule 9) |
+| Change by defect ticket | A new feature is logged as a bug to skip the procedure | Classification before estimate; disputes escalate (rules 5, 8) |
+| The steering committee for a label | Trivial changes wait three weeks, so people stop using the procedure | Levels of authority and an allowance (rules 20, 27) |
+| The unwritten change | Built, working, and missing from the requirements, the tests and the manual | Update the baseline (rule 32) |
+
+```text
+✗ prohibited: Meeting note: "Client asked for bulk approval. Team to look into it."
+
+✓ required:   CR-014 (class: change). Requested by Puan Aida, Unit Pelesenan, 12 November.
+              Need: 300 renewals a week are approved one at a time; each takes about 40 seconds.
+              Options: (A) bulk approval of up to 50 renewals: 9 to 13 days; go-live forecast moves from
+                           1 December to 15–19 December; adds 6 acceptance scenarios; audit trail records
+                           one decision per renewal.
+                       (B) keyboard shortcut and auto-advance: 2 days, inside the change allowance
+                           (6 of 10 days remain); no date change.
+                       (C) defer to phase 2.
+              Cost of no change: about 3.5 officer-hours a week.
+              Decision by 19 November: Encik Farid (accountable for scope).
+```
+
+## 4. Checklist
+
+- [ ] The baseline has a version, a date and a written approval, and states what is fixed and what may vary.
+- [ ] The change procedure is written in the project plan and was agreed before the first request.
+- [ ] The procedure names who assesses, who decides at each level, and the time limits.
+- [ ] Every request in the log has an identifier, a requester, a need and a class.
+- [ ] No defect has been handled or charged as a change.
+- [ ] Each assessment covers the areas in rule 14, the cost of no change, and at least two options.
+- [ ] Each decision names the decider, the option, and what gives way.
+- [ ] No work started before approval, except recorded urgent changes.
+- [ ] Each approved change is in the requirements, the acceptance tests, the plan and the documents.
+- [ ] Contract-level changes followed the variation clause.
+- [ ] The last status report shows received, approved, rejected and pending changes and their total effect.
+- [ ] Urgent changes were counted at the last steering meeting.
+- [ ] Rejected and deferred requests were answered with a reason.
+
+## 5. Canonical summary
+
+- No baseline, no change control. Agree the baseline and the procedure before the first request.
+- Classify before you estimate: defect, clarification, change or new work. A defect is never a change request.
+- Every request is written, with the need behind it. Receiving it is not accepting it.
+- Assess the whole effect: scope, cost, dates, quality, risk, other modules, data, training, discarded work.
+- Offer options, including the cost of doing nothing.
+- The accountable person decides. Every approval states what gives way: date, cost or other scope.
+- Small changes have a cheap path with an allowance, and their total is reported.
+- Urgent changes may start on verbal approval; the paper follows in two working days.
+- An approved change updates the requirements, the tests, the plan and the documents.
+- The most common mistake: saying yes in the meeting.
+- See also: `requirements-discovery`, `stakeholder-engagement`, `acceptance-testing`, `estimation`.
+
+## Sources
+
+Every source below was opened and read on 2026-11-12. "Read" names how much of it was read. A rule with no
+source here is this standard's own judgement, and so is every number of days in the rules.
+
+- **Metodologi PPrISA 2.0: Garis Panduan Pengurusan Projek ICT Sektor Awam** — Jabatan Digital Negara, Kementerian
+  Digital, Versi 2.0 (the file name says "Versi Beta"), December 2024.
+  <https://sqa.jdn.gov.my/images/pdfdocument/pprisa/PPrISA2_0VersiBetaDisember2024.pdf>. Read: full document, by
+  question. Supports rules 3 and 4: a formal change request procedure, a Change Control Board advised for complex
+  projects and chaired by the Pemilik Projek, which reviews each request, approves or rejects it and recommends
+  to the technical and steering committees. Two reads of this document disagreed on whether it lets the Pengurus
+  Projek approve a request that has no effect on scope, cost, schedule or quality. Rule 20 is therefore this
+  standard's own threshold and is not attributed to PPrISA.
+- **Templat Pengurusan Projek ICT Sektor Awam (PPrISA)** — Jabatan Digital Negara.
+  <https://sqa.jdn.gov.my/index.php/en/templat-pengurusan-projek-ict-sektor-awam-pprisa>. Read: full page. Lists
+  PPrISA10 Borang Permohonan Pindaan and PPrISA11 Log Penyelesaian Pindaan (rules 4, 10, 33).
+- **Contracting for Agile Guidance Note** — UK Digital, Data and Technology Playbook, 20 June 2023.
+  <https://www.gov.uk/government/publications/the-digital-data-and-technology-playbook/contracting-for-agile-guidance-note-html>.
+  Read: full page. Supports rule 2 (under a fixed-price agile model, time and cost are fixed and scope varies),
+  rule 25 (the backlog is reprioritised through regular planning while the client keeps control of scope), and
+  rule 6 (the contract should state what level of defects is acceptable and give warranties against defects).
+- **Principles behind the Agile Manifesto** — agilemanifesto.org. <https://agilemanifesto.org/principles.html>.
+  Read: full page. Supports the Purpose: changing requirements are welcome, even late, when they serve the
+  customer.
+- **The Scrum Guide** — Ken Schwaber and Jeff Sutherland, November 2020.
+  <https://scrumguides.org/scrum-guide.html>. Read: full page. Supports rules 25 and 28: the Product Owner orders
+  the Product Backlog; during a Sprint no change is made that endangers the Sprint Goal, and scope may be
+  clarified and renegotiated with the Product Owner.
+- **ISO 21502:2020, Project, programme and portfolio management: Guidance on project management** — ISO, edition 1,
+  2020, marked "to be revised". <https://www.iso.org/standard/74947.html>. Read: catalogue page and abstract only.
+  The standard is paywalled; its clause on change control was not read and no rule here claims to restate it.
+
+### Not verified
+
+- PRINCE2 (issue types, change authority, change budget) and the PMBOK Guide are paywalled and were not read.
+  The change allowance in rule 27 resembles what secondary sources call a PRINCE2 change budget; that
+  resemblance is not checked against the manual.
+- ITIL change enablement governs changes to live services. It is not a source for contract scope and is not
+  used here.
+- The four classes in rule 5 are this standard's own. No source read here defines them.
+
+
+<!-- ===== acceptance-testing | process | standards/process/10-acceptance-testing.md ===== -->
+
+# Acceptance Testing & Sign-off — Gold Standard 2026
+
+## 1. Purpose
+
+This standard defines how a client decides that a system is acceptable: who tests, against what, in which
+environment, how defects are judged, and what a signature means. It binds every delivery that a client must
+accept, whether a whole system, a release or a module.
+
+The failure it prevents: acceptance that is either a ceremony or a siege. In the ceremony, a few managers click
+through a demo script, sign, and the real users find the problems in the first week of live use. In the siege,
+nobody agreed what "accepted" means, so testing never ends, every defect is a blocker, and the signature is held
+back as leverage. Both come from deciding the rules of acceptance during acceptance.
+
+Acceptance testing is not the team's own testing. The team's unit, integration and system tests (`testing`) show
+that the system was built correctly. Acceptance testing lets the client decide whether to accept it.
+
+**Out of scope:** the team's own test levels and automation (`testing`); when one work item is done (`dor-dod`);
+how a change found during acceptance is decided (`change-control`); what is handed over after acceptance
+(`handover-transition`).
+
+### Terms
+
+| This standard | ISTQB term | KRISA term (Malaysian public sector) |
+|---|---|---|
+| User acceptance | User acceptance testing (UAT) | Ujian Penerimaan Pengguna (UAT): functions |
+| Operational acceptance | Operational acceptance testing | Part of Ujian Penerimaan Provisional (PAT): functional and non-functional, in the real environment, before go-live |
+| Contractual and regulatory acceptance | Contractual, regulatory acceptance testing | No separate term found in the chapters read |
+| Pilot | Beta testing (closest form) | Pilot within PAT; one month is KRISA's example |
+| Final acceptance | No direct term | Ujian Penerimaan Akhir (FAT): the agency's formal consent to enter production and the warranty period |
+
+## 2. Rules
+
+### 2.1 Decide the rules of acceptance first
+
+1. Every requirement in the baseline **MUST** have acceptance criteria before it is built
+   (`requirements-discovery` rule 19). Rationale: criteria written after the build describe what was built.
+2. An acceptance test plan **MUST** be agreed with the client before acceptance testing starts, and **SHOULD** be
+   agreed before the build is half complete. Rationale: the plan decides effort, environment and people on the
+   client's side, and they need notice.
+3. The plan **MUST** state: the scope and the baseline version under test, the forms of acceptance to be done,
+   the environments, the test data, the testers by role, the schedule, the entry criteria, the exit criteria, the
+   severity scale, how defects are reported and decided, and who signs. Rationale: each missing item becomes a
+   dispute in the second week of testing.
+4. The plan **MUST** be approved by the accountable person for acceptance, or by the body the client's framework
+   names. Example: under KRISA the Jawatankuasa Pemandu Projek approves the PAT strategy. Rationale: a plan the
+   signer has not approved does not bind the signature.
+5. The exit criteria **MUST** be numbers and conditions, agreed in the plan. Rationale: "when the client is
+   satisfied" has no end.
+
+### 2.2 Entry criteria
+
+6. Acceptance testing **MUST NOT** start until the team's own system testing of the same baseline is complete and
+   its results are shared with the client. Rationale: users who find basic defects on the first day stop
+   trusting the system and the team.
+7. Before the start, the following **MUST** be true and recorded: the acceptance environment is ready and matches
+   the plan, the test data is loaded, the scenarios and scripts are reviewed by the client, the testers are named
+   and briefed, known defects are listed, and access for every tester works. Rationale: the first days of a
+   test window are otherwise spent on logins.
+8. A failed entry check **MUST** move the start date. It **MUST NOT** be resolved by starting anyway and counting
+   the lost days as testing. Rationale: a shortened test window is the most common cause of a ceremony.
+
+### 2.3 Who tests
+
+9. User acceptance **MUST** be performed by people who will use the system in each role on the stakeholder map,
+   not by their managers alone and not by the delivery team. Rationale: acceptance by someone who will not use
+   the system accepts a different system.
+10. The delivery team **MUST NOT** execute acceptance tests on the client's behalf. It **MAY** support the session:
+    explain, record, reproduce. Rationale: a tester who built the feature tests what they meant, and independence
+    is the point of this test level.
+11. Operational acceptance **MUST** be performed with the team that will run the system: backup and restore,
+    monitoring and alerts, deployment and rollback, user administration, and the support procedure. Rationale: a
+    system its operators have never operated is not ready, whatever the users say.
+12. Testers **MUST** be released from their normal work for the test sessions, and the plan **MUST** record their
+    manager's agreement. Rationale: testing done between counter duties is not done.
+13. Testers **MUST** be briefed before the first session: the purpose, how to run a scenario, how to report a
+    defect, and that finding problems is the job. Rationale: untrained testers either report nothing or report
+    preferences.
+14. The sessions **MUST** be accessible to the testers: language, location, working hours, assistive technology
+    (`a11y-inclusive`). Rationale: the testers who cannot attend are the users the system will fail.
+
+### 2.4 What is tested
+
+15. Each acceptance scenario **MUST** trace to requirements in the baseline, and every requirement in scope
+    **MUST** be covered by at least one scenario or by a recorded reason. Rationale: untraced tests check the
+    script writer's memory; uncovered requirements are accepted untested.
+16. Scenarios **MUST** follow real work from start to finish across roles, using realistic data, and **MUST**
+    include the exceptions named in the requirements. Rationale: a system passes screen by screen and fails
+    case by case.
+17. Testers **SHOULD** have unscripted time in each session to do their own real work in the system. Rationale:
+    scripts find what the author expected; real work finds the rest.
+18. Acceptance **MUST** cover the quality requirements with evidence: performance under the agreed load,
+    accessibility, security test results, audit trail, reports, and each integration against the real or the
+    agreed test system. Rationale: these are requirements, and they are the ones a demo cannot show.
+19. Migrated data **MUST** be verified by the data owner: counts reconciled against the source, and a sample of
+    records checked value by value. Rationale: a correct system with wrong data is a wrong system.
+20. Test data **MUST NOT** contain real personal data unless the data owner has approved it in writing and the
+    environment is protected to the same level as production (`privacy-data-governance`). Rationale: test
+    environments are the usual place where personal data leaks.
+
+### 2.5 Defects
+
+21. Every defect **MUST** be recorded in one shared register with: an identifier, the scenario and step, the
+    expected and the actual result, evidence, the environment and build, the reporter, a severity, a priority and
+    a status. Rationale: a defect described in a chat message cannot be reproduced, retested or counted.
+22. The severity scale **MUST** be defined in the plan with examples from this system. Default: **1 High** (a
+    main task cannot be completed, data is lost or wrong, a security or legal requirement fails, no workaround);
+    **2 Medium** (a task can be completed only with a workaround, or a secondary function fails); **3 Low**
+    (cosmetic or wording, no effect on the task). Rationale: severity agreed in advance is a fact; severity
+    argued at sign-off is a negotiation.
+23. Severity **MUST** be proposed by the reporter and confirmed in a joint triage of client and team, held at
+    least every two working days during testing. Rationale: one side alone rates everything High or everything
+    Low.
+24. Each finding **MUST** be classified in triage as a defect, a clarification or a change, under
+    `change-control` rule 5. A change **MUST** leave the defect register and enter the change log. Rationale: an
+    acceptance register full of new wishes never empties.
+25. A fixed defect **MUST** be retested by the person who reported it or another tester of the same role, and the
+    scenarios the fix could affect **MUST** be run again. Rationale: a fix confirmed only by the developer is
+    not confirmed.
+26. A defect **MUST NOT** be closed, downgraded or deferred without the agreement of the client's test lead,
+    recorded in the register. Rationale: a register the client does not trust is replaced by a private
+    spreadsheet.
+
+### 2.6 Exit and sign-off
+
+27. Testing ends when the exit criteria in the plan are met, and not before. The default criteria are: every
+    planned scenario executed; the agreed pass rate reached; no open severity 1 or 2 defect; every open severity
+    3 defect has an owner and a date; quality evidence under rule 18 accepted. Rationale: an end that is defined
+    can be reached.
+28. The pass rate and the number of open defects allowed **MUST** be numbers written in the plan. KRISA gives 100%
+    of scenarios tested, 95% of test cases passed and all severity 1 and 2 defects fixed, retested and closed as
+    an example; it is an example and not a mandatory limit. Rationale: the right threshold depends on what the
+    system decides and for whom.
+29. The team **MUST** issue an acceptance test report: the baseline version, what was tested and by whom, results
+    by scenario, defects by severity and status, deviations from the plan, and the open items. Rationale: the
+    signature needs something to refer to.
+30. Acceptance **MUST** be a written decision by the accountable person for acceptance, on the report, with one of
+    three outcomes: accepted, accepted with conditions, or not accepted. Example: under KRISA the pemilik projek
+    validates the UAT and PAT termination reports. Rationale: a signature from anyone else, or on anything else,
+    will be disowned.
+31. "Accepted with conditions" **MUST** list each condition with an owner and a date, and **MUST** state what
+    happens if a date is missed. Rationale: conditions with no date are waived in practice.
+32. "Not accepted" **MUST** state which exit criteria failed. Rationale: a rejection without a reason cannot be
+    acted on.
+33. The team **MUST NOT** treat silence, live use or a payment as acceptance, unless the contract says so in
+    those words. Rationale: implied acceptance is disputed exactly when it matters.
+34. Acceptance **MUST NOT** be requested from, or given by, a person under pressure of a date alone. If the exit
+    criteria are not met, the options go to the accountable person under `change-control`: move the date, reduce
+    the scope, or accept with conditions. Rationale: a forced signature transfers no confidence and returns as a
+    dispute.
+
+### 2.7 Provisional and final acceptance
+
+35. Where the system replaces live work, acceptance **SHOULD** be in two steps: provisional acceptance in the real
+    environment with real users, with a pilot period, and final acceptance after that period. Rationale: some
+    failures appear only under real volume, real data and a real month-end.
+36. The pilot **MUST** have written success measures and a stated length before it starts. Rationale: a pilot
+    with no measures always succeeds.
+37. Before final acceptance, the following **MUST** be complete: provisional acceptance, the fixes it required,
+    user training, data migration, the production environment, and the approved manuals. Rationale: these are
+    the entry criteria KRISA sets for FAT, and each is a known cause of a failed go-live.
+38. Final acceptance **MUST** state the date on which the warranty or support period starts, and **MUST** trigger
+    the handover in `handover-transition`. Example: under KRISA the system owner issues the Sijil Penerimaan
+    Akhir (FAC) to the supplier. Rationale: the day of acceptance starts obligations on both sides.
+
+## 3. Anti-patterns
+
+| Anti-pattern | Why it fails | Instead |
+|---|---|---|
+| UAT as demo | The team drives, the client watches and signs | Real users run the scenarios (rules 9, 10) |
+| The manager's UAT | Three heads of unit test; forty clerks meet the system at go-live | Each role tests (rule 9) |
+| Rules decided at the end | Pass rate and severity are argued with the deadline one day away | Plan approved first (rules 2 to 5) |
+| System test in disguise | Users find crashes on day one because the team's testing was not finished | Entry criteria hold the start (rules 6, 8) |
+| The squeezed window | Build is late, go-live is fixed, UAT shrinks from three weeks to four days | Move the date or cut scope by decision (rule 34) |
+| Wishlist register | Every new idea is logged as a defect; the register never closes | Triage into defect, clarification, change (rule 24) |
+| Closed by the developer | "Fixed" in the register, still broken at the counter | Retest by the reporter's role (rule 25) |
+| Deemed acceptance | "You are using it, so you accepted it" | Written decision only (rules 30, 33) |
+| Signature as hostage | Sign-off is withheld for items outside the baseline | Exit criteria decide (rules 27, 32) |
+
+```text
+✗ prohibited: "UAT completed successfully on 20 November. Client is happy. Please sign."
+
+✓ required:   Acceptance Test Report: Sistem e-Lesen, baseline v1.3, build 2026.11.18
+              Tested 3–18 November by 14 testers: 6 counter clerks, 4 processing officers, 2 approvers,
+              2 ICT operations.
+              Scenarios: 62 planned, 62 executed, 60 passed (96.8%; plan requires 95%).
+              Defects: 31 raised: 4 High (4 closed), 11 Medium (11 closed), 16 Low (9 closed, 7 open with
+              owner and date, Annex B). 5 findings moved to the change log (CR-015 to CR-019).
+              Quality evidence: load test at 150 concurrent officers passed; accessibility audit: 2 Low open;
+              restore test passed in 47 minutes (requirement: 2 hours).
+              Deviation: payment gateway tested against the bank's test system, not production.
+              Requested decision: accepted with conditions (Annex B by 5 December).
+              Signed: ____________ (Pemilik Projek)   Date: ________
+```
+
+## 4. Checklist
+
+- [ ] Every requirement in scope had acceptance criteria before it was built.
+- [ ] The acceptance test plan is approved by the accountable person and names scope, baseline version, forms of
+      acceptance, environments, data, testers, schedule, entry and exit criteria, severity scale and signer.
+- [ ] Exit criteria are numbers.
+- [ ] The team's system test results were shared before acceptance testing started.
+- [ ] The entry check was recorded and passed.
+- [ ] Testers include real users of every role, and the operations team for operational acceptance.
+- [ ] Testers were released from normal work and briefed.
+- [ ] Every scenario traces to requirements; every requirement in scope is covered or has a recorded reason.
+- [ ] Quality requirements, integrations and migrated data have evidence.
+- [ ] Test data holds no real personal data, or holds it with the data owner's written approval.
+- [ ] Every defect is in one register with severity confirmed in joint triage.
+- [ ] Findings that are changes are in the change log, not the defect register.
+- [ ] Fixed defects were retested by a tester of the reporter's role.
+- [ ] An acceptance test report exists and the decision is written on it by the accountable person.
+- [ ] Conditions, if any, each have an owner, a date and a consequence.
+- [ ] Final acceptance states the start date of the warranty or support period.
+
+## 5. Canonical summary
+
+- Decide the rules of acceptance before testing: plan, exit criteria, severity scale, signer.
+- Acceptance testing starts only after the team's own testing is finished and shared.
+- Real users of every role test; the operations team tests operations; the delivery team supports and does not
+  test.
+- Scenarios follow real work end to end, trace to requirements, and include exceptions, quality requirements,
+  integrations and migrated data.
+- One defect register; severity confirmed jointly; new wishes go to change control.
+- A fix is confirmed by a tester, not by the developer.
+- Testing ends when the written exit criteria are met.
+- Acceptance is a written decision by the accountable person: accepted, accepted with conditions, or not
+  accepted. Silence, use and payment are not acceptance.
+- For a system that replaces live work: provisional acceptance, a measured pilot, then final acceptance, which
+  starts the warranty period and the handover.
+- The most common mistake: deciding what "accepted" means during the last week.
+- See also: `requirements-discovery`, `change-control`, `handover-transition`, `testing`, `dor-dod`.
+
+## Sources
+
+Every source below was opened and read on 2026-11-12. "Read" names how much of it was read. A rule with no
+source here is this standard's own judgement.
+
+- **Certified Tester Foundation Level Syllabus v4.0.1** — ISTQB, 15 September 2024.
+  <https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf>. Read: full document, by question.
+  Supports the Terms table (user, operational, contractual and regulatory acceptance testing, alpha and beta
+  testing), rule 9 (acceptance testing is ideally performed by the intended users), rules 5 to 8 and 27 (entry
+  criteria are preconditions such as resources, testware and initial quality; exit criteria state what must be
+  achieved), rule 10 (independent testers find different defects than authors), rule 21 (the fields of a defect
+  report, including severity and priority) and rule 1 (scenario-oriented and rule-oriented acceptance criteria).
+  The syllabus defines severity as the degree of impact and gives no scale; the three levels in rule 22 follow
+  KRISA.
+- **KRISA, Bab 6: Fasa Pengujian** — Kejuruteraan Sistem Aplikasi Sektor Awam, MAMPU 2019, now Jabatan Digital
+  Negara. <https://sqa.jdn.gov.my/images/pdfdocument/krisa/BAB6-KRISA-pengujian.pdf>. Read: full chapter, by
+  question. Supports the Terms table (UAT, PAT, FAT), rules 2 to 4 (Pelan Induk Pengujian, Pelan UAT/PAT; the
+  Jawatankuasa Pemandu Projek approves the PAT strategy), rule 7 (UAT entry criteria: system test done, plan
+  validated, environment ready, scripts validated, data loaded, team briefed), rules 9 and 11 (participants
+  include the Pemilik Modul, Wakil Pengguna, Wakil pasukan operasi and Pengguna Pilot), rule 15 (traceability
+  matrix), rule 22 (severity 1 Tinggi, 2 Sederhana, 3 Rendah), rule 28 (the example exit criteria), rules 29 and
+  30 (Laporan Ujian Penerimaan; the pemilik projek validates the termination reports) and rule 35 (PAT in the
+  real environment with a pilot of at least one month as the example).
+- **KRISA, Bab 7: Fasa Pelaksanaan** — as above.
+  <https://sqa.jdn.gov.my/images/pdfdocument/krisa/BAB7-KRISA-pelaksanaan.pdf>. Read: full chapter, by question.
+  Supports rule 19 (migration checked by record counts and by statistical sampling of values), rule 37 (the FAT
+  entry criteria) and rule 38 (FAT is the agency's formal consent to enter production and the Tempoh Jaminan; the
+  system owner issues the Sijil Penerimaan Akhir).
+- **Contracting for Agile Guidance Note** — UK Digital, Data and Technology Playbook, 20 June 2023.
+  <https://www.gov.uk/government/publications/the-digital-data-and-technology-playbook/contracting-for-agile-guidance-note-html>.
+  Read: full page. Supports rules 1 and 28: the contract should define quality thresholds through a Definition of
+  Ready and a Definition of Done and state what level of defects is acceptable after release.
+- **Introducing BDD** — Dan North, 2006. <https://dannorth.net/introducing-bdd/>. Read: full article. Supports the
+  Given, When, Then form referred to in rule 1.
+- **The Scrum Guide** — Ken Schwaber and Jeff Sutherland, November 2020.
+  <https://scrumguides.org/scrum-guide.html>. Read: full page. The Definition of Done describes the state of an
+  increment that meets the quality measures. The guide does not mention acceptance criteria or client acceptance;
+  a passed Definition of Done is therefore not acceptance under this standard.
+
+### Not verified
+
+- KRISA 2.0 (Jabatan Digital Negara, 2026) renumbers the test documents. It was not read for this standard; the
+  document numbers and criteria above are from the 2019 edition.
+- ISO/IEC/IEEE 29119 (software testing) is paywalled and was not read.
+- No source read here requires a particular form for the sign-off record. Rules 30 to 33 are this standard's own.
+- The rule that silence or payment is not acceptance (rule 33) is a delivery rule, not legal advice. The contract
+  and the law that governs it decide what counts as acceptance.
+
+
+<!-- ===== handover-transition | process | standards/process/11-handover-transition.md ===== -->
+
+# Handover & Transition — Gold Standard 2026
+
+## 1. Purpose
+
+This standard defines how a system moves from the team that built it to the people who will own, run and change
+it: what is handed over, how the receiving team proves it can operate the system, and when the delivery team's
+responsibility ends. It binds every delivery to a client, and every transfer of a system between teams inside
+one organisation.
+
+The failure it prevents: the system is accepted, the project team leaves, and three months later nobody can
+deploy a fix, the administrator password belongs to a person who has gone, the source code is in a private
+account, and the only person who understood the nightly job is on another project. The client owns a system it
+cannot run. That is a dependency, and the client did not choose it.
+
+A handover is complete when the receiving team has operated the system without the delivery team, and has the
+rights, the access and the knowledge to keep doing so. A signed list of documents is not a handover.
+
+**Out of scope:** the decision to accept the system (`acceptance-testing`); training of end users and adoption
+(`training-adoption`); how documents are written (`documentation`); the support process after handover
+(`support`, `incidents`); onboarding a new engineer to a codebase (`onboarding`).
+
+## 2. Rules
+
+### 2.1 Plan the handover from the start
+
+1. The receiving team **MUST** be named on the stakeholder map in the first ten working days of the project
+   (`stakeholder-engagement` rule 2). Rationale: a system designed without its operators is designed for its
+   developers.
+2. The receiving team's constraints **MUST** be recorded as requirements during discovery: the hosting
+   environment, the tools and languages it can support, its working hours, its security and change rules.
+   Rationale: a stack the client's team cannot maintain is a decision to stay dependent on the supplier.
+3. A written handover plan **MUST** exist no later than three months before the planned handover, or at the
+   midpoint of a project shorter than six months. Rationale: handover work planned in the last fortnight is
+   cut first.
+4. The handover plan **MUST** state: what is transferred, to whom, the readiness criteria, the schedule of
+   knowledge transfer, the length and terms of the early support period, and who signs. Rationale: the same
+   reasons as an acceptance plan; the end is defined before it arrives.
+5. Handover work **MUST** be estimated and scheduled as part of the project, not treated as what remains after
+   go-live. Rationale: unplanned handover is paid for by the delivery team's next project and by the client's
+   first incident.
+6. Where the contract defines what is delivered at the end (source code, licences, documents, training), the
+   handover plan **MUST** list each item against its clause. Rationale: the contract is what the client can
+   enforce.
+
+### 2.2 What is transferred
+
+7. The handover **MUST** include an inventory, each item with its location and its new owner:
+   source code with full history; build and deployment configuration; infrastructure definitions; database
+   schemas and migration scripts; the environments; domain names and certificates; accounts with third-party
+   services; licences and subscriptions; and the documents in rule 13. Rationale: what is not listed is found
+   missing later, by the wrong person, at the wrong time.
+8. Source code **MUST** be in a repository the client controls before handover is signed, and the receiving team
+   **MUST** have built and deployed the system from that repository. Rationale: possession is not capability;
+   a repository nobody has built from is unverified.
+9. The handover **MUST** state the ownership and licence of the code, the data, and each third-party component,
+   as the contract defines them, and **MUST** list the open-source components and their licences
+   (`legal-licensing`). Rationale: rights that are unclear at handover are settled later by whoever holds the
+   access.
+10. All data the system holds, including data the system created, **MUST** be exportable by the client in a
+    documented, open format, and the export **MUST** have been run once by the receiving team. Rationale: data
+    that only the supplier can extract is not the client's in practice.
+11. Every account, subscription, domain and certificate the system depends on **MUST** be registered to the
+    client organisation, with a role mailbox and not a person's address, and **MUST** have a recorded renewal
+    date and payer. Rationale: services registered to a departed engineer expire unnoticed.
+12. The handover **MUST** list every dependency on the delivery organisation that remains: a hosted service, a
+    shared library, a licence held by the supplier, a person. Each **MUST** have an owner and an end date, or an
+    explicit agreement that it continues. Rationale: hidden dependencies are how a completed project keeps a
+    supplier.
+
+### 2.3 Documents
+
+13. The following **MUST** be handed over, current for the accepted version: an architecture overview with the
+    decisions and their reasons (`adr`); an operations runbook (start, stop, deploy, roll back, back up,
+    restore, rotate secrets, renew certificates); an administrator guide; a user manual; the data dictionary and
+    interface specifications; the test suite and how to run it; the list of known defects and limitations; the
+    requirements baseline and the change log. Rationale: each answers a question the receiving team will have
+    in its first month.
+14. Each runbook procedure **MUST** have been executed by a member of the receiving team, following only the
+    written steps, before handover is signed. Rationale: a procedure is correct when someone who did not write
+    it can follow it.
+15. Documents **MUST** live in a place the client controls, in an editable format. Rationale: a PDF on the
+    supplier's drive cannot be kept current.
+16. Known defects, limitations, workarounds and unfinished work **MUST** be listed in the handover report and
+    **MUST NOT** be left for the receiving team to discover. Rationale: an honest list is the cheapest support
+    the delivery team will ever give.
+
+### 2.4 Access and secrets
+
+17. Every credential, key and token **MUST** be rotated at handover, so that no member of the delivery team holds
+    a working secret afterwards unless the support agreement gives them one by name. Rationale: access that
+    outlives responsibility is a breach waiting for a cause (`secrets`).
+18. Secrets **MUST** be transferred through the client's secret store or an agreed secure channel, and **MUST
+    NOT** be sent by email, chat or a shared document. Rationale: the handover week is when discipline about
+    secrets is weakest.
+19. Administrative access **MUST** be held by at least two named people on the receiving side at handover.
+    Rationale: one administrator is one resignation away from a locked system.
+20. The delivery team's access to production, to the repositories and to the data **MUST** be removed on the date
+    the handover plan states, and the removal **MUST** be confirmed in writing by the client. Rationale: removal
+    that is everyone's job is nobody's.
+21. Copies of the client's data held by the delivery team, including backups, test copies and exports on
+    laptops, **MUST** be returned or deleted, and the deletion confirmed in writing. Rationale: the data
+    protection duty continues as long as the copy exists (`privacy-data-governance`).
+
+### 2.5 Readiness of the receiving team
+
+22. Handover **MUST** be gated by a readiness review held with the receiving team, covering at least: the
+    architecture and its dependencies; monitoring, alerts and what each alert means (`observability`); incident
+    response and escalation (`incidents`); capacity and its limits; how changes are released
+    (`release-versioning`); performance; backup and a tested restore (`backup-disaster-recovery`); and
+    security. Rationale: these are the areas in which a system fails its operators.
+23. Findings of the readiness review **MUST** be fixed, or accepted in writing by the receiving team's lead,
+    before handover is signed. Rationale: a review whose findings are carried forward is a ceremony.
+24. Knowledge transfer **MUST** be by doing. The receiving team **MUST** perform, with the delivery team
+    watching and not driving: one deployment, one rollback, one restore from backup, one user administration
+    task, and the diagnosis of one real or injected fault. Rationale: people keep what they have done, not what
+    they were shown.
+25. Responsibility **SHOULD** transfer gradually: the receiving team shadows, then leads with the delivery team
+    on call, then operates alone. Rationale: a single cut-over date tests the receiving team for the first time
+    in a real incident.
+26. Knowledge transfer sessions **MUST** be recorded or written up, and stored with the documents. Rationale:
+    the receiving team has turnover too.
+27. The receiving team **MUST** be able to change the system: at least one small change **SHOULD** be made,
+    tested and released by the receiving team before handover is signed. Rationale: a team that can run a system
+    and cannot change it will need the supplier for the first new requirement.
+
+### 2.6 Early support period
+
+28. Handover **MUST** be followed by an early support period with a stated length, in which the delivery team
+    remains available to the receiving team. Thirty days after go-live is the default minimum where the contract
+    sets no warranty period. Rationale: the first month-end, the first audit and the first peak find what
+    acceptance did not.
+29. The terms of the period **MUST** be written: what the delivery team will respond to, how fast, through
+    which channel, and what is excluded. Rationale: "call us if anything happens" is a promise with no size.
+30. The period **MUST** have exit criteria agreed in advance: for example, no open severity 1 or 2 defect, a
+    stated number of days without one, and the receiving team having resolved at least one incident alone.
+    Rationale: support that ends on a date and not on a condition ends in the middle of a problem.
+31. Defects found in the warranty or early support period **MUST** be handled as defects and not as change
+    requests (`change-control` rule 6). Rationale: the client accepted a system that meets the baseline.
+32. Every question the receiving team asks in this period **MUST** be answered in the documents as well as to
+    the person. Rationale: a question asked once will be asked again after the delivery team has gone.
+
+### 2.7 Sign-off and closure
+
+33. Handover **MUST** end with a handover report signed by the delivery lead and by the accountable owner on the
+    receiving side: the inventory, the readiness review results, the open items with owners and dates, the
+    remaining dependencies, the start and end of the support period, and the confirmations of access removal and
+    data deletion. Example: under KRISA the Laporan Serahan Sistem is certified by at least the Pengurus or
+    Pengarah Projek and the Pemilik Projek or Sistem; under PPrISA the Laporan Penyerahan Projek lists the
+    main deliverables and the unfinished activities. Rationale: the report is the line between two
+    responsibilities.
+34. The project **MUST** hold a closing review with the client and record lessons learnt: what to repeat and
+    what to change. Rationale: both organisations will do this again.
+35. The delivery organisation **MUST** keep a named contact for the system for at least twelve months after
+    handover, and tell the client who it is. Rationale: the question that only the builders can answer arrives
+    in month seven.
+
+### 2.8 Exit from a supplier
+
+36. A team that takes over a system from another supplier **MUST** apply rules 7 to 27 as the receiving team, and
+    **MUST** record what it could not obtain. Rationale: the incoming team inherits every gap it does not write
+    down.
+37. A team that is being replaced **MUST** cooperate with the handover to the same standard as if it were
+    staying. Rationale: the client's users are the ones who pay for a hostile exit, and reputations outlive
+    contracts.
+
+## 3. Anti-patterns
+
+| Anti-pattern | Why it fails | Instead |
+|---|---|---|
+| Handover by zip file | Code and PDFs are emailed on the last day; nobody has built from them | Receiving team builds and deploys (rule 8) |
+| The documentation dump | 400 pages nobody on the receiving side has opened | Receiving team executes each runbook (rule 14) |
+| The hero dependency | One engineer "knows the system" and has moved to another project | Transfer by doing; record sessions (rules 24, 26) |
+| Accounts in a personal name | The domain renews on a departed engineer's card | Role mailbox, renewal date, payer (rule 11) |
+| Access that never ends | The supplier still holds production keys two years later | Rotate and remove on a date (rules 17, 20) |
+| Go-live equals handover | The team leaves at launch; the first incident has no owner | Early support period with exit criteria (rules 28, 30) |
+| The quiet limitation | Known defects are left for the client to find | Listed in the handover report (rule 16) |
+| Run but not change | The client can restart the server and cannot fix a label | Receiving team ships one change (rule 27) |
+| Lock-in by stack | A framework only the supplier knows | Receiving team's constraints are requirements (rule 2) |
+
+```text
+✗ prohibited: "Attached: source code (zip), user manual (PDF), admin password. Project closed. Thank you."
+
+✓ required:   Handover Report: Sistem e-Lesen v1.3, 15 December
+              Repository: client GitLab, group pelesenan/e-lesen. Built and deployed to production from it by
+              Unit ICT on 9 December (pipeline 482).
+              Runbook: 9 of 9 procedures executed by Unit ICT; restore tested 10 December, 47 minutes.
+              Readiness review 8 December: 6 findings, 5 fixed, 1 accepted by Ketua Unit ICT (alert noise on
+              the nightly job; owner Unit ICT, 31 January).
+              Accounts: domain, SMS gateway and certificate registered to ict@agensi.example, renewals listed
+              in Annex C.
+              Secrets rotated 14 December. Delivery team access removed 15 December; confirmed by Unit ICT.
+              Client data on delivery laptops and test servers deleted 15 December; confirmation in Annex D.
+              Remaining dependency: none.
+              Open items: 7 Low defects (Annex B). Early support: 15 December to 31 January; exit criteria
+              in section 6.
+              Signed: Delivery lead ________   Pemilik Sistem ________
+```
+
+## 4. Checklist
+
+- [ ] The receiving team was on the stakeholder map from the start and its constraints are in the requirements.
+- [ ] A handover plan exists, dated at least three months before handover, with readiness criteria and signers.
+- [ ] The inventory lists every item in rule 7 with a location and a new owner.
+- [ ] The receiving team has built and deployed the system from a repository the client controls.
+- [ ] Ownership and licences of code, data and components are stated; open-source components are listed.
+- [ ] The receiving team has run a full data export.
+- [ ] Every account, domain, certificate and subscription is registered to the client with a renewal date.
+- [ ] Remaining dependencies on the delivery organisation are listed with owners and end dates.
+- [ ] Every document in rule 13 is current, editable and in a place the client controls.
+- [ ] Every runbook procedure was executed by the receiving team from the written steps.
+- [ ] The readiness review was held and each finding is fixed or accepted in writing.
+- [ ] The receiving team performed a deployment, a rollback, a restore, an administration task and a diagnosis.
+- [ ] Secrets were rotated; at least two named administrators exist on the receiving side.
+- [ ] Delivery team access was removed and client data copies deleted, each confirmed in writing.
+- [ ] The early support period has written terms and exit criteria.
+- [ ] The handover report is signed by both sides and lists open items and known limitations.
+- [ ] Lessons learnt are recorded and a contact is named for twelve months.
+
+## 5. Canonical summary
+
+- Name the receiving team in week one. Its constraints are requirements.
+- Plan handover at least three months ahead, and estimate it as project work.
+- Transfer an inventory, not a zip file: code, configuration, environments, accounts, licences, data, documents.
+- The repository, the accounts and the documents live where the client controls them.
+- The receiving team proves it: it builds, deploys, rolls back, restores, exports the data and ships one change.
+- A readiness review gates the handover; its findings are fixed or accepted in writing.
+- Rotate every secret, remove the delivery team's access on a date, delete its copies of the data, and get each
+  confirmed.
+- Known defects and limitations are written in the handover report.
+- An early support period with written terms and exit criteria follows go-live.
+- The most common mistake: treating go-live as the handover.
+- See also: `acceptance-testing`, `training-adoption`, `documentation`, `support`, `secrets`.
+
+## Sources
+
+Every source below was opened and read on 2026-11-12. "Read" names how much of it was read. A rule with no
+source here is this standard's own judgement, and so is every number of days or months except where a source is
+named for it.
+
+- **Metodologi PPrISA 2.0: Garis Panduan Pengurusan Projek ICT Sektor Awam** — Jabatan Digital Negara, Kementerian
+  Digital, Versi 2.0 (the file name says "Versi Beta"), December 2024.
+  <https://sqa.jdn.gov.my/images/pdfdocument/pprisa/PPrISA2_0VersiBetaDisember2024.pdf>. Read: full document, by
+  question. Supports rule 3 (a closure checklist at least three months before the end of the last project
+  activity), rules 24 to 27 (training and Transfer of Technology so that the owner and users can use and master
+  the product), rule 33 (Laporan Penyerahan Projek with the main deliverables and the unfinished activities;
+  signed by the Pengarah Projek where there is one, the Pengurus Projek and the Pemilik Projek, and by the
+  contractor for outsourced work) and rule 34 (Laporan Penamatan Projek with lessons learnt).
+- **KRISA, Bab 7: Fasa Pelaksanaan** — Kejuruteraan Sistem Aplikasi Sektor Awam, MAMPU 2019, now Jabatan Digital
+  Negara. <https://sqa.jdn.gov.my/images/pdfdocument/krisa/BAB7-KRISA-pelaksanaan.pdf>. Read: full chapter, by
+  question. Supports rule 13 (Manual Pengguna: introduction, overview, functions, instructions, error handling),
+  rule 28 (final acceptance starts the Tempoh Jaminan) and rule 33 (Laporan Serahan Sistem, D18, certified by at
+  least the Pengurus or Pengarah Projek and the Pemilik Projek or Sistem).
+- **The Evolving SRE Engagement Model** — a chapter of Site Reliability Engineering, Google.
+  <https://sre.google/sre-book/evolving-sre-engagement-model/>. Read: full chapter. Supports rule 22 (a production
+  readiness review covers architecture and dependencies, instrumentation and monitoring, emergency response,
+  capacity, change management and performance), rule 23 (improvements before onboarding) and rule 25 (gradual
+  transfer of responsibility, with training).
+- **How the live phase works** — GOV.UK Service Manual, last updated 8 May 2019.
+  <https://www.gov.uk/service-manual/agile-delivery/how-the-live-phase-works>. Read: full page. Supports rules 22
+  and 28: before going live, support staff understand the service, monitoring and uptime are in place, security
+  and performance testing continue, and the service can be supported sustainably.
+- **Define your purchasing strategy** — UK Government Digital Service, last updated 3 September 2026.
+  <https://www.gov.uk/guidance/define-your-purchasing-strategy>. Read: full page. Supports rules 9 and 10
+  (contracts state who owns the data, including data the service creates, and the intellectual property,
+  including code and business rules) and rule 12 (break clauses so that the client can leave at low exit cost).
+- **Exiting Major IT Contracts: Guidance for Departments** — Cabinet Office (UK), 2017.
+  <https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/658162/6.3634_CCS_GCF_Gov_Shared_Learning_Exiting_Major_IT_Contracts_FINAL_081117.pdf>.
+  Read: full document, by question. Supports rules 6, 7, 9, 10, 13 and 36: an exit plan, knowledge of the current
+  operation from the incumbent, ownership of intellectual property and licences, access to service data, asset
+  ownership, and access to operations manuals. It says exit of a major contract can take up to four years from
+  first discussion; that figure is about large government contracts and is not used as a rule here.
+
+### Not verified
+
+- ISO/IEC/IEEE 12207 (transition process) is paywalled and was not read.
+- "Early life support" is an ITIL version 3 term. It was not found in ITIL 4 material, and no exit criteria from
+  ITIL were read. Rules 28 to 30 are this standard's own.
+- No Malaysian circular on source-code ownership or Transfer of Technology was opened. One (SPP Bil. 3 Tahun
+  2013) is reported by secondary sources and returned an error when requested. Rule 9 therefore points to the
+  contract and states no legal position.
+- The twelve months in rule 35 and the thirty days in rule 28 have no source.
+
+
+<!-- ===== training-adoption | process | standards/process/12-training-adoption.md ===== -->
+
+# Training & Adoption — Gold Standard 2026
+
+## 1. Purpose
+
+This standard defines how the people who will use a system are prepared for it, and how the team finds out
+whether they are in fact using it to do their work. It binds every delivery in which people must change how they
+work: a new system, a replacement, or a release that changes a main task.
+
+The failure it prevents: a system that passes acceptance and is not used. Officers keep the old spreadsheet and
+enter the data twice, or once, into the spreadsheet. The counter keeps the paper form "in case". The dashboard
+shows activity because one clerk has been told to key everything in on Friday. Nothing is broken, so nothing is
+reported, and the benefit that justified the project never arrives.
+
+Training is one input to adoption. A person adopts a new way of working when they know why it is changing, want
+or accept the change, know how to do their work in it, are able to do it at real speed, and find that the new
+way is what the organisation expects and supports. Training addresses the third and part of the fourth.
+
+**Out of scope:** transfer of the system to the team that will operate it (`handover-transition`); onboarding
+engineers to a codebase (`onboarding`); the wording and help text inside the product (`content-ux-writing`); the
+support process (`support`).
+
+## 2. Rules
+
+### 2.1 Plan adoption as part of the project
+
+1. Every project that changes how people work **MUST** have an adoption plan, agreed with the sponsor, before the
+   build is half complete. Rationale: adoption work started at go-live starts after people have formed their
+   view of the system.
+2. The adoption plan **MUST** begin from the stakeholder map: for each group of users, what changes in their
+   daily work, what they lose, what they gain, and what they are likely to worry about. Example: under PPrISA the
+   Pelan Pengurusan Perubahan begins with stakeholder analysis and an analysis of the current environment.
+   Rationale: "users" is not a group; a counter clerk and a director experience a different change.
+3. The plan **MUST** state the adoption outcomes as measures with targets and dates: for example, the share of
+   cases processed in the system and not on paper, the time to complete the main task, the number of support
+   requests per user. Rationale: adoption that is not measured is assumed.
+4. The plan **MUST** name the person on the client side who is accountable for adoption. It **MUST NOT** be the
+   delivery team. Rationale: only the client's management can change what is expected of the client's staff.
+5. Adoption and training work **MUST** be estimated and scheduled in the project plan, including the users' time
+   away from normal work. Rationale: unbudgeted training is delivered as a two-hour slide session.
+6. The team **MUST** tell the sponsor in writing when a decision outside the team's control blocks adoption: the
+   old system stays available with no end date, a policy still requires the paper form, staff are measured on
+   the old process. Rationale: these are the commonest reasons a working system is not used, and the delivery
+   team cannot fix them.
+
+### 2.2 Tell people before you train them
+
+7. Every affected group **MUST** be told, before training, why the change is happening, what will change for
+   them, when, and what will not change. Rationale: people who first hear the reason in a training room spend
+   the session deciding whether they agree.
+8. That message **MUST** come from the client's own management, and **SHOULD** come from each group's direct
+   superior. Rationale: staff judge a change by who stands behind it; a supplier announcing a client's change
+   has no standing.
+9. Communication **MUST** state honestly what will be harder at first and what the system will not do.
+   Rationale: the first broken promise costs the credibility of every later message.
+10. There **MUST** be a channel for questions and objections before go-live, and each **MUST** receive an answer.
+    Recurring objections **MUST** be reported to the sponsor (`stakeholder-engagement` rule 32). Rationale:
+    an objection that is not heard does not go away; it becomes a workaround.
+11. The team **SHOULD** identify, with each unit's management, one or more users who will be trained first and
+    will help their colleagues. Rationale: people ask the colleague at the next desk before they open a manual or
+    a ticket.
+
+### 2.3 Design training from the work
+
+12. Training **MUST** be designed for each role from the tasks that role performs, in the order the work arrives.
+    It **MUST NOT** be a tour of the menus. Rationale: people learn the system to do their job, and a menu tour
+    teaches where things are and not what to do.
+13. Training objectives **MUST** be written as things the trainee can do afterwards, each checkable: "can
+    register an application with an incomplete document and issue the query letter". Rationale: an objective
+    that cannot be checked cannot be said to be met.
+14. Training **MUST** be hands-on: each trainee performs each main task of their role, in a training environment,
+    with realistic data that is not real personal data. Rationale: watching a demonstration produces confidence
+    without ability.
+15. Training **MUST** cover the exceptions and what to do when something goes wrong: the wrong entry, the
+    rejected payment, the system that is unavailable. Rationale: the main path is learnt in an hour; the first
+    exception is what sends people back to paper.
+16. Training **MUST** be delivered close to the day of first use; within two weeks is the default. Rationale:
+    skills that are not used fade, and a session held two months early must be repeated.
+17. Training **MUST** be accessible to every trainee: language, literacy, disability, shift pattern, location
+    (`a11y-inclusive`). Rationale: the people who miss the session are often the ones who needed it most.
+18. Each session **MUST** end with a check of ability, by task, and the result **MUST** be recorded per role.
+    Rationale: attendance records show who sat in the room.
+19. Trainees who did not reach the objectives **MUST** be offered further practice or support before they are
+    expected to work in the system. Rationale: a person who fails in front of the public on day one does not
+    try again.
+20. Where the client's own staff will deliver later training, the team **MUST** train those trainers, observe
+    each one deliver a session, and hand over the material in an editable form. Rationale: new staff arrive
+    every month after the project team has gone.
+
+### 2.4 Material and help at the moment of need
+
+21. Every role **MUST** have reference material for its main tasks that can be used while doing the task: a
+    one-page guide per task is the default; a full manual is the reference behind it. Rationale: nobody reads a
+    manual with a member of the public waiting.
+22. Material **MUST** show the accepted version of the system, in the users' language and with their terms, and
+    **MUST** be updated when `change-control` approves a change that touches it. Rationale: a guide with last
+    month's screen teaches people that the guide is wrong.
+23. Material **MUST** be stored where users can find it without asking, and be editable by the client.
+    Rationale: material on the trainer's laptop does not survive the project.
+24. The system's own messages, labels and inline help **SHOULD** carry as much of the guidance as possible
+    (`content-ux-writing`). Rationale: a task that needs training to complete is first a design finding.
+25. Repeated questions in training **MUST** be reported to the product owner as findings about the design.
+    Rationale: when ten people cannot find the same button, the button is the defect.
+
+### 2.5 People who need help to use the service
+
+26. For a service used by the public, the team **MUST** establish through research what help people need to use
+    it, and the adoption plan **MUST** provide that help: by phone, in person, or through someone acting for
+    them. Rationale: a digital-only service excludes the people with the least choice.
+27. Staff who help the public use the service, at a counter or a call centre, **MUST** be trained and given their
+    own guides before the public launch. Rationale: they are the service for everyone who cannot use it alone.
+28. The old channel **MUST NOT** be closed until the measures in the adoption plan show that the people who used
+    it can use the new one, or the accountable person has decided otherwise in writing. Rationale: closing a
+    channel is a decision about people, and it belongs to a named person.
+
+### 2.6 Go-live and the first weeks
+
+29. Users **MUST** have support at the place of work in the first days of live use: a trained colleague, a
+    member of the team on site, or a staffed line that answers. Rationale: the first real case decides whether a
+    user trusts the system.
+30. Every user **MUST** know, before go-live, where to ask for help and what happens after they ask (`support`).
+    Rationale: a user who does not know where to ask asks nobody and goes back to the old way.
+31. The team **MUST** review support requests at least weekly in the first month and classify each: defect,
+    missing knowledge, missing feature, or unclear design. Rationale: each class has a different fix, and
+    "user error" is not a class.
+32. A workaround outside the system (a spreadsheet, a paper register, a chat group that carries the data)
+    **MUST** be treated as a finding, investigated and reported to the sponsor. Rationale: a workaround is the
+    users' own change request, written in the only form available to them.
+33. The old system or process **MUST** have an agreed end date, or an explicit decision to run both, with an
+    owner. Rationale: two ways of working, both tolerated, means the new one is optional.
+
+### 2.7 Measure adoption
+
+34. The adoption measures in the plan **MUST** be reported to the sponsor at go-live, at thirty days and at ninety
+    days. Rationale: adoption problems show within weeks and are cheap to fix only then.
+35. Measures **MUST** come from use of the system and from the work, not only from a satisfaction form:
+    cases completed in the system, time on the main task, error and rework rates, support requests, remaining
+    use of the old channel. Rationale: people can like the training and still not use the system.
+36. Training **SHOULD** be evaluated at four levels: whether trainees found it useful, whether they acquired the
+    skill, whether they apply it at work, and whether the intended result followed. Planning **SHOULD** start
+    from the result and work back. Rationale: the first level is the easiest to collect and tells the least.
+37. A group whose measures are below target **MUST** be asked why, in person, before more training is ordered.
+    Rationale: more training fixes missing knowledge and nothing else; the cause may be awareness, willingness,
+    ability at real speed, or what their superior expects.
+38. Usage data **MUST NOT** be used to assess individual staff unless the client has told staff so in advance and
+    it is lawful to do so. Reports to the sponsor **SHOULD** be by unit or role. Rationale: measurement that is
+    felt as surveillance produces keyed-in numbers, not adoption (`privacy-data-governance`).
+
+### 2.8 After the project
+
+39. New staff **MUST** have a way to learn the system after the project ends: the trained trainers, the
+    material, and a training environment that stays available. Rationale: staff turnover erases a one-time
+    training within a few years.
+40. Each release that changes a main task **MUST** come with a note to users, written for them, before the
+    release, and an update to the guides. Rationale: a screen that changes without warning is reported as a
+    fault.
+
+## 3. Anti-patterns
+
+| Anti-pattern | Why it fails | Instead |
+|---|---|---|
+| The one big session | Two hundred people, one projector, one afternoon, two months early | By role, hands-on, close to first use (rules 12, 14, 16) |
+| The menu tour | Every screen is shown; nobody completes a case | Tasks in the order of the work (rule 12) |
+| Attendance as evidence | The sheet is signed, so staff are "trained" | Check ability by task (rule 18) |
+| Training as the fix | Low use is answered with another session | Ask why first (rule 37) |
+| The supplier's announcement | Staff hear about their own reorganised work from a vendor | The client's management says why (rules 7, 8) |
+| The 300-page manual | Complete, accurate and unopened | One page per task at the desk (rule 21) |
+| The parallel spreadsheet | The system is "live" and the real register is in Excel | Workarounds are findings; the old way has an end date (rules 32, 33) |
+| Digital only | The portal launches and the counter closes; some people cannot apply | Research the help needed; keep the channel until measured (rules 26, 28) |
+| Happy sheets | "4.6 out of 5" on the feedback form; usage is 30% | Measure use and the work (rules 35, 36) |
+| Dashboards about people | Usage reports name the slow officers; entries are now keyed in bulk | Report by unit; tell staff what is measured (rule 38) |
+
+```text
+✗ prohibited: "Training completed: 4 sessions, 186 attendees, satisfaction 4.6/5. Adoption: done."
+
+✓ required:   Adoption report, day 30: Sistem e-Lesen
+              Target: 90% of renewals decided in the system by day 30. Actual: 71%.
+              By unit: Pelesenan HQ 94%; Cawangan Utara 88%; Cawangan Timur 31%.
+              Training: 186 of 192 staff attended; 171 completed all tasks for their role in the check;
+              15 had follow-up practice, 6 not yet trained (list with unit heads).
+              Support requests: 143: 22 defects (all Low or Medium, 19 closed), 71 missing knowledge
+              (48 about the query-letter step: guide rewritten, label changed under CR-021), 50 other.
+              Finding: Cawangan Timur still records renewals in the old register. Cause, asked on site
+              2 December: the branch's audit checklist still requires the register. Not a training gap.
+              Decision needed from the Pengarah by 9 December: amend the checklist, or run both until
+              the next audit cycle.
+```
+
+## 4. Checklist
+
+- [ ] An adoption plan exists, agreed with the sponsor before the build was half complete.
+- [ ] The plan describes, for each user group, what changes, what is lost, what is gained and the likely worries.
+- [ ] Adoption measures have targets and dates, and a client-side person is accountable for adoption.
+- [ ] Each group was told why, what, when and what will not change, by the client's management, before training.
+- [ ] Questions and objections before go-live were answered, and recurring ones reported.
+- [ ] Training is by role, from real tasks, hands-on, in a training environment without real personal data.
+- [ ] Training covers exceptions and what to do when something goes wrong.
+- [ ] Training took place within two weeks of first use, or the gap is recorded with a reason.
+- [ ] Ability was checked by task and recorded; people who did not reach the objectives had follow-up.
+- [ ] Client trainers were trained, observed delivering, and hold the editable material.
+- [ ] Each role has a one-page guide per main task, current for the accepted version, where users can find it.
+- [ ] For a public service: the help people need was researched and is provided; assisting staff were trained.
+- [ ] Users have on-site or staffed support in the first days and know where to ask.
+- [ ] Support requests were classified weekly in the first month.
+- [ ] Workarounds outside the system were investigated and reported.
+- [ ] The old system or process has an end date or a written decision to run both.
+- [ ] Adoption measures were reported at go-live, thirty days and ninety days, from use and from the work.
+- [ ] Usage reports do not assess individuals, or staff were told in advance.
+
+## 5. Canonical summary
+
+- Adoption is the outcome; training is one input. Plan both before the build is half complete.
+- Start from each group: what changes for them, what they lose, what worries them.
+- The client's management says why, before anyone is trained. The supplier cannot.
+- Train by role, from real tasks, hands-on, with exceptions, close to first use.
+- Check what people can do, not that they attended.
+- One page per task at the desk; the manual is the reference behind it.
+- For a public service, research and provide the help people need, and train the staff who give it.
+- Support people at their place of work in the first days.
+- A workaround outside the system is a finding. The old way needs an end date.
+- Measure adoption from use and from the work, at go-live, thirty days and ninety days.
+- When use is low, ask why before ordering more training.
+- The most common mistake: counting attendance and calling it adoption.
+- See also: `handover-transition`, `stakeholder-engagement`, `acceptance-testing`, `support`.
+
+## Sources
+
+Every source below was opened and read on 2026-11-12. "Read" names how much of it was read. A rule with no
+source here is this standard's own judgement, and so is every number of days or weeks in the rules.
+
+- **The Prosci ADKAR Model** — Prosci. <https://www.prosci.com/methodology/adkar>. Read: full page. Supports the
+  Purpose and rule 37: Awareness, Desire, Knowledge, Ability, Reinforcement; the elements build on each other, and
+  support goes to the earliest element where a person is blocked. This is a vendor's model. The page calls it
+  research-based; the research itself was not read.
+- **The Kirkpatrick Model** — Kirkpatrick Partners. <https://www.kirkpatrickpartners.com/the-kirkpatrick-model/>.
+  Read: full page. Supports rule 36: four levels (Reaction, Learning, Behavior, Results), planned from Results
+  backwards. This is also a vendor's model.
+- **Metodologi PPrISA 2.0: Garis Panduan Pengurusan Projek ICT Sektor Awam** — Jabatan Digital Negara, Kementerian
+  Digital, Versi 2.0 (the file name says "Versi Beta"), December 2024.
+  <https://sqa.jdn.gov.my/images/pdfdocument/pprisa/PPrISA2_0VersiBetaDisember2024.pdf>. Read: full document, by
+  question. Supports rules 1 and 2 (the Pelan Pengurusan Perubahan sets the strategy, programmes and activities
+  for adoption by target group, starting from stakeholder analysis and an analysis of the current environment,
+  and covers publicity and training) and rule 20 (training and Transfer of Technology so that the owner and
+  users can use and master the product).
+- **Templat Pengurusan Projek ICT Sektor Awam (PPrISA)** — Jabatan Digital Negara.
+  <https://sqa.jdn.gov.my/index.php/en/templat-pengurusan-projek-ict-sektor-awam-pprisa>. Read: full page. Lists
+  PPrISA09 Pelan Pengurusan Perubahan.
+- **KRISA, Bab 7: Fasa Pelaksanaan** — Kejuruteraan Sistem Aplikasi Sektor Awam, MAMPU 2019, now Jabatan Digital
+  Negara. <https://sqa.jdn.gov.my/images/pdfdocument/krisa/BAB7-KRISA-pelaksanaan.pdf>. Read: full chapter, by
+  question. Supports rule 16 (completed user training is an entry criterion for final acceptance) and rule 21
+  (the Manual Pengguna as a guide and reference: introduction, overview, functions, instructions, error
+  handling).
+- **Assisted digital support: an introduction** — GOV.UK Service Manual, last updated 18 December 2025.
+  <https://www.gov.uk/service-manual/helping-people-to-use-your-service/assisted-digital-support-introduction>.
+  Read: full page. Supports rules 26 and 27: research must establish what help people need; help is given by
+  phone, in person or by webchat.
+- **How the live phase works** — GOV.UK Service Manual, last updated 8 May 2019.
+  <https://www.gov.uk/service-manual/agile-delivery/how-the-live-phase-works>. Read: full page. Supports rule 27
+  (support staff understand the online service before it goes live) and rule 31 (continue to review how the
+  service performs).
+- **The challenges in implementing digital change** — National Audit Office (UK), 21 July 2021.
+  <https://www.nao.org.uk/insights/the-challenges-in-implementing-digital-change/>. Read: report page (background,
+  scope, conclusions), not the full report. Used as a check on this standard's own claims: the report says there
+  is rarely a single reason for failure, and its six lesson areas (aims and risk, commercial partners, legacy
+  systems and data, capability, delivery methods, funding) do not include user adoption.
+
+### Not verified
+
+- No source read here shows that poor adoption is the leading cause of failed IT projects. This standard does
+  not make that claim. Widely quoted failure percentages (for example the Standish CHAOS figures) were not read
+  and are not used.
+- Rule 16 (train close to first use) rests on practice. The research on forgetting that is usually quoted for it
+  was not read for this standard, and what was found about it concerns memory experiments, not workplace
+  software training.
+- Kotter's eight steps and other change models were not read and are not used.
+- The thirty and ninety days in rule 34 have no source.
