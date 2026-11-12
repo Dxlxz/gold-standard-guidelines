@@ -5,6 +5,15 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); standar
 
 ## [Unreleased]
 
+### Added — standards (all `status: draft`, `version: 0.1.0`, `provenance: generated-batch`)
+- `standards/process/` — 6 documents for client delivery, the part of a project between the delivery team and
+  the people it delivers to: `stakeholder-engagement`, `requirements-discovery`, `change-control`,
+  `acceptance-testing`, `handover-transition`, `training-adoption`. Each has a Sources section that names what
+  was read and a "Not verified" list. Malaysian public-sector terms (PPrISA, KRISA) are mapped where a rule
+  matches them.
+- `AGENTS.md` routing table: a "Client delivery" row.
+- `ATTRIBUTION.md`: a cohort row for these six machine-written drafts.
+
 ### Planned
 - `foundation/` documents (6 queued in the pipeline project's `prompts-foundation.json`): principles,
   naming & terminology, document authoring, glossary, reading paths, cross-standard map.
